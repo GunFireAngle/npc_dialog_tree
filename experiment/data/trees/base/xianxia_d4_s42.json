@@ -1,0 +1,231 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 59.44,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.7333,
+  "gram_dup_rate": 0.5707,
+  "distinct2": 0.407,
+  "option_dup_rate": 0.0714,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.2857,
+  "intent_coverage": 0.2857,
+  "persona_hit_rate": 0.0667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.125,
+  "mean_line_len": 15.6,
+  "std_line_len": 6.91,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 1.0,
+  "composite": 2.778
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 59.44,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我为什么来吗？",
+     "你是哪一路的人？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这事儿，我也不好说。",
+    "emotion": "无奈",
+    "options": [
+     "你能不能透露一点？",
+     "我需要更多证据"
+    ],
+    "parent": "n1",
+    "parent_option": "你能告诉我为什么来吗？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "是啊，我记得见过你。不过，我似乎记错了名字，你就是阿禾吗？",
+    "emotion": "试探",
+    "options": [
+     "我叫沈无咎，青冥剑宗守山人，看守着剑冢三十年。",
+     "我是来帮忙的，不过我不太想打扰你。"
+    ],
+    "parent": "n1",
+    "parent_option": "你是哪一路的人？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "试探",
+    "options": [
+     "我需要更多证据",
+     "你认识我的样子吗？"
+    ],
+    "parent": "n2",
+    "parent_option": "你能不能透露一点？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这事儿，我也不好说。",
+    "emotion": "无奈",
+    "options": [
+     "你难道是来找我的麻烦吗？",
+     "告诉我真相，我会帮你的"
+    ],
+    "parent": "n2",
+    "parent_option": "我需要更多证据"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "好奇",
+    "options": [
+     "我们认识吗？",
+     "你有啥线索？"
+    ],
+    "parent": "n3",
+    "parent_option": "我叫沈无咎，青冥剑宗守山人，看守着剑冢三十年。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "试探",
+    "options": [
+     "你知道我在看守什么？",
+     "跟我去一趟，我有话说。"
+    ],
+    "parent": "n3",
+    "parent_option": "我是来帮忙的，不过我不太想打扰你。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我曾经是宗门最被看好的内门首席，但那次入冢，剑意反噬让我废了一身修为。",
+    "emotion": "悲伤",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我需要更多证据"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你认识我的样子吗？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "这事儿，我也不好说。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你难道是来找我的麻烦吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这事儿，我也不好说。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "告诉我真相，我会帮你的"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我们认识吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你有啥线索？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这事儿，我也不好说。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你知道我在看守什么？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "你看起来有些熟悉，可是怎么了？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "跟我去一趟，我有话说。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 59.44,
+   "strategy_calls": 15
+  }
+ },
+ "judge": null
+}

@@ -1,0 +1,305 @@
+{
+ "world": "deepsea",
+ "world_name": "深潮站",
+ "npc": "林栖",
+ "method": "ft",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 102.78,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.2,
+  "gram_dup_rate": 0.3087,
+  "distinct2": 0.6407,
+  "option_dup_rate": 0.0714,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.8571,
+  "intent_coverage": 0.7143,
+  "persona_hit_rate": 0.5333,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.75,
+  "mean_line_len": 18.07,
+  "std_line_len": 5.64,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 27,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 27,
+  "dedupe_calls": 4,
+  "dedupe_fixed": 3,
+  "dedupe_gaveup": 2,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+    "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+    "forbid": "手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+    "unlock": "手边永远有一杯没喝完的咸水",
+    "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 102.78,
+  "strategy_calls": 27
+ },
+ "tree": {
+  "world_id": "deepsea",
+  "npc_name": "林栖",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在深潮站，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "别绕了，把话说明白。",
+     "开个条件，我出得起。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "先说说，你想从我这儿换什么。",
+    "emotion": "试探",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n1",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "行吧。先帮你遮掩一下。但记住，潮声的事不好全告诉。",
+    "emotion": "交易",
+    "options": [
+     "你在替谁遮掩？",
+     "别逼我动手。"
+    ],
+    "parent": "n1",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [
+     "我现在就要一个答案。",
+     "你说的潮，到底指什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我拿舱换你一句话。",
+     "开个条件，我出得起。"
+    ],
+    "parent": "n2",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你手上那种颜色的东西，跟潮有关吧。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "先不说这个了。"
+    ],
+    "parent": "n3",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把舱修好，你告诉我实情。",
+     "这事换谁都扛不住。"
+    ],
+    "parent": "n3",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "那天的水密，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "他们让你看到的潮声，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你说的潮，到底指什么？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我拿舱换你一句话。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "那天的舱，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "那天的舱，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "先不说这个了。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "他们让你看到的潮声，全是被挑过的。那天的信号，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我帮你把舱修好，你告诉我实情。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "这事换谁都扛不住。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 27,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 27,
+   "dedupe_calls": 4,
+   "dedupe_fixed": 3,
+   "dedupe_gaveup": 2,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+     "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+     "forbid": "手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+     "unlock": "手边永远有一杯没喝完的咸水",
+     "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 102.78,
+   "strategy_calls": 27
+  }
+ },
+ "judge": null
+}

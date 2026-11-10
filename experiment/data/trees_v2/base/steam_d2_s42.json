@@ -1,0 +1,155 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 17.31,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.2027,
+  "distinct2": 0.76,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 27.33,
+  "std_line_len": 6.8,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.111
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 4,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 4,
+  "dedupe_calls": 0,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 1,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 2,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 17.31,
+  "strategy_calls": 4
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "警惕",
+    "options": [
+     "你是谁？",
+     "我是来帮忙的。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "是的，我是来确认一下你是否是前来捣乱的人，但我知道你为什么来这里了。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你是谁？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我曾经在一场大火中失去了我的左手，但时间教会了我更多的东西。",
+    "emotion": "回忆",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "我是来帮忙的。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 4,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 4,
+   "dedupe_calls": 0,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 1,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 2,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 17.31,
+   "strategy_calls": 4
+  }
+ },
+ "judge": null
+}

@@ -1,0 +1,753 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 6,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 289.77,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.7619,
+  "gram_dup_rate": 0.7988,
+  "distinct2": 0.1641,
+  "option_dup_rate": 0.3226,
+  "option_semantic_distance": 0.9807,
+  "intent_distinct_rate": 0.4839,
+  "intent_coverage": 0.5968,
+  "persona_hit_rate": 0.0159,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0312,
+  "mean_line_len": 18.46,
+  "std_line_len": 7.99,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 1.0,
+  "composite": 2.778
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 1,
+  "bad_branch_nodes": 1,
+  "calls": 63,
+  "elapsed": 289.77,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "紧张",
+    "options": [
+     "我在这儿呢，不过没找到你。",
+     "你找谁？我是这里唯一的人。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "诚恳",
+    "options": [
+     "你能具体说说怎么查吗？",
+     "我有办法帮你！"
+    ],
+    "parent": "n1",
+    "parent_option": "我在这儿呢，不过没找到你。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [
+     "我得看看是不是出了问题",
+     "我只是想问，你来找过炉议会吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "你找谁？我是这里唯一的人。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "关心",
+    "options": [
+     "我在这儿呢，不过没找到你。",
+     "你能具体说说怎么查吗？"
+    ],
+    "parent": "n2",
+    "parent_option": "你能具体说说怎么查吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [
+     "你知道我在找什么吗？",
+     "你到底是谁？"
+    ],
+    "parent": "n2",
+    "parent_option": "我有办法帮你！"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "困惑",
+    "options": [
+     "我得看看是不是出了问题",
+     "你找谁？我是这里唯一的人"
+    ],
+    "parent": "n3",
+    "parent_option": "我得看看是不是出了问题"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "询问",
+    "options": [
+     "我只是来检查水管的。",
+     "炉议会可能有消息。"
+    ],
+    "parent": "n3",
+    "parent_option": "我只是想问，你来找过炉议会吗？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [
+     "……",
+     "我明白了。"
+    ],
+    "parent": "n4",
+    "parent_option": "我在这儿呢，不过没找到你。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "焦急",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n4",
+    "parent_option": "你能具体说说怎么查吗？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "关心",
+    "options": [
+     "你能具体说说怎么查吗？",
+     "我很乐意帮你。"
+    ],
+    "parent": "n5",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "失望",
+    "options": [
+     "我在这儿呢，不过没找到你。",
+     "也许我应该离开这里。"
+    ],
+    "parent": "n5",
+    "parent_option": "你到底是谁？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "好奇",
+    "options": [
+     "你为什么会在这里？",
+     "告诉我，你找到了什么？"
+    ],
+    "parent": "n6",
+    "parent_option": "我得看看是不是出了问题"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "好奇",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n6",
+    "parent_option": "你找谁？我是这里唯一的人"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "询问",
+    "options": [
+     "我在这儿等了三天了，你到底来没有？",
+     "你找谁？我是这里唯一的人。"
+    ],
+    "parent": "n7",
+    "parent_option": "我只是来检查水管的。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [
+     "你知道这3号主水管的破洞吗？",
+     "有没有可能找到一个可以联系炉议会的方法？"
+    ],
+    "parent": "n7",
+    "parent_option": "炉议会可能有消息。"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我一直觉得，如果有机会可以重新开始，我会选择做更多有意义的事情。",
+    "emotion": "内疚",
+    "options": [
+     "告诉我，你为什么来这里？",
+     "我需要帮助。"
+    ],
+    "parent": "n8",
+    "parent_option": "……"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "关心",
+    "options": [
+     "你知道这是为什么吗？",
+     "我在这儿等了三天了，你到底来没有？"
+    ],
+    "parent": "n8",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "期待",
+    "options": [
+     "你能具体说说怎么查吗？",
+     "你知道怎么联系吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "询问",
+    "options": [
+     "你能具体说说怎么查吗？",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n9",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "我知道你在找什么吗？",
+    "emotion": "好奇",
+    "options": [
+     "你确定吗？",
+     "这是什么？"
+    ],
+    "parent": "n10",
+    "parent_option": "你能具体说说怎么查吗？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [
+     "你知道我在找什么吗？",
+     "我在找3号主水管的破洞。"
+    ],
+    "parent": "n10",
+    "parent_option": "我很乐意帮你。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "试探",
+    "options": [
+     "我这里有工具，你帮我修复。",
+     "你能告诉我3号主水管在哪里吗？"
+    ],
+    "parent": "n11",
+    "parent_option": "我在这儿呢，不过没找到你。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "好奇",
+    "options": [
+     "你能帮我修好水管吗？",
+     "你到底是谁？"
+    ],
+    "parent": "n11",
+    "parent_option": "也许我应该离开这里。"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "询问",
+    "options": [
+     "为什么不来？",
+     "有什么事吗？"
+    ],
+    "parent": "n12",
+    "parent_option": "你为什么会在这里？"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "试探",
+    "options": [
+     "告诉我，你找到了什么？",
+     "你是不是有什么事瞒着我？"
+    ],
+    "parent": "n12",
+    "parent_option": "告诉我，你找到了什么？"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "询问",
+    "options": [
+     "我得看看是不是出了问题",
+     "你找谁？我是这里唯一的人"
+    ],
+    "parent": "n13",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [
+     "你知道怎么解决这个问题吗？",
+     "你来找哪个？"
+    ],
+    "parent": "n13",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [
+     "我在这儿等了三天了，你到底来没有？",
+     "我来找过炉议会吗？"
+    ],
+    "parent": "n14",
+    "parent_option": "我在这儿等了三天了，你到底来没有？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [
+     "我在这儿等了三天了，你到底来没有？",
+     "我来找炉议会的事情。"
+    ],
+    "parent": "n14",
+    "parent_option": "你找谁？我是这里唯一的人。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "困惑",
+    "options": [
+     "炉议会的消息。",
+     "你找谁？"
+    ],
+    "parent": "n15",
+    "parent_option": "你知道这3号主水管的破洞吗？"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [
+     "你知道我在等什么。",
+     "我来找炉议会的消息。"
+    ],
+    "parent": "n15",
+    "parent_option": "有没有可能找到一个可以联系炉议会的方法？"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我一直觉得，如果有机会可以重新开始，我会选择做更多有意义的事情。",
+    "emotion": "反思",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "告诉我，你为什么来这里？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我一直觉得，如果有机会可以重新开始，我会选择做更多有意义的事情。",
+    "emotion": "感慨",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我需要帮助。"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我已经等了两天了，你终于来了。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你知道这是为什么吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "你有没有想过，我们这里的水有多珍贵？",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我在这儿等了三天了，你到底来没有？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你能具体说说怎么查吗？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你知道怎么联系吗？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "我对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你能具体说说怎么查吗？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你确定吗？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "我不知道你在找什么，但我可以帮你。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "这是什么？"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我知道你在找什么吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我在找3号主水管的破洞。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我这里有工具，你帮我修复。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "对这里的情况很了解，如果你能找到3号主水管的破洞，我可以给你一些线索。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "你能告诉我3号主水管在哪里吗？"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你能帮我修好水管吗？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我已经等了很久，你到底是不是我找的人？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你到底是谁？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "为什么不来？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "你为什么会在这里？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "有什么事吗？"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "你找谁？我是这里唯一的人。",
+    "emotion": "惊讶",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "告诉我，你找到了什么？"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你是不是有什么事瞒着我？"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我得看看是不是出了问题"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "你知道这里的水管是什么材质吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你找谁？我是这里唯一的人"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你知道怎么解决这个问题吗？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "你找谁？我是这里唯一的人。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你来找哪个？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我在这儿等了三天了，你到底来没有？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我来找过炉议会吗？"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我在这儿等了三天了，你到底来没有？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我来找炉议会的事情。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "炉议会的消息。"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "我在这儿等了三天了，你到底来没有？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你找谁？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "这地方真静啊，你在这儿干嘛？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你知道我在等什么。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "你来找炉议会的消息。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我来找炉议会的消息。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 1,
+   "bad_branch_nodes": 1,
+   "calls": 63,
+   "elapsed": 289.77,
+   "strategy_calls": 63
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合锈钉·卡莱布的身份、物品和经历设定，没有矛盾或冲突。"
+ }
+}

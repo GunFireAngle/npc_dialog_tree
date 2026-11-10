@@ -1,0 +1,305 @@
+{
+ "world": "academy",
+ "world_name": "星槎学院",
+ "npc": "雾先生",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 79.1,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.3333,
+  "gram_dup_rate": 0.6318,
+  "distinct2": 0.3237,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.9935,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.3571,
+  "persona_hit_rate": 1.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 21.4,
+  "std_line_len": 5.16,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.111
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 22,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 22,
+  "dedupe_calls": 6,
+  "dedupe_fixed": 3,
+  "dedupe_gaveup": 6,
+  "reveal_retries": 1,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 8,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+    "unlock": "手里总拿着一盏不点火的灯",
+    "forbid": "袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+    "unlock": "袖口有被纸割出的细密伤口",
+    "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 79.1,
+  "strategy_calls": 22
+ },
+ "tree": {
+  "world_id": "academy",
+  "npc_name": "雾先生",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来帮忙的。",
+     "你找谁？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这间图书馆似乎比我还熟悉，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "我确实需要帮忙。",
+     "你能帮我找到那本书吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "哦，我是来帮忙的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "图书馆里没人吗？",
+     "你来这里做什么？"
+    ],
+    "parent": "n1",
+    "parent_option": "你找谁？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我确实需要帮忙，这是我的灯和伤口。",
+    "emotion": "叙述",
+    "options": [
+     "你的眼神让我安心多了。",
+     "我很清楚你为什么来找我。"
+    ],
+    "parent": "n2",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "图书馆里似乎没什么人，我怕你找不到。",
+    "emotion": "警告",
+    "options": [
+     "你在这里等我找书。",
+     "你不是来帮忙的。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能帮我找到那本书吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "图书馆里有人吗？",
+     "你找什么人？"
+    ],
+    "parent": "n3",
+    "parent_option": "图书馆里没人吗？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [
+     "我需要更多关于这书的信息。",
+     "告诉我，这书是为什么被封印的？"
+    ],
+    "parent": "n3",
+    "parent_option": "你来这里做什么？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。我确实需要帮忙，这是我的灯和伤口。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你的眼神让我安心多了。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "你来找我，一定是有急事吧？图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我很清楚你为什么来找我。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "图书馆里似乎没什么人，我怕你找不到。",
+    "emotion": "担心",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你在这里等我找书。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。你不是来帮忙的。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你不是来帮忙的。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。我想看看你到底是谁，阿禾。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "图书馆里有人吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "图书馆里似乎没什么人，我怕你找不到。",
+    "emotion": "忧虑",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你找什么人？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。我想看看你到底是谁，阿禾。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我需要更多关于这书的信息。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "图书馆里似乎没什么人，阿禾。我想看看你到底是谁，阿禾。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "告诉我，这书是为什么被封印的？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 22,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 22,
+   "dedupe_calls": 6,
+   "dedupe_fixed": 3,
+   "dedupe_gaveup": 6,
+   "reveal_retries": 1,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 8,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+     "unlock": "手里总拿着一盏不点火的灯",
+     "forbid": "袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+     "unlock": "袖口有被纸割出的细密伤口",
+     "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 79.1,
+   "strategy_calls": 22
+  }
+ },
+ "judge": null
+}

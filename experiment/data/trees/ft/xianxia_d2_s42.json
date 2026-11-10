@@ -1,0 +1,105 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "ft",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 13.81,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 1.0,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.6667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.5,
+  "mean_line_len": 17.33,
+  "std_line_len": 0.94,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.556
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 3,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 3,
+  "elapsed": 13.81,
+  "strategy_calls": 3
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在青冥剑宗，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "你说的师门，到底指什么？",
+     "你确定要跟我耗下去？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你说的师门，到底指什么？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "他们让你看到的剑，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你确定要跟我耗下去？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 3,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 3,
+   "elapsed": 13.81,
+   "strategy_calls": 3
+  }
+ },
+ "judge": null
+}

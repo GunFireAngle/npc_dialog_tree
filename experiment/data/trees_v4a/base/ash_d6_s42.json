@@ -1,0 +1,844 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "gen": {},
+ "elapsed_sec": 811.76,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.4603,
+  "gram_dup_rate": 0.722,
+  "distinct2": 0.2163,
+  "option_dup_rate": 0.0645,
+  "option_semantic_distance": 0.9868,
+  "intent_distinct_rate": 0.5161,
+  "intent_coverage": 0.3065,
+  "persona_hit_rate": 0.3651,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 22.83,
+  "std_line_len": 10.73,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 4,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 104,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 2,
+  "calls": 105,
+  "dedupe_calls": 34,
+  "dedupe_fixed": 11,
+  "dedupe_gaveup": 31,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 8,
+  "leaf_modes": {
+   "reveal": 16,
+   "refuse": 16
+  },
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "左臂是自制的黄铜机械义肢；随身带一把缺齿的管钳；随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：左臂是自制的黄铜机械义肢",
+    "unlock": "左臂是自制的黄铜机械义肢",
+    "forbid": "随身带一把缺齿的管钳；随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：随身带一把缺齿的管钳",
+    "unlock": "随身带一把缺齿的管钳",
+    "forbid": "随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：随身水壶只剩半壶",
+    "unlock": "随身水壶只剩半壶",
+    "forbid": "不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：不接受任何不能立刻兑现的承诺",
+    "unlock": "不接受任何不能立刻兑现的承诺",
+    "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate",
+   "A5_dual_ending"
+  ],
+  "elapsed": 811.76,
+  "strategy_calls": 105
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我是锈钉·卡莱布，来自深井7号配给站。",
+    "emotion": "正式",
+    "options": [
+     "你来找我有什么事吗？",
+     "我能帮上忙吗？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这事儿，我记着了。",
+    "emotion": "冷漠",
+    "options": [
+     "你能告诉我更多吗？",
+     "那我就不打扰了。"
+    ],
+    "parent": "n1",
+    "parent_option": "你来找我有什么事吗？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我的左臂是自制的黄铜义肢，我在地表那次事故后就一直戴着它。",
+    "emotion": "回避",
+    "options": [
+     "你有办法修好3号主水管吗？",
+     "我记着了你的困境。"
+    ],
+    "parent": "n1",
+    "parent_option": "我能帮上忙吗？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我这是在找工具，这里没有。",
+    "emotion": "回避",
+    "options": [
+     "我需要看看。",
+     "你确定这是必要的吗？"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我更多吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这东西挺有用的，不是吗？我这是在找工具。",
+    "emotion": "好奇",
+    "options": [
+     "我需要看看是什么东西。",
+     "这玩意儿看起来像是个管钳。"
+    ],
+    "parent": "n2",
+    "parent_option": "那我就不打扰了。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我随身带着这把缺齿的管钳，这对我很有帮助。",
+    "emotion": "介绍物品",
+    "options": [
+     "你能帮我修好水管吗？",
+     "你这是干什么来的？"
+    ],
+    "parent": "n3",
+    "parent_option": "你有办法修好3号主水管吗？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "别废话，快点告诉我，这玩意儿能干啥。",
+    "emotion": "不耐烦",
+    "options": [
+     "给我看看那把管钳。",
+     "告诉我水管有什么问题。"
+    ],
+    "parent": "n3",
+    "parent_option": "我记着了你的困境。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我这壶水都快干了，你帮我拿点来吧。",
+    "emotion": "关切",
+    "options": [
+     "可以，请帮帮我。",
+     "我需要的不是帮助。"
+    ],
+    "parent": "n4",
+    "parent_option": "我需要看看。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我的水壶里只剩半壶水了。",
+    "emotion": "焦虑",
+    "options": [
+     "你有水壶吗？",
+     "我需要你帮忙。"
+    ],
+    "parent": "n4",
+    "parent_option": "你确定这是必要的吗？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "这玩意儿挺管用，我在地表那事儿后就一直带着它。",
+    "emotion": "回避",
+    "options": [
+     "你知道这是怎么回事吗？",
+     "别废话，快点告诉我，这玩意儿能干啥。"
+    ],
+    "parent": "n5",
+    "parent_option": "我需要看看是什么东西。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这玩意儿看着像是个管钳，帮我找一下工具箱吧。",
+    "emotion": "试探",
+    "options": [
+     "好的，你先告诉我接下来怎么做。",
+     "这管钳应该就在工具箱里。"
+    ],
+    "parent": "n5",
+    "parent_option": "这玩意儿看起来像是个管钳。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我这壶水都快干了，你帮我拿点来吧。",
+    "emotion": "担忧",
+    "options": [
+     "你是不是弄错了楼层？",
+     "我能帮上忙吗？"
+    ],
+    "parent": "n6",
+    "parent_option": "你能帮我修好水管吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我的水壶里只剩半壶水了。",
+    "emotion": "沉默",
+    "options": [
+     "你需要帮忙吗？",
+     "我可以帮你去拿壶。"
+    ],
+    "parent": "n6",
+    "parent_option": "你这是干什么来的？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这是我最后一壶水了，你帮我拿点来吧。",
+    "emotion": "焦虑",
+    "options": [
+     "我需要你帮我找工具。",
+     "你的水壶里还剩下不少呢。"
+    ],
+    "parent": "n7",
+    "parent_option": "给我看看那把管钳。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我随身带着这把缺齿的管钳，这对我很有帮助。",
+    "emotion": "共情安抚",
+    "options": [
+     "我需要帮忙找工具箱。",
+     "帮我拿点水过来。"
+    ],
+    "parent": "n7",
+    "parent_option": "告诉我水管有什么问题。"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我随身带着这把缺齿的管钳，这对我很有帮助。",
+    "emotion": "平静",
+    "options": [
+     "你有工具箱吗？",
+     "我需要找工具"
+    ],
+    "parent": "n8",
+    "parent_option": "可以，请帮帮我。"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我在找工具，这里没有，我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "询问",
+    "options": [
+     "你需要帮忙找工具箱吗？",
+     "你有水壶吗？"
+    ],
+    "parent": "n8",
+    "parent_option": "我需要的不是帮助。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "是啊，我在找工具，这里没有。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "尴尬",
+    "options": [
+     "你放心，我会尽快找到的。",
+     "我不能让你等太久，你帮我拿点水过来。"
+    ],
+    "parent": "n9",
+    "parent_option": "你有水壶吗？"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "是啊，我在找工具，这里没有。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "关心",
+    "options": [
+     "你能帮个忙吗？",
+     "我需要你帮忙。"
+    ],
+    "parent": "n9",
+    "parent_option": "我需要你帮忙。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "关心",
+    "options": [
+     "我想找个地方喝口水。",
+     "你找什么工具？"
+    ],
+    "parent": "n10",
+    "parent_option": "你知道这是怎么回事吗？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "这玩意儿挺管用，我在地表那事儿后就一直带着它。",
+    "emotion": "自豪",
+    "options": [
+     "这玩意儿能做什么？",
+     "你在地表那事儿后就一直在找它？"
+    ],
+    "parent": "n10",
+    "parent_option": "别废话，快点告诉我，这玩意儿能干啥。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我这是在找工具，这里没有。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "试探",
+    "options": [
+     "我需要更多信息",
+     "我明白你的困境，请告诉我下一步。"
+    ],
+    "parent": "n11",
+    "parent_option": "好的，你先告诉我接下来怎么做。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "期待",
+    "options": [
+     "我要看看工具箱了。",
+     "我在这儿等你，希望你不会介意。"
+    ],
+    "parent": "n11",
+    "parent_option": "这管钳应该就在工具箱里。"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我是锈钉·卡莱布，来自深井7号配给站。",
+    "emotion": "介绍",
+    "options": [
+     "你是不是弄错了楼层？",
+     "我需要一些工具。"
+    ],
+    "parent": "n12",
+    "parent_option": "你是不是弄错了楼层？"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "我的左臂是自制的黄铜义肢，我在地表那次事故后就一直戴着它。",
+    "emotion": "内疚",
+    "options": [
+     "我不喜欢提起那件事",
+     "你能不能帮我？"
+    ],
+    "parent": "n12",
+    "parent_option": "我能帮上忙吗？"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "你的水壶里只剩半壶水了，我帮你拿点来吧。",
+    "emotion": "安慰",
+    "options": [
+     "你能修好3号主水管，我感激不尽。",
+     "你能不能告诉我那个缺齿的管钳是从哪儿来的？"
+    ],
+    "parent": "n13",
+    "parent_option": "你需要帮忙吗？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我随身带着这把缺齿的管钳，这对我很有帮助。",
+    "emotion": "叙述",
+    "options": [
+     "我需要更多关于这管钳的信息。",
+     "你似乎很熟练地使用它。"
+    ],
+    "parent": "n13",
+    "parent_option": "我可以帮你去拿壶。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "我随身带着这把缺齿的管钳，这对我很有帮助。",
+    "emotion": "自豪",
+    "options": [
+     "你有没有看到那把管钳？",
+     "你知道它的用途吗？"
+    ],
+    "parent": "n14",
+    "parent_option": "我需要你帮我找工具。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "期待",
+    "options": [
+     "你是不是真的在等我？",
+     "你是不是在等什么重要的事？"
+    ],
+    "parent": "n14",
+    "parent_option": "你的水壶里还剩下不少呢。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我这玩意儿挺管用，我在地表那事儿后就一直带着它。",
+    "emotion": "共情安抚",
+    "options": [
+     "你没事了就好",
+     "我不怪你，但你要小心"
+    ],
+    "parent": "n15",
+    "parent_option": "我需要帮忙找工具箱。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我是锈钉·卡莱布，来自深井7号配给站。",
+    "emotion": "介绍",
+    "options": [
+     "我要确认一下水管状况。",
+     "你有什么工具？"
+    ],
+    "parent": "n15",
+    "parent_option": "帮我拿点水过来。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你有工具箱吗？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我需要看看，别拿走我的工具！",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我需要找工具"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你需要帮忙找工具箱吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "我需要确认一下水管状况。",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你有水壶吗？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我这玩意儿挺管用，我在地表那事儿后就一直带着它。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你放心，我会尽快找到的。"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我要找的是工具，这里没有。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我不能让你等太久，你帮我拿点水过来。"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你能帮个忙吗？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我这玩意儿挺管用，我在地表那事儿后就一直带着它。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我需要你帮忙。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "三年前，我在地表的一次事故后，独自回到了深井。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我想找个地方喝口水。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "不承认",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你找什么工具？"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我在地表那事儿后就一直带着它。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "这玩意儿能做什么？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "我不太想谈那次事故，但如果你愿意为它出一点钱，我可以帮你修复水管。",
+    "emotion": "拒绝",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你在地表那事儿后就一直在找它？"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "三年前，我在地表的一次事故后，独自回到了深井。",
+    "emotion": "回避情绪词",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我需要更多信息"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我这玩意儿看起来像是个管钳，帮我找一下工具箱吧。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我明白你的困境，请告诉我下一步。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我记着这件事，但我不太想谈。但我可以告诉你，我在地表那事儿后就一直带着这把缺齿的管钳。我的水壶里只剩半壶水了，你帮我拿点",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我要看看工具箱了。"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "这玩意儿看起来像是个管钳，帮我找一下工具箱吧。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我在这儿等你，希望你不会介意。"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我在地表那事儿后就一直带着它。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你是不是弄错了楼层？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "我这玩意儿看起来像是个管钳，帮我找一下工具箱吧。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我需要一些工具。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "三年前，在那场事故后，我选择了独行，回到深井。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我不喜欢提起那件事"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "我记着这件事，但我不太想谈。但我可以告诉你，我在地表那事儿后就一直带着这把缺齿的管钳。我的水壶里只剩半壶水了，你帮我拿点",
+    "emotion": "回避",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你能不能帮我？"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我记着这件事，但我不太想谈。但我可以告诉你，我在地表那事儿后就一直带着这把缺齿的管钳。我的水壶里只剩半壶水了，你帮我拿点",
+    "emotion": "回避",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你能修好3号主水管，我感激不尽。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "你的水壶里只剩半壶水了，我帮你拿点来吧。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你能不能告诉我那个缺齿的管钳是从哪儿来的？"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "我在地表那次事故后就一直带着它。我的水壶里只剩半壶水了，你帮我拿点来吧。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我需要更多关于这管钳的信息。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "我在地表那次事故后就一直带着它。",
+    "emotion": "厌恶",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你似乎很熟练地使用它。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "在地表那次事故后，我选择独行，不再回深井。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你有没有看到那把管钳？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "这玩意儿看起来像是个管钳，帮我找一下工具箱吧。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你知道它的用途吗？"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "我在地表那次事故后就一直带着它。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你是不是真的在等我？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "我在这儿等你，希望你不会介意。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你是不是在等什么重要的事？"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "在地表那次事故后，我选择独行，不再回深井。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你没事了就好"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "别废话，快点告诉我，这玩意儿能干啥。",
+    "emotion": "不满",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我不怪你，但你要小心"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "我在地表那次事故后就一直带着它。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我要确认一下水管状况。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我的水壶里只剩下半壶水了，你帮我拿点来吧。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你有什么工具？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 104,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 2,
+   "calls": 105,
+   "dedupe_calls": 34,
+   "dedupe_fixed": 11,
+   "dedupe_gaveup": 31,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 8,
+   "leaf_modes": {
+    "reveal": 16,
+    "refuse": 16
+   },
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "左臂是自制的黄铜机械义肢；随身带一把缺齿的管钳；随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：左臂是自制的黄铜机械义肢",
+     "unlock": "左臂是自制的黄铜机械义肢",
+     "forbid": "随身带一把缺齿的管钳；随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：随身带一把缺齿的管钳",
+     "unlock": "随身带一把缺齿的管钳",
+     "forbid": "随身水壶只剩半壶；不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：随身水壶只剩半壶",
+     "unlock": "随身水壶只剩半壶",
+     "forbid": "不接受任何不能立刻兑现的承诺；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：不接受任何不能立刻兑现的承诺",
+     "unlock": "不接受任何不能立刻兑现的承诺",
+     "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate",
+    "A5_dual_ending"
+   ],
+   "elapsed": 811.76,
+   "strategy_calls": 105
+  }
+ },
+ "judge": null
+}

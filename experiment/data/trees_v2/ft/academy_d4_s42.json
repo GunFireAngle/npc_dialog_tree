@@ -1,0 +1,305 @@
+{
+ "world": "academy",
+ "world_name": "星槎学院",
+ "npc": "雾先生",
+ "method": "ft",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 114.69,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.2,
+  "gram_dup_rate": 0.354,
+  "distinct2": 0.5859,
+  "option_dup_rate": 0.2857,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.7143,
+  "persona_hit_rate": 0.3333,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 17.67,
+  "std_line_len": 4.03,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 29,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 29,
+  "dedupe_calls": 6,
+  "dedupe_fixed": 2,
+  "dedupe_gaveup": 5,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+    "unlock": "手里总拿着一盏不点火的灯",
+    "forbid": "袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+    "unlock": "袖口有被纸割出的细密伤口",
+    "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 114.69,
+  "strategy_calls": 29
+ },
+ "tree": {
+  "world_id": "academy",
+  "npc_name": "雾先生",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在星槎学院，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "我现在就要一个答案。",
+     "别绕了，把话说明白。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "先说说，知道的。你身上那些特征的事。",
+    "emotion": "强硬",
+    "options": [
+     "你在替谁遮掩？",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n1",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "行，看在你没拿名字压我的份上。",
+    "emotion": "试探",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "别逼我动手。"
+    ],
+    "parent": "n1",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把书修好，你告诉我实情。",
+     "先不说这个了。"
+    ],
+    "parent": "n2",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把页修好，你告诉我实情。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n2",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [
+     "我现在就要一个答案。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n3",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把廊修好，你告诉我实情。",
+     "别绕了，把话说明白。"
+    ],
+    "parent": "n3",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "那天的咒，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我帮你把书修好，你告诉我实情。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "他们让你看到的魔，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "先不说这个了。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我帮你把页修好，你告诉我实情。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "那天的魔，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "他们让你看到的廊，全是被挑过的。我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我帮你把廊修好，你告诉我实情。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "那天的廊，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "别绕了，把话说明白。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 29,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 29,
+   "dedupe_calls": 6,
+   "dedupe_fixed": 2,
+   "dedupe_gaveup": 5,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+     "unlock": "手里总拿着一盏不点火的灯",
+     "forbid": "袖口有被纸割出的细密伤口；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+     "unlock": "袖口有被纸割出的细密伤口",
+     "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 114.69,
+   "strategy_calls": 29
+  }
+ },
+ "judge": null
+}

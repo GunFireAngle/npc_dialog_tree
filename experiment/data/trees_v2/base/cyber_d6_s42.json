@@ -1,0 +1,833 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 372.84,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.6825,
+  "gram_dup_rate": 0.6946,
+  "distinct2": 0.2586,
+  "option_dup_rate": 0.129,
+  "option_semantic_distance": 0.9831,
+  "intent_distinct_rate": 0.5161,
+  "intent_coverage": 0.5161,
+  "persona_hit_rate": 0.0952,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.25,
+  "mean_line_len": 19.11,
+  "std_line_len": 5.33,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 105,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 105,
+  "dedupe_calls": 34,
+  "dedupe_fixed": 6,
+  "dedupe_gaveup": 37,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右眼是会变焦的二手义眼，对焦时会发出轻响；诊所墙上贴着二十七张未结账的欠条；左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右眼是会变焦的二手义眼，对焦时会发出轻响",
+    "unlock": "右眼是会变焦的二手义眼，对焦时会发出轻响",
+    "forbid": "诊所墙上贴着二十七张未结账的欠条；左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：诊所墙上贴着二十七张未结账的欠条",
+    "unlock": "诊所墙上贴着二十七张未结账的欠条",
+    "forbid": "左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：左手无名指缺一节，装了接口",
+    "unlock": "左手无名指缺一节，装了接口",
+    "forbid": "从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：从不问病人的真名",
+    "unlock": "从不问病人的真名",
+    "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 372.83,
+  "strategy_calls": 105
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没空闲时间谈这些。你到底找谁？",
+    "emotion": "警惕",
+    "options": [
+     "你好像有故事可以听。",
+     "别开玩笑了，你到底是谁？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这眼睛对你来说就像新发现的宝藏。",
+    "emotion": "好奇",
+    "options": [
+     "你能给我看看吗？",
+     "你确定这不是你哥哥的义眼？"
+    ],
+    "parent": "n1",
+    "parent_option": "你好像有故事可以听。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我的右眼像一只会变焦的老猫，对焦时轻轻喵喵叫。",
+    "emotion": "自嘲",
+    "options": [
+     "这声音好像有故事。",
+     "我不明白你的兴趣所在。"
+    ],
+    "parent": "n1",
+    "parent_option": "别开玩笑了，你到底是谁？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [
+     "能不能帮我看看这张？",
+     "这些都跟我不相干。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能给我看看吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [
+     "你能帮我结一下账吗？",
+     "我不介意再聊聊你的故事。"
+    ],
+    "parent": "n2",
+    "parent_option": "你确定这不是你哥哥的义眼？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "诊所的墙上，那些未结账的欠条，像夜空中最亮的星，指引着你的路。",
+    "emotion": "安慰",
+    "options": [
+     "你能找到答案，我相信。",
+     "记住，我们都是自己的救世主。"
+    ],
+    "parent": "n3",
+    "parent_option": "这声音好像有故事。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "别老往墙上贴欠条。",
+    "emotion": "无奈",
+    "options": [
+     "我问过你多少次了？",
+     "这墙上挂了多少张？"
+    ],
+    "parent": "n3",
+    "parent_option": "我不明白你的兴趣所在。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "关心",
+    "options": [
+     "告诉我，你以前在这里做过什么？",
+     "你能帮我看看这张，这是你的机会。"
+    ],
+    "parent": "n4",
+    "parent_option": "能不能帮我看看这张？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "冷漠",
+    "options": [
+     "你能帮我看看这张，这是你的机会。",
+     "记住，我们都是自己的救世主。"
+    ],
+    "parent": "n4",
+    "parent_option": "这些都跟我不相干。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "冷漠",
+    "options": [
+     "告诉我，你以前在这里做过什么？",
+     "我能帮你看看这张，但是要记住，这墙上挂的都是我的"
+    ],
+    "parent": "n5",
+    "parent_option": "你能帮我结一下账吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [
+     "我得问问那张欠条是哪张。",
+     "你知道那张欠条的主人是谁吗？"
+    ],
+    "parent": "n5",
+    "parent_option": "我不介意再聊聊你的故事。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "自嘲",
+    "options": [
+     "你能告诉我为什么左手无名指缺一节吗？",
+     "我能帮你看看这张，但这是你的过去，我不能告诉你更"
+    ],
+    "parent": "n6",
+    "parent_option": "你能找到答案，我相信。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这是我的左手无名指，装了接口。",
+    "emotion": "自嘲",
+    "options": [
+     "这是我的左手无名指，装了接口。",
+     "你知道为什么我左手没有无名指吗？"
+    ],
+    "parent": "n6",
+    "parent_option": "记住，我们都是自己的救世主。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我是白鸦，一位无证义体医生。",
+    "emotion": "自嘲",
+    "options": [
+     "我需要钱。",
+     "我来这里是为了帮助你。"
+    ],
+    "parent": "n7",
+    "parent_option": "我问过你多少次了？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "别老往墙上贴欠条。",
+    "emotion": "轻视",
+    "options": [
+     "我懂了，谢谢。",
+     "继续，我来帮你。"
+    ],
+    "parent": "n7",
+    "parent_option": "这墙上挂了多少张？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "陈述",
+    "options": [
+     "告诉我，你以前在这里做过什么？",
+     "你好像有故事可以听。"
+    ],
+    "parent": "n8",
+    "parent_option": "告诉我，你以前在这里做过什么？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我这里的病人可不常有闲工夫和我说话。",
+    "emotion": "无奈",
+    "options": [
+     "那你倒是告诉我，这是怎么回事？",
+     "我要的是钱，不是故事。"
+    ],
+    "parent": "n8",
+    "parent_option": "你能帮我看看这张，这是你的机会。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇",
+    "options": [
+     "我能帮助你解开这个谜团吗？",
+     "你妹妹的事我也听说过，能告诉我更多吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "你能帮我看看这张，这是你的机会。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "我这里的病人可不常有闲工夫和我说话。",
+    "emotion": "厌烦",
+    "options": [
+     "继续询问病人的具体情况",
+     "提出换一个医生"
+    ],
+    "parent": "n9",
+    "parent_option": "记住，我们都是自己的救世主。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "你的眼睛好特别，像宝石一样闪烁。",
+    "emotion": "好奇",
+    "options": [
+     "你的义眼是不是很贵？",
+     "Idon'thavemuchmoney,butI"
+    ],
+    "parent": "n10",
+    "parent_option": "告诉我，你以前在这里做过什么？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [
+     "你能帮我结一下账吗？",
+     "这墙上挂着二十七张欠条，没人能还清。"
+    ],
+    "parent": "n10",
+    "parent_option": "我能帮你看看这张，但是要记住，这墙上挂的都是我的"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我这里的病人可不常有闲工夫和我说话。",
+    "emotion": "不满",
+    "options": [
+     "告诉我你的故事吧！",
+     "我需要更多细节。"
+    ],
+    "parent": "n11",
+    "parent_option": "我得问问那张欠条是哪张。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [
+     "你能告诉我欠条的主人吗？",
+     "你有没有什么故事能打动我？"
+    ],
+    "parent": "n11",
+    "parent_option": "你知道那张欠条的主人是谁吗？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "陈述",
+    "options": [
+     "你知道我是谁吗？",
+     "为什么没有病人愿意和我说话？"
+    ],
+    "parent": "n12",
+    "parent_option": "你能告诉我为什么左手无名指缺一节吗？"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "鼓励",
+    "options": [
+     "我这里有办法帮你找回记忆，但代价不小。",
+     "我要带你去见我的客户，他们会帮你。"
+    ],
+    "parent": "n12",
+    "parent_option": "我能帮你看看这张，但这是你的过去，我不能告诉你更"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "冷漠",
+    "options": [
+     "我能帮你看看这张，但是要记住，这墙上挂的都是我的",
+     "记住，我们都是自己的救世主。"
+    ],
+    "parent": "n13",
+    "parent_option": "这是我的左手无名指，装了接口。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我，我需要什么？",
+     "你妹妹在哪？"
+    ],
+    "parent": "n13",
+    "parent_option": "你知道为什么我左手没有无名指吗？"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "我这里有张纸，上面写着我妹妹的名字。",
+    "emotion": "好奇",
+    "options": [
+     "查看纸条",
+     "继续询问"
+    ],
+    "parent": "n14",
+    "parent_option": "我需要钱。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "坚定",
+    "options": [
+     "你真的打算这么做？",
+     "为什么非得要我帮忙？"
+    ],
+    "parent": "n14",
+    "parent_option": "我来这里是为了帮助你。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇",
+    "options": [
+     "我妹妹的名字藏在哪里？",
+     "你知道她去哪了吗？"
+    ],
+    "parent": "n15",
+    "parent_option": "我懂了，谢谢。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我没空闲时间谈这些。你到底找谁？",
+    "emotion": "生气",
+    "options": [
+     "告诉我你在做什么？",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n15",
+    "parent_option": "继续，我来帮你。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "告诉我，你以前在这里做过什么？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你好像有故事可以听。"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我这里的病人可不常有闲工夫和我说话。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "那你倒是告诉我，这是怎么回事？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我要的是钱，不是故事。"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我能帮助你解开这个谜团吗？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你妹妹的事我也听说过，能告诉我更多吗？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "记住，我们都是自己的救世主。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "继续询问病人的具体情况"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "提出换一个医生"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你的义眼是不是很贵？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "Idon'thavemuchmoney,butI"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我能帮你结一下账吗？",
+    "emotion": "反问",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你能帮我结一下账吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "这墙上挂着二十七张欠条，没人能还清。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "我知道你的故事很动人，但这个秘密只有你能解开，别忘了承诺我会为你保密。",
+    "emotion": "警示",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "告诉我你的故事吧！"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我需要更多细节。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我这里的病人可不常有闲工夫和我说话。你到底找谁？",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你能告诉我欠条的主人吗？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你有没有什么故事能打动我？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "反问",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你知道我是谁吗？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "反问",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "为什么没有病人愿意和我说话？"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇心",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我这里有办法帮你找回记忆，但代价不小。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "诊所的墙上，那些未结账的欠条，像夜空中最亮的星，指引着你的路。",
+    "emotion": "安慰",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我要带你去见我的客户，他们会帮你。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "记住，我们都是自己的救世主。",
+    "emotion": "鼓励",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我能帮你看看这张，但是要记住，这墙上挂的都是我的"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "这墙上挂着二十七张欠条，没人能还清。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "记住，我们都是自己的救世主。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "我能帮你看看这张，但是要记住，这墙上挂的都是我的过去。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "告诉我，我需要什么？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "诊所的墙上，那些未结账的欠条，像夜空中最亮的星，指引着你的路。",
+    "emotion": "安慰",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你妹妹在哪？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "我是白鸦，一位无证义体医生。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "查看纸条"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "你知道我的右眼会变焦，对焦时会发出轻响。",
+    "emotion": "反问",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "继续询问"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "我的秘密不是你想的那么简单。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你真的打算这么做？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "我这里的秘密能帮你找到妹妹。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "为什么非得要我帮忙？"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我妹妹的名字藏在哪里？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "我这里有个秘密，能帮你解决妹妹的问题。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你知道她去哪了吗？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "别老往墙上贴欠条。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "告诉我你在做什么？"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我没空闲时间谈这些。你到底找谁？",
+    "emotion": "质疑",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我只想知道那天晚上的事。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 105,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 105,
+   "dedupe_calls": 34,
+   "dedupe_fixed": 6,
+   "dedupe_gaveup": 37,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右眼是会变焦的二手义眼，对焦时会发出轻响；诊所墙上贴着二十七张未结账的欠条；左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右眼是会变焦的二手义眼，对焦时会发出轻响",
+     "unlock": "右眼是会变焦的二手义眼，对焦时会发出轻响",
+     "forbid": "诊所墙上贴着二十七张未结账的欠条；左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：诊所墙上贴着二十七张未结账的欠条",
+     "unlock": "诊所墙上贴着二十七张未结账的欠条",
+     "forbid": "左手无名指缺一节，装了接口；从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：左手无名指缺一节，装了接口",
+     "unlock": "左手无名指缺一节，装了接口",
+     "forbid": "从不问病人的真名；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：从不问病人的真名",
+     "unlock": "从不问病人的真名",
+     "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 372.83,
+   "strategy_calls": 105
+  }
+ },
+ "judge": null
+}

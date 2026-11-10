@@ -1,0 +1,155 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 55.52,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0159,
+  "distinct2": 0.9531,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 1.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 24.0,
+  "std_line_len": 7.79,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.556
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 3,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 4,
+  "dedupe_calls": 0,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 1,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 2,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 55.52,
+  "strategy_calls": 4
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我是锈钉·卡莱布，来自深井7号配给站。",
+    "emotion": "正式",
+    "options": [
+     "你来找我有什么事吗？",
+     "我能帮上忙吗？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在地表发生过的事，你们都不想知道。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你来找我有什么事吗？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我那时在地表修复了一台老旧水泵，不小心触怒了地表的领主，他让我离开了。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "我能帮上忙吗？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 3,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 4,
+   "dedupe_calls": 0,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 1,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 2,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 55.52,
+   "strategy_calls": 4
+  }
+ },
+ "judge": null
+}

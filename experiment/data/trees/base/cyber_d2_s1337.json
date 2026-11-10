@@ -1,0 +1,123 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 2,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 13.16,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.3333,
+  "gram_dup_rate": 0.2353,
+  "distinct2": 0.75,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.0,
+  "intent_coverage": 0.0,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 20.0,
+  "std_line_len": 5.66,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 3,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 3,
+  "elapsed": 13.16,
+  "strategy_calls": 3
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "戒备",
+    "options": [
+     "我叫白鸦，是个医生。",
+     "我有证据证明你欠了人情。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "我叫白鸦，是个医生。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "你知道我是怎么来的吗？那时候，我们这里还没有这么多企业。",
+    "emotion": "回忆",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "我有证据证明你欠了人情。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 3,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 3,
+   "elapsed": 13.16,
+   "strategy_calls": 3
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有台词均符合白鸦的设定和说话风格，没有矛盾之处。"
+ }
+}

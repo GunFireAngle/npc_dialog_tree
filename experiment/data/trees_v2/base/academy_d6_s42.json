@@ -1,0 +1,833 @@
+{
+ "world": "academy",
+ "world_name": "星槎学院",
+ "npc": "雾先生",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 375.34,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.5079,
+  "gram_dup_rate": 0.8155,
+  "distinct2": 0.1447,
+  "option_dup_rate": 0.129,
+  "option_semantic_distance": 0.9698,
+  "intent_distinct_rate": 0.4839,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.9206,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.25,
+  "mean_line_len": 24.14,
+  "std_line_len": 12.06,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 1.0,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 104,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 105,
+  "dedupe_calls": 34,
+  "dedupe_fixed": 11,
+  "dedupe_gaveup": 32,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 29,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+    "unlock": "手里总拿着一盏不点火的灯",
+    "forbid": "袖口有被纸割出的细密伤口；翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+    "unlock": "袖口有被纸割出的细密伤口",
+    "forbid": "翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：翻书时从不出声",
+    "unlock": "翻书时从不出声",
+    "forbid": "从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：从不跨出图书馆的门槛",
+    "unlock": "从不跨出图书馆的门槛",
+    "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 375.33,
+  "strategy_calls": 105
+ },
+ "tree": {
+  "world_id": "academy",
+  "npc_name": "雾先生",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来帮忙的。",
+     "你找谁？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这间图书馆似乎比我还熟悉，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "我确实需要帮忙。",
+     "你能帮我找到那本书吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "哦，我是来帮忙的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "图书馆里没人吗？",
+     "你来这里做什么？"
+    ],
+    "parent": "n1",
+    "parent_option": "你找谁？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我这是在借书吗？",
+    "emotion": "好奇",
+    "options": [
+     "借书，你没听清楚吗？",
+     "我需要帮助，不是借书。"
+    ],
+    "parent": "n2",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "袖口上有几道纸划过的痕迹。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我那是谁做的吗？",
+     "为什么袖口会有这些划痕？"
+    ],
+    "parent": "n2",
+    "parent_option": "你能帮我找到那本书吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "平静",
+    "options": [
+     "那本书里记载了你失踪的细节。",
+     "我需要知道更多关于袖口划痕的信息。"
+    ],
+    "parent": "n3",
+    "parent_option": "图书馆里没人吗？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [
+     "图书馆里总是这么安静，阿禾。",
+     "你来这里做什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "你来这里做什么？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我这间图书馆似乎比你还熟悉，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "你知道我在找什么吗？",
+     "这本书里有什么秘密？"
+    ],
+    "parent": "n4",
+    "parent_option": "借书，你没听清楚吗？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我确实需要帮助，不是借书。",
+    "emotion": "惊讶",
+    "options": [
+     "你能帮我想想办法。",
+     "告诉我，你找的是什么？"
+    ],
+    "parent": "n4",
+    "parent_option": "我需要帮助，不是借书。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "图书馆里的灰尘似乎比外面还要多。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我，这本书是怎么来的吗？",
+     "为什么这里总是这么乱？"
+    ],
+    "parent": "n5",
+    "parent_option": "你能告诉我那是谁做的吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我这间图书馆似乎比你还熟悉，阿禾。",
+    "emotion": "温和",
+    "options": [
+     "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+     "你知道我在找什么吗？"
+    ],
+    "parent": "n5",
+    "parent_option": "为什么袖口会有这些划痕？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "冷漠",
+    "options": [
+     "不知道你找谁，图书馆里没什么人。",
+     "请告诉我，你在找什么？"
+    ],
+    "parent": "n6",
+    "parent_option": "那本书里记载了你失踪的细节。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "提醒",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n6",
+    "parent_option": "我需要知道更多关于袖口划痕的信息。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "图书馆里似乎没什么人，阿禾。",
+    "emotion": "平静",
+    "options": [
+     "你在找谁？",
+     "你来这里做什么？"
+    ],
+    "parent": "n7",
+    "parent_option": "图书馆里总是这么安静，阿禾。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "平静",
+    "options": [
+     "我来这里是为了查资料。",
+     "我只是路过，想看看你。"
+    ],
+    "parent": "n7",
+    "parent_option": "你来这里做什么？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "这间图书馆似乎比我还熟悉，阿禾。",
+    "emotion": "好奇",
+    "options": [
+     "你知道我在找什么吗？",
+     "我在这里等你。"
+    ],
+    "parent": "n8",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我在这儿等你，阿禾。",
+    "emotion": "期待",
+    "options": [
+     "告诉我这本书的密码。",
+     "你确定你想在这里等我？"
+    ],
+    "parent": "n8",
+    "parent_option": "这本书里有什么秘密？"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "我确实需要帮助，不是借书。",
+    "emotion": "疑问",
+    "options": [
+     "我能帮你什么？",
+     "告诉我这本书的密码。"
+    ],
+    "parent": "n9",
+    "parent_option": "你能帮我想想办法。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "这间图书馆似乎比我还熟悉，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [
+     "你确定这是‘神秘之书’吗？",
+     "我想知道更多关于这本书的信息。"
+    ],
+    "parent": "n9",
+    "parent_option": "告诉我，你找的是什么？"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "我在这儿等你，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "期待",
+    "options": [
+     "我能在旁边等你，阿禾。",
+     "你是不是忘了，我在禁书区？"
+    ],
+    "parent": "n10",
+    "parent_option": "你能告诉我，这本书是怎么来的吗？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "图书馆里的灰尘似乎比外面还要多。",
+    "emotion": "疑惑",
+    "options": [
+     "为什么这里总是这么乱？",
+     "这里的环境很安静。"
+    ],
+    "parent": "n10",
+    "parent_option": "为什么这里总是这么乱？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我这间图书馆似乎比你还熟悉，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [
+     "我能帮你找到它，你先告诉我它的位置。",
+     "我想知道这个书是怎么改写的。"
+    ],
+    "parent": "n11",
+    "parent_option": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我在这儿等你，阿禾。",
+    "emotion": "期待",
+    "options": [
+     "那本书在哪儿？",
+     "你到底想干嘛？"
+    ],
+    "parent": "n11",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "图书馆里总是这么安静，阿禾。我想找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "共情安抚",
+    "options": [
+     "你确定这是真的吗？",
+     "我能帮你找到它。"
+    ],
+    "parent": "n12",
+    "parent_option": "不知道你找谁，图书馆里没什么人。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "图书馆里似乎没什么人，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [
+     "你确定这是那本书？",
+     "你是在找‘神秘之书’？"
+    ],
+    "parent": "n12",
+    "parent_option": "请告诉我，你在找什么？"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "图书馆里似乎没什么人，阿禾。你看起来有些不寻常。",
+    "emotion": "好奇",
+    "options": [
+     "图书馆里没人吗？",
+     "你知道我在找什么书吗？"
+    ],
+    "parent": "n13",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "图书馆里总是这么安静，阿禾。我想找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我书的内容。",
+     "我需要这本书的内容。"
+    ],
+    "parent": "n13",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "图书馆里总是这么安静，阿禾。你看起来有些不寻常。",
+    "emotion": "好奇",
+    "options": [
+     "我在这里看书，想找到一本有关魔法的书。",
+     "图书馆里的灰尘似乎比外面还要多。"
+    ],
+    "parent": "n14",
+    "parent_option": "你在找谁？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "忧虑",
+    "options": [
+     "图书馆里似乎没什么人，阿禾。",
+     "图书馆里总是这么安静，阿禾。"
+    ],
+    "parent": "n14",
+    "parent_option": "你来这里做什么？"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "询问",
+    "options": [
+     "你真的需要这本书吗？",
+     "我在找的书应该在这里，不过你可能是对的地方。"
+    ],
+    "parent": "n15",
+    "parent_option": "我来这里是为了查资料。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "图书馆里总是这么安静，阿禾。我想找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "共情安抚",
+    "options": [
+     "告诉我你在图书馆干嘛？",
+     "你确定这是你要找的书？"
+    ],
+    "parent": "n15",
+    "parent_option": "我只是路过，想看看你。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我知道你在找什么，阿禾。这间图书馆似乎比你还熟悉。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我这里有些东西需要你帮我处理一下。",
+    "emotion": "紧张",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我在这里等你。"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我知道你在找什么，阿禾。这间图书馆似乎比你还熟悉。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "告诉我这本书的密码。"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "我在这儿等你，阿禾。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你确定你想在这里等我？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我能帮你什么？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我在这里等你，阿禾。图书馆里似乎没什么人。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "告诉我这本书的密码。"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "这间图书馆似乎比我还熟悉，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你确定这是‘神秘之书’吗？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我知道你在找什么，阿禾。这间图书馆似乎比你还熟悉。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我想知道更多关于这本书的信息。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "图书馆里灰尘比外面还多，我在这儿等你，阿禾。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我能在旁边等你，阿禾。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你是不是忘了，我在禁书区？"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我的名字已被那本书吃掉，所以现在无法离开图书馆。",
+    "emotion": "震惊",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "为什么这里总是这么乱？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "图书馆里的灰尘似乎比外面还要多，我在这儿等你，阿禾。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "这里的环境很安静。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。不过我似乎在哪儿见过你。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我能帮你找到它，你先告诉我它的位置。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我在这儿等你，阿禾。图书馆里似乎没什么人。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我想知道这个书是怎么改写的。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我在这儿等你，阿禾。图书馆里似乎没什么人。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "那本书在哪儿？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我在这儿等你，阿禾。图书馆里似乎没什么人。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你到底想干嘛？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我知道你在找什么，阿禾。这间图书馆似乎比你还熟悉。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你确定这是真的吗？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "你知道这本书的秘密吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我能帮你找到它。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "图书馆里似乎没什么人，阿禾。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你确定这是那本书？"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你是在找‘神秘之书’？"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "图书馆里似乎没什么人，阿禾。你要找的书可能就在这里，上面写着‘神秘之书’。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "图书馆里没人吗？"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "图书馆里似乎没什么人，阿禾。你要找的书可能就在这里，上面写着‘神秘之书’。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你知道我在找什么书吗？"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "我知道你在找什么，阿禾。这间图书馆似乎比你还熟悉。我要找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "告诉我书的内容。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。我在这儿等你。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我需要这本书的内容。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。我在这儿等你。你要找的书可能就在这里，上面写着‘神秘之书’。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我在这里看书，想找到一本有关魔法的书。"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "图书馆里似乎没什么人，阿禾。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "图书馆里的灰尘似乎比外面还要多。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "图书馆里似乎没什么人，阿禾。我在这儿等你。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "图书馆里似乎没什么人，阿禾。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "我在这儿等你，阿禾。图书馆里似乎没什么人。",
+    "emotion": "温和",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "图书馆里总是这么安静，阿禾。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你真的需要这本书吗？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我在找的书应该在这里，不过你可能是对的地方。"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "告诉我你在图书馆干嘛？"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "图书馆里总是这么安静，阿禾。我想找的书就在第三排靠窗的位置，上面写着‘神秘之书’。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你确定这是你要找的书？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 104,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 105,
+   "dedupe_calls": 34,
+   "dedupe_fixed": 11,
+   "dedupe_gaveup": 32,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 29,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "手里总拿着一盏不点火的灯；袖口有被纸割出的细密伤口；翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：手里总拿着一盏不点火的灯",
+     "unlock": "手里总拿着一盏不点火的灯",
+     "forbid": "袖口有被纸割出的细密伤口；翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：袖口有被纸割出的细密伤口",
+     "unlock": "袖口有被纸割出的细密伤口",
+     "forbid": "翻书时从不出声；从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：翻书时从不出声",
+     "unlock": "翻书时从不出声",
+     "forbid": "从不跨出图书馆的门槛；他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：从不跨出图书馆的门槛",
+     "unlock": "从不跨出图书馆的门槛",
+     "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 375.33,
+   "strategy_calls": 105
+  }
+ },
+ "judge": null
+}

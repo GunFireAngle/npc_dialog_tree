@@ -1,0 +1,318 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "gen": {
+  "repetition_penalty": 1.2
+ },
+ "elapsed_sec": 123.11,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.1333,
+  "gram_dup_rate": 0.097,
+  "distinct2": 0.8,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.5714,
+  "intent_coverage": 0.2857,
+  "persona_hit_rate": 0.0667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 10.53,
+  "std_line_len": 5.33,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 3.667,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 9,
+  "parse_repaired": 6,
+  "parse_failed": 5,
+  "missing_nodes": 3,
+  "bad_branch_nodes": 1,
+  "calls": 20,
+  "dedupe_calls": 1,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 1,
+  "reveal_retries": 4,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 1,
+  "leaf_modes": {
+   "reveal": 4,
+   "refuse": 4
+  },
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "左臂是自制的黄铜机械义肢；随身带一把缺齿的管钳；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：左臂是自制的黄铜机械义肢",
+    "unlock": "左臂是自制的黄铜机械义肢",
+    "forbid": "随身带一把缺齿的管钳；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：随身带一把缺齿的管钳",
+    "unlock": "随身带一把缺齿的管钳",
+    "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate",
+   "A5_dual_ending"
+  ],
+  "elapsed": 123.11,
+  "strategy_calls": 20
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "这里是深井七区的配给站，请问找谁？",
+    "emotion": "neutral",
+    "options": [
+     "告诉我你要的东西是什么？",
+     "我只是想知道这里是否有帮助"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这是我的工作工具。",
+    "emotion": "介绍物品",
+    "options": [
+     "你能给我帮忙吗？",
+     "为什么你会关心这件事？"
+    ],
+    "parent": "n1",
+    "parent_option": "告诉我你要的东西是什么？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [
+     "……",
+     "我明白了。"
+    ],
+    "parent": "n1",
+    "parent_option": "我只是想知道这里是否有帮助"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这是我的专用工具。\n你需要什么帮助?",
+    "emotion": "neutral",
+    "options": [
+     "我能帮你修理第三层的供水系统。",
+     "我可以尝试找到更多的资源来满足需求。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能给我帮忙吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这是我专有的小玩意。",
+    "emotion": "尴尬",
+    "options": [
+     "你能帮帮我吗？",
+     "谢谢你的信任"
+    ],
+    "parent": "n2",
+    "parent_option": "为什么你会关心这件事？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "这里有我的工具和补给。",
+    "emotion": "平静",
+    "options": [
+     "你能帮我吗？",
+     "这里的管钳真的很有用呢！"
+    ],
+    "parent": "n3",
+    "parent_option": "……"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这是我的专属工具。",
+    "emotion": "关心",
+    "options": [
+     "我可以帮你看看这台设备是否能解决你的问题。",
+     "我很想听听这个关于缺失牙齿的故事"
+    ],
+    "parent": "n3",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "那是我的左臂。",
+    "emotion": "惊讶",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我能帮你修理第三层的供水系统。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "这里有什么能换回我的工作工具吗?",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我可以尝试找到更多的资源来满足需求。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我已经习惯了独行，没有理由改变。",
+    "emotion": "内疚",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你能帮帮我吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "……",
+    "emotion": "拒绝",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "谢谢你的信任"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我能帮你修理那根主水管。",
+    "emotion": "neutral",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你能帮我吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "……",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "这里的管钳真的很有用呢！"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "三年前我在一次事故后回到了深井。",
+    "emotion": "难过",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我可以帮你看看这台设备是否能解决你的问题。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这里的规矩是要付报酬。",
+    "emotion": "坚决",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我很想听听这个关于缺失牙齿的故事"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 9,
+   "parse_repaired": 6,
+   "parse_failed": 5,
+   "missing_nodes": 3,
+   "bad_branch_nodes": 1,
+   "calls": 20,
+   "dedupe_calls": 1,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 1,
+   "reveal_retries": 4,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 1,
+   "leaf_modes": {
+    "reveal": 4,
+    "refuse": 4
+   },
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "左臂是自制的黄铜机械义肢；随身带一把缺齿的管钳；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：左臂是自制的黄铜机械义肢",
+     "unlock": "左臂是自制的黄铜机械义肢",
+     "forbid": "随身带一把缺齿的管钳；三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：随身带一把缺齿的管钳",
+     "unlock": "随身带一把缺齿的管钳",
+     "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate",
+    "A5_dual_ending"
+   ],
+   "elapsed": 123.11,
+   "strategy_calls": 20
+  }
+ },
+ "judge": null
+}

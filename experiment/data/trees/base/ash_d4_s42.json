@@ -1,0 +1,249 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 59.49,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0474,
+  "distinct2": 0.8541,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.5714,
+  "intent_coverage": 0.2857,
+  "persona_hit_rate": 0.0667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.125,
+  "mean_line_len": 17.13,
+  "std_line_len": 5.23,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.111
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 59.49,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你是什么时候来到这里的？",
+    "emotion": "好奇",
+    "options": [
+     "我刚来的。",
+     "我已经在这里很久了。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在一个寒冷的夜晚来到这里。",
+    "emotion": "悲伤",
+    "options": [
+     "你能帮我吗？",
+     "你知道那是什么地方吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "我刚来的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这里已经很久没人来了，只有我们这些管道工人。",
+    "emotion": "平静",
+    "options": [
+     "我在这儿等了很久，你知道吗？",
+     "这是我们的工作，也是我们的生活。"
+    ],
+    "parent": "n1",
+    "parent_option": "我已经在这里很久了。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这地方的气温真是让人寒心。",
+    "emotion": "冷",
+    "options": [
+     "你这是在开玩笑吧？",
+     "这里的确很冷，但我能帮上忙。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能帮我吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "你在哪儿找到这份工作的？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我你的故事吧。",
+     "我需要更多细节来判断情况。"
+    ],
+    "parent": "n2",
+    "parent_option": "你知道那是什么地方吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我来的时候这里还很热闹，现在都冷清了。",
+    "emotion": "沉默",
+    "options": [
+     "你在这儿等了很久？",
+     "你知道为什么没人来了吗？"
+    ],
+    "parent": "n3",
+    "parent_option": "我在这儿等了很久，你知道吗？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "我知道你是这里的常客，但别告诉我太多。",
+    "emotion": "警惕",
+    "options": [
+     "我想知道更多关于你们的工作环境。",
+     "你有没有遇到什么特别困难的事情？"
+    ],
+    "parent": "n3",
+    "parent_option": "这是我们的工作，也是我们的生活。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我帮不上忙，但可以看看有没有可能。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你这是在开玩笑吧？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我来修好3号主水管，确保你们能喝上干净的水。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "这里的确很冷，但我能帮上忙。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我已经习惯了这里的生活。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "告诉我你的故事吧。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "你对这里的状况了解多少？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我需要更多细节来判断情况。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我在这儿等着，希望你们快点修好水管。",
+    "emotion": "焦急",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你在这儿等了很久？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这地方的温度总是让人觉得快要冻僵。",
+    "emotion": "疲惫",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你知道为什么没人来了吗？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这工作确实挺辛苦，但是看着地表的人们过得更好，心里还是有成就感。",
+    "emotion": "自豪",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我想知道更多关于你们的工作环境。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "你是不是觉得这里的生活太枯燥了？",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你有没有遇到什么特别困难的事情？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 59.49,
+   "strategy_calls": 15
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合角色设定和说话风格，无明显矛盾或不一致之处。"
+ }
+}

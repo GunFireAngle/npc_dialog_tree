@@ -1,0 +1,249 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 4,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 65.35,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.6,
+  "gram_dup_rate": 0.5687,
+  "distinct2": 0.3774,
+  "option_dup_rate": 0.2143,
+  "option_semantic_distance": 0.9913,
+  "intent_distinct_rate": 0.5714,
+  "intent_coverage": 0.4286,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 16.13,
+  "std_line_len": 2.33,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 65.35,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "戒备",
+    "options": [
+     "我叫白鸦，是个医生。",
+     "我有证据证明你欠了人情。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "试探",
+    "options": [
+     "我是来帮忙的。",
+     "你是谁啊？"
+    ],
+    "parent": "n1",
+    "parent_option": "我叫白鸦，是个医生。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我有证据证明你欠了人情。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n1",
+    "parent_option": "我有证据证明你欠了人情。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "困惑",
+    "options": [
+     "我叫白鸦，是个医生。",
+     "我是来帮忙的。"
+    ],
+    "parent": "n2",
+    "parent_option": "我是来帮忙的。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "警惕",
+    "options": [
+     "告诉我你找我的事。",
+     "你看起来挺有趣。"
+    ],
+    "parent": "n2",
+    "parent_option": "你是谁啊？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我这些秘密吧！",
+     "你能帮我什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "我有证据证明你欠了人情。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "你知道我在等什么吗？",
+    "emotion": "困惑",
+    "options": [
+     "告诉我你为什么在这里，我或许能帮你解决一些事情。",
+     "我要的是真相，别告诉我虚伪的理由。"
+    ],
+    "parent": "n3",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我叫白鸦，是个医生。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我是来帮忙的。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我知道你缺人手，能帮我解决这件事吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "告诉我你找我的事。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你看起来挺有趣。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "告诉我这些秘密吧！"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "你身上有股不寻常的气息，能告诉我你在找谁吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你能帮我什么？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "告诉我你为什么在这里，我或许能帮你解决一些事情。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我要的是真相，别告诉我虚伪的理由。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 65.35,
+   "strategy_calls": 15
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有台词均符合白鸦的说话风格和设定，没有矛盾之处。"
+ }
+}

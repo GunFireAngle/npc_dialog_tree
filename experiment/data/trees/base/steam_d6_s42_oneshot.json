@@ -1,0 +1,137 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "oneshot",
+ "elapsed_sec": 23.29,
+ "metrics": {
+  "n_nodes": 6,
+  "expected_nodes": 63,
+  "completeness": 0.0952,
+  "structure_valid": 0,
+  "bad_branch_nodes": 4,
+  "empty_line_nodes": 0,
+  "depth_achieved": 3,
+  "depth_ok": 0,
+  "n_leaf": 0,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 0.962,
+  "option_dup_rate": 0.1667,
+  "option_semantic_distance": 0.8571,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.75,
+  "persona_hit_rate": 0.1667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 15.17,
+  "std_line_len": 3.98,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 1,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 1,
+  "elapsed": 23.28
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "oneshot",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "欢迎来到云顶蒸汽城，我是薇拉·索恩。",
+    "emotion": "尊敬且自信",
+    "options": [
+     "请告诉我今天是哪一天？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我的职责是确保时间准确，全城都依赖我。",
+    "emotion": "专业",
+    "options": [
+     "您有什么问题吗？"
+    ],
+    "parent": "n1",
+    "parent_option": null
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "您想要知道今天是哪一天吗？",
+    "emotion": "友好",
+    "options": [
+     "告诉我今天是哪一天？",
+     "您能告诉我今天的天气吗？"
+    ],
+    "parent": "n1",
+    "parent_option": null
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "抱歉，我的时间总是准确的，不需要调整。",
+    "emotion": "坚持",
+    "options": [],
+    "parent": "n2",
+    "parent_option": null
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "您希望了解什么？",
+    "emotion": "询问",
+    "options": [
+     "告诉我今天是哪一天？",
+     "您能帮我找到钟表慢四秒的原因吗？"
+    ],
+    "parent": "n2",
+    "parent_option": null
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "对不起，我不能透露任何信息。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n3",
+    "parent_option": null
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 1,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 1,
+   "elapsed": 23.28
+  }
+ },
+ "judge": null
+}

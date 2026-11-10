@@ -1,0 +1,249 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "ft",
+ "depth": 4,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 65.4,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.4667,
+  "gram_dup_rate": 0.4783,
+  "distinct2": 0.4808,
+  "option_dup_rate": 0.2857,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5714,
+  "persona_hit_rate": 0.2,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.375,
+  "mean_line_len": 16.33,
+  "std_line_len": 1.07,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 5,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 65.4,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在霓虹深渊，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "你在替谁遮掩？",
+     "别逼我动手。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这事不急着要答案，我慢慢说。",
+    "emotion": "回避",
+    "options": [
+     "你说的记忆，到底指什么？",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n1",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "试探",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n1",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我拿记忆换你一句话。",
+     "别逼我动手。"
+    ],
+    "parent": "n2",
+    "parent_option": "你说的记忆，到底指什么？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "你确定要跟我耗下去？"
+    ],
+    "parent": "n2",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n3",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "你确定要跟我耗下去？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我拿记忆换你一句话。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "行，看在你没拿记忆压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "行，看在你没拿黑市压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "后来呢？那天发生了什么？"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 65.4,
+   "strategy_calls": 15
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有台词均符合白鸦的说话方式和人设，没有与设定事实矛盾，也没有出现其他世界观专属的专名或现代词。"
+ }
+}

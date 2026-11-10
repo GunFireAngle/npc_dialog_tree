@@ -1,0 +1,833 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 489.61,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.6667,
+  "gram_dup_rate": 0.6978,
+  "distinct2": 0.2455,
+  "option_dup_rate": 0.0968,
+  "option_semantic_distance": 0.9828,
+  "intent_distinct_rate": 0.6452,
+  "intent_coverage": 0.5323,
+  "persona_hit_rate": 0.5714,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.75,
+  "mean_line_len": 19.84,
+  "std_line_len": 7.46,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 101,
+  "parse_repaired": 1,
+  "parse_failed": 3,
+  "missing_nodes": 2,
+  "bad_branch_nodes": 1,
+  "calls": 105,
+  "dedupe_calls": 34,
+  "dedupe_fixed": 5,
+  "dedupe_gaveup": 45,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 2,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右袖是空的，从不解释；腰上挂着一柄没有剑鞘的断剑；每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右袖是空的，从不解释",
+    "unlock": "右袖是空的，从不解释",
+    "forbid": "腰上挂着一柄没有剑鞘的断剑；每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：腰上挂着一柄没有剑鞘的断剑",
+    "unlock": "腰上挂着一柄没有剑鞘的断剑",
+    "forbid": "每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：每年只在开冢那天下山一次",
+    "unlock": "每年只在开冢那天下山一次",
+    "forbid": "从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：从不踏入宗门正殿",
+    "unlock": "从不踏入宗门正殿",
+    "forbid": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 489.6,
+  "strategy_calls": 105
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些熟悉，不过我不太记得了。",
+    "emotion": "试探",
+    "options": [
+     "你是沈无咎吧？",
+     "你怎么知道我？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我知道你为什么来这里，沈前辈。",
+    "emotion": "疑惑",
+    "options": [
+     "我确实知道些东西，可以帮你。",
+     "我是沈无咎，这个你可能已经知道了。"
+    ],
+    "parent": "n1",
+    "parent_option": "你是沈无咎吧？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "无奈",
+    "options": [
+     "我只知道你是谁，其他什么都不知道。",
+     "你既然来了，不妨告诉我更多。"
+    ],
+    "parent": "n1",
+    "parent_option": "你怎么知道我？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我知道你来这里是为了看看有没有什么秘密。",
+    "emotion": "试探",
+    "options": [
+     "我确实有，但你猜不到。",
+     "其实没什么特别的秘密。"
+    ],
+    "parent": "n2",
+    "parent_option": "我确实知道些东西，可以帮你。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [
+     "你能告诉我这把剑是怎么来的吗？",
+     "你为什么要一直守在这里？"
+    ],
+    "parent": "n2",
+    "parent_option": "我是沈无咎，这个你可能已经知道了。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "平静",
+    "options": [
+     "这把剑有什么特别的地方吗？",
+     "你对这里的剑冢了解多少？"
+    ],
+    "parent": "n3",
+    "parent_option": "我只知道你是谁，其他什么都不知道。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "你既然来了，不妨告诉我更多。",
+    "emotion": "强硬",
+    "options": [
+     "告诉我，我来就是为了找到真相。",
+     "你到底想干什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "你既然来了，不妨告诉我更多。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "你看起来有些熟悉，不过我不太记得了。",
+    "emotion": "好奇",
+    "options": [
+     "这是我的剑，见证了无数个夜晚的守夜。",
+     "我知道你来这里是为了看看有没有什么秘密。"
+    ],
+    "parent": "n4",
+    "parent_option": "我确实有，但你猜不到。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我确实是沈无咎，你来找我应该不是无缘无故。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我这里为什么每年只开一次冢吗？",
+     "我听说这里有很多秘密，你感兴趣吗？"
+    ],
+    "parent": "n4",
+    "parent_option": "其实没什么特别的秘密。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [
+     "能告诉我这把剑是怎么来的吗？",
+     "你来这有什么目的？"
+    ],
+    "parent": "n5",
+    "parent_option": "你能告诉我这把剑是怎么来的吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我每年都只在开冢那天下山一次，这是规矩。",
+    "emotion": "平静",
+    "options": [
+     "我确实知道规矩。",
+     "你是想了解规矩吗？"
+    ],
+    "parent": "n5",
+    "parent_option": "你为什么要一直守在这里？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢开启，都会有人见到剑意。",
+    "emotion": "叙述",
+    "options": [
+     "这把剑有什么特别的地方吗？",
+     "你觉得这里的安全措施怎么样？"
+    ],
+    "parent": "n6",
+    "parent_option": "这把剑有什么特别的地方吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "平静",
+    "options": [
+     "你确定？",
+     "你能给我解释一下吗？"
+    ],
+    "parent": "n6",
+    "parent_option": "你对这里的剑冢了解多少？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "坚定",
+    "options": [
+     "我每年都只在开冢那天下山一次，这是规矩。",
+     "你看起来有些熟悉，不过我不太记得了。"
+    ],
+    "parent": "n7",
+    "parent_option": "告诉我，我来就是为了找到真相。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我每年都只在开冢那天下山一次，这是规矩。",
+    "emotion": "无奈",
+    "options": [
+     "告诉我更多关于规矩的事。",
+     "你为什么要坚持这个规矩？"
+    ],
+    "parent": "n7",
+    "parent_option": "你到底想干什么？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我每年都只在开冢那天下山一次，这是规矩。",
+    "emotion": "陈述",
+    "options": [
+     "告诉我更多关于规矩的事",
+     "你确定？"
+    ],
+    "parent": "n8",
+    "parent_option": "这是我的剑，见证了无数个夜晚的守夜。"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我确实知道些东西，可以帮你。",
+    "emotion": "期待",
+    "options": [
+     "能告诉我更多吗？",
+     "你来这里是有什么要求？"
+    ],
+    "parent": "n8",
+    "parent_option": "我知道你来这里是为了看看有没有什么秘密。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "我确实知道些东西，可以帮你。",
+    "emotion": "安慰",
+    "options": [
+     "能告诉我更多关于规矩的事。",
+     "你确定？"
+    ],
+    "parent": "n9",
+    "parent_option": "你能告诉我这里为什么每年只开一次冢吗？"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "你知道这里的所有秘密吗？",
+    "emotion": "好奇",
+    "options": [
+     "不知道，但我能帮你看一看。",
+     "你能给我一些线索吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "我听说这里有很多秘密，你感兴趣吗？"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "这里的规矩是，只有真正有资格的弟子才能进入。",
+    "emotion": "平静",
+    "options": [
+     "我可以帮你证明我有资格。",
+     "你来试试看，我相信你会成功。"
+    ],
+    "parent": "n10",
+    "parent_option": "能告诉我这把剑是怎么来的吗？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [
+     "你知道这把剑是什么来历吗？",
+     "我能告诉你我的过去吗？"
+    ],
+    "parent": "n10",
+    "parent_option": "你来这有什么目的？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我知道你为什么来这里，沈前辈。",
+    "emotion": "共情安抚",
+    "options": [
+     "我需要更多信息",
+     "告诉我原因"
+    ],
+    "parent": "n11",
+    "parent_option": "我确实知道规矩。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我确实知道些东西，可以帮你。",
+    "emotion": "共情安抚",
+    "options": [
+     "你可以告诉我，这里的所有秘密吗？",
+     "我愿意听你讲，但要保证安全。"
+    ],
+    "parent": "n11",
+    "parent_option": "你是想了解规矩吗？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢开启，都会有人见到剑意。",
+    "emotion": "叙述",
+    "options": [
+     "这把剑有什么特别的地方吗？",
+     "这把剑的历史很悠久。"
+    ],
+    "parent": "n12",
+    "parent_option": "这把剑有什么特别的地方吗？"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "这里的规矩是，只有真正有资格的弟子才能进入。",
+    "emotion": "陈述",
+    "options": [
+     "我知道规矩，但你不应该违背。",
+     "别这么说，规矩是规则，不是命令。"
+    ],
+    "parent": "n12",
+    "parent_option": "你觉得这里的安全措施怎么样？"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [
+     "我知道你为什么来这里，沈前辈。",
+     "你确定？"
+    ],
+    "parent": "n13",
+    "parent_option": "你确定？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我确实知道些东西，可以帮你。",
+    "emotion": "鼓励",
+    "options": [
+     "能告诉我是什么吗？",
+     "你确定不是在说谎？"
+    ],
+    "parent": "n13",
+    "parent_option": "你能给我解释一下吗？"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "留白",
+    "options": [
+     "告诉我，这里有多少个夜晚？",
+     "我明白了，这里就是我的地盘。"
+    ],
+    "parent": "n14",
+    "parent_option": "我每年都只在开冢那天下山一次，这是规矩。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我确实知道些东西，可以帮你。",
+    "emotion": "试探",
+    "options": [
+     "你知道这里的所有秘密吗？",
+     "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢"
+    ],
+    "parent": "n14",
+    "parent_option": "你看起来有些熟悉，不过我不太记得了。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我每年只在开冢那天下山一次，这是规矩。",
+    "emotion": "陈述",
+    "options": [
+     "我想告诉你的是规矩背后隐藏的真相。",
+     "别跟我提那些规矩，我要知道更多。"
+    ],
+    "parent": "n15",
+    "parent_option": "告诉我更多关于规矩的事。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我每年都只在开冢那天下山一次，这是规矩。",
+    "emotion": "陈述",
+    "options": [
+     "我明白了规矩很重要。",
+     "规矩真的束缚了吗？"
+    ],
+    "parent": "n15",
+    "parent_option": "你为什么要坚持这个规矩？"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我知道你来这里是为了看看有没有什么秘密",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "告诉我更多关于规矩的事"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢开启，都会有人见到剑意。",
+    "emotion": "叙述",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你确定？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我当年入冢时被剑意反噬，废了一身修为，宗门对外称我‘自愿守山’。",
+    "emotion": "悲伤",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "能告诉我更多吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "我知道你来这里是为了看看有没有什么秘密。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你来这里是有什么要求？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我当年入冢时被剑意反噬，废了一身修为，宗门对外称我‘自愿守山’。",
+    "emotion": "讲述",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "能告诉我更多关于规矩的事。"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我确实是沈无咎，你来找我应该不是无缘无故。你确定这是真的吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你确定？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "我知道你来这里是为了看看有没有什么秘密，沈前辈。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "不知道，但我能帮你看一看。"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "其实没什么特别的秘密，只是这里的规矩让我有些困扰。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你能给我一些线索吗？"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我可以帮你证明我有资格。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你来试试看，我相信你会成功。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你知道这把剑是什么来历吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我能告诉你我的过去吗？"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "我确实知道规矩，沈前辈。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我需要更多信息"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我知道你为什么来这里，沈前辈。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "告诉我原因"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我确实知道规矩，沈前辈。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你可以告诉我，这里的所有秘密吗？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我确实知道规矩，沈前辈。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我愿意听你讲，但要保证安全。"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "这把剑是我祖父留给我的，剑意的力量让我领悟了许多关于剑道的知识，也教会了我很多为人处世的道理。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "这把剑有什么特别的地方吗？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "这把剑见证了无数个夜晚的守夜。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "这把剑的历史很悠久。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢开启，都会有人见到剑意。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我知道规矩，但你不应该违背。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "这把剑见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "别这么说，规矩是规则，不是命令。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我知道你为什么来这里，沈前辈。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你确定？"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "回忆",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "能告诉我是什么吗？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你确定不是在说谎？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "叙述",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "告诉我，这里有多少个夜晚？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "neutral",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我明白了，这里就是我的地盘。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "这里的剑冢，见证了我的一生。",
+    "emotion": "感慨",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你知道这里的所有秘密吗？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "这把剑是祖传的，剑鞘上刻着剑冢的故事，每一次剑冢"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "这里是我的剑，它见证了无数个夜晚的守夜。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我想告诉你的是规矩背后隐藏的真相。"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "我每年都只在开冢那天下山一次，这是规矩。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "别跟我提那些规矩，我要知道更多。"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "你看起来有些熟悉，不过我不太记得了。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我明白了规矩很重要。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "这把剑见证了无数个夜晚的守夜。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "规矩真的束缚了吗？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 101,
+   "parse_repaired": 1,
+   "parse_failed": 3,
+   "missing_nodes": 2,
+   "bad_branch_nodes": 1,
+   "calls": 105,
+   "dedupe_calls": 34,
+   "dedupe_fixed": 5,
+   "dedupe_gaveup": 45,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 2,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右袖是空的，从不解释；腰上挂着一柄没有剑鞘的断剑；每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右袖是空的，从不解释",
+     "unlock": "右袖是空的，从不解释",
+     "forbid": "腰上挂着一柄没有剑鞘的断剑；每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：腰上挂着一柄没有剑鞘的断剑",
+     "unlock": "腰上挂着一柄没有剑鞘的断剑",
+     "forbid": "每年只在开冢那天下山一次；从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：每年只在开冢那天下山一次",
+     "unlock": "每年只在开冢那天下山一次",
+     "forbid": "从不踏入宗门正殿；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：从不踏入宗门正殿",
+     "unlock": "从不踏入宗门正殿",
+     "forbid": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 489.6,
+   "strategy_calls": 105
+  }
+ },
+ "judge": null
+}

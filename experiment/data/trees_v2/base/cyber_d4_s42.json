@@ -1,0 +1,305 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 93.24,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.3333,
+  "gram_dup_rate": 0.582,
+  "distinct2": 0.3905,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.9911,
+  "intent_distinct_rate": 0.4286,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.4667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.625,
+  "mean_line_len": 27.93,
+  "std_line_len": 11.95,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 2,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 26,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 26,
+  "dedupe_calls": 6,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 6,
+  "reveal_retries": 5,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 4,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右眼是会变焦的二手义眼，对焦时会发出轻响；诊所墙上贴着二十七张未结账的欠条；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右眼是会变焦的二手义眼，对焦时会发出轻响",
+    "unlock": "右眼是会变焦的二手义眼，对焦时会发出轻响",
+    "forbid": "诊所墙上贴着二十七张未结账的欠条；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：诊所墙上贴着二十七张未结账的欠条",
+    "unlock": "诊所墙上贴着二十七张未结账的欠条",
+    "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 93.24,
+  "strategy_calls": 26
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没空闲时间谈这些。你到底找谁？",
+    "emotion": "警惕",
+    "options": [
+     "你好像有故事可以听。",
+     "别开玩笑了，你到底是谁？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这眼睛对你来说就像新发现的宝藏。",
+    "emotion": "好奇",
+    "options": [
+     "你能给我看看吗？",
+     "你确定这不是你哥哥的义眼？"
+    ],
+    "parent": "n1",
+    "parent_option": "你好像有故事可以听。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我的右眼像一只会变焦的老猫，对焦时轻轻喵喵叫。",
+    "emotion": "自嘲",
+    "options": [
+     "这声音好像有故事。",
+     "我不明白你的兴趣所在。"
+    ],
+    "parent": "n1",
+    "parent_option": "别开玩笑了，你到底是谁？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这墙上挂着二十七张欠条，没人来还过。",
+    "emotion": "平静",
+    "options": [
+     "有没有别的线索？",
+     "你是不是想借点钱？"
+    ],
+    "parent": "n2",
+    "parent_option": "你能给我看看吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这墙上挂着二十七张欠条，没人来还过。",
+    "emotion": "无奈",
+    "options": [
+     "你真的没钱？",
+     "你知道是谁欠下的吗？"
+    ],
+    "parent": "n2",
+    "parent_option": "你确定这不是你哥哥的义眼？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "诊所墙上挂了二十七张未结账的欠条，有人愿意来还。",
+    "emotion": "好奇",
+    "options": [
+     "我能帮你看看是谁欠的吗？",
+     "你找上门来，是不是也有什么急事？"
+    ],
+    "parent": "n3",
+    "parent_option": "这声音好像有故事。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "诊所墙上挂了二十七张未结账的欠条，有人愿意来还。",
+    "emotion": "无奈",
+    "options": [
+     "你能告诉我这是为什么吗？",
+     "这跟我有什么关系？"
+    ],
+    "parent": "n3",
+    "parent_option": "我不明白你的兴趣所在。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我从没想过会有天我会失去自己的记忆，不过现在看来，或许正是命运让我找回它吧。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "有没有别的线索？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人来还过。你要是真心帮忙，我可以把其中一张给你看。",
+    "emotion": "neutral",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你是不是想借点钱？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人来还过。我从没想过会有天我会失去自己的记忆，不过现在看来，或许正是命运让我找回它吧。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你真的没钱？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这墙上挂着二十七张欠条，没人来还过。你要是真心帮忙，我可以把其中一张给你看。",
+    "emotion": "探求",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你知道是谁欠下的吗？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我从没想过会有天我会失去自己的记忆，不过现在看来，或许正是命运让我找回它吧。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我能帮你看看是谁欠的吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这墙上挂着二十七张未结账的欠条，有人愿意来还。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你找上门来，是不是也有什么急事？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我能帮你，但代价不小。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你能告诉我这是为什么吗？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我从没想过会有天我会失去自己的记忆，不过现在看来，或许正是命运让我找回它吧。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "这跟我有什么关系？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 26,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 26,
+   "dedupe_calls": 6,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 6,
+   "reveal_retries": 5,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 4,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右眼是会变焦的二手义眼，对焦时会发出轻响；诊所墙上贴着二十七张未结账的欠条；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右眼是会变焦的二手义眼，对焦时会发出轻响",
+     "unlock": "右眼是会变焦的二手义眼，对焦时会发出轻响",
+     "forbid": "诊所墙上贴着二十七张未结账的欠条；妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：诊所墙上贴着二十七张未结账的欠条",
+     "unlock": "诊所墙上贴着二十七张未结账的欠条",
+     "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 93.24,
+   "strategy_calls": 26
+  }
+ },
+ "judge": null
+}

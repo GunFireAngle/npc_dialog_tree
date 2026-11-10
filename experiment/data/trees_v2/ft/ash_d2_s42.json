@@ -1,0 +1,155 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "ft",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 21.8,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.2281,
+  "distinct2": 0.7586,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 1.0,
+  "persona_hit_rate": 1.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 22.67,
+  "std_line_len": 7.32,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "composite": 5.0
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 4,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 4,
+  "dedupe_calls": 0,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 1,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+   },
+   {
+    "level": 2,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 21.8,
+  "strategy_calls": 4
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在灰烬纪年，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "开个条件，我出得起。",
+     "你在替谁遮掩？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "他们让你看到的地表，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "他们让你看到的地表，全是被挑过的。我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你在替谁遮掩？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 4,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 4,
+   "dedupe_calls": 0,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 1,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。"
+    },
+    {
+     "level": 2,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "三年前他在地表的一次维修事故中放弃了同伴，独自回到深井。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 21.8,
+   "strategy_calls": 4
+  }
+ },
+ "judge": null
+}

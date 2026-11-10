@@ -1,0 +1,833 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 558.03,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.5556,
+  "gram_dup_rate": 0.7151,
+  "distinct2": 0.2294,
+  "option_dup_rate": 0.129,
+  "option_semantic_distance": 0.9534,
+  "intent_distinct_rate": 0.3226,
+  "intent_coverage": 0.1935,
+  "persona_hit_rate": 0.3968,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.5,
+  "mean_line_len": 21.3,
+  "std_line_len": 4.42,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 1.0,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 101,
+  "parse_repaired": 2,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 103,
+  "dedupe_calls": 32,
+  "dedupe_fixed": 4,
+  "dedupe_gaveup": 41,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右手食指有一道被齿轮割出的旧疤；腰间挂着十七把不同规格的校时钥匙；说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右手食指有一道被齿轮割出的旧疤",
+    "unlock": "右手食指有一道被齿轮割出的旧疤",
+    "forbid": "腰间挂着十七把不同规格的校时钥匙；说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：腰间挂着十七把不同规格的校时钥匙",
+    "unlock": "腰间挂着十七把不同规格的校时钥匙",
+    "forbid": "说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：说话时会不自觉用指节敲击金属三次",
+    "unlock": "说话时会不自觉用指节敲击金属三次",
+    "forbid": "从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：从不摘下单片眼镜",
+    "unlock": "从不摘下单片眼镜",
+    "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 558.03,
+  "strategy_calls": 103
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "警惕",
+    "options": [
+     "你是谁？",
+     "我是来帮忙的。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这事儿，我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。",
+    "emotion": "推测",
+    "options": [
+     "我明白你的担心，但行会长老从未做过这种事。",
+     "也许是他想要借此提高行会声望"
+    ],
+    "parent": "n1",
+    "parent_option": "你是谁？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我对这事儿有些了解，不过还是小心些好。",
+    "emotion": "警惕",
+    "options": [
+     "告诉我详情吧，我愿意帮你。",
+     "别告诉我，我不喜欢这种被利用的感觉。"
+    ],
+    "parent": "n1",
+    "parent_option": "我是来帮忙的。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "可能是我的钥匙惹的祸，但行会长老不会做这种事。",
+    "emotion": "共情安抚",
+    "options": [
+     "行会长老一定是故意的，这样就能让我们有更多时间。",
+     "行会长老可能只是不小心。"
+    ],
+    "parent": "n2",
+    "parent_option": "我明白你的担心，但行会长老从未做过这种事。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这事儿，我没做过。行会长老总是有点儿独断。",
+    "emotion": "疑惑",
+    "options": [
+     "你确定吗？",
+     "行会长老真的这么厉害？"
+    ],
+    "parent": "n2",
+    "parent_option": "也许是他想要借此提高行会声望"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你是来帮我解决这个难题吗？",
+    "emotion": "询问",
+    "options": [
+     "是的，请问有什么我能帮忙的？",
+     "我只是想知道真相。"
+    ],
+    "parent": "n3",
+    "parent_option": "告诉我详情吧，我愿意帮你。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "我对你很失望，阿禾。",
+    "emotion": "愤怒",
+    "options": [
+     "我明白了，谢谢。",
+     "你对我很失望？！"
+    ],
+    "parent": "n3",
+    "parent_option": "别告诉我，我不喜欢这种被利用的感觉。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "疑惑",
+    "options": [
+     "行会长老就是这么狡猾的，难怪我们总怀疑他。",
+     "行会长老的手段真是让人捉摸不透。"
+    ],
+    "parent": "n4",
+    "parent_option": "行会长老一定是故意的，这样就能让我们有更多时间。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "可能是我的钥匙出故障了，但这事儿不应该由我来负责。",
+    "emotion": "遗憾",
+    "options": [
+     "行会长老肯定是故意的。",
+     "我怀疑是其他原因。"
+    ],
+    "parent": "n4",
+    "parent_option": "行会长老可能只是不小心。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "可能是我的钥匙出了问题，但行会长老不会这么干。",
+    "emotion": "共情安抚",
+    "options": [
+     "我怀疑行会长老，但他太独断了。",
+     "你有证据吗？"
+    ],
+    "parent": "n5",
+    "parent_option": "你确定吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这事儿，可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "坦诚",
+    "options": [
+     "可能是我不小心碰坏了它",
+     "行会长老肯定有他的想法"
+    ],
+    "parent": "n5",
+    "parent_option": "行会长老真的这么厉害？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "试探",
+    "options": [
+     "是的，请问有什么我能帮忙的？",
+     "我是来协助你解决问题的。"
+    ],
+    "parent": "n6",
+    "parent_option": "是的，请问有什么我能帮忙的？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "担忧",
+    "options": [
+     "你能告诉我他是怎么钻空子的吗？",
+     "行会长老总喜欢玩这个把戏。"
+    ],
+    "parent": "n6",
+    "parent_option": "我只是想知道真相。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。",
+    "emotion": "推测",
+    "options": [
+     "可能是我的钥匙出了问题，但我不会这么干。",
+     "我知道你缺人手，所以才会这么做。"
+    ],
+    "parent": "n7",
+    "parent_option": "我明白了，谢谢。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "疑惑",
+    "options": [
+     "他可能是个聪明的家伙，只是想玩玩花样。",
+     "我需要更多证据来确定他的动机。"
+    ],
+    "parent": "n7",
+    "parent_option": "你对我很失望？！"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "好奇",
+    "options": [
+     "你怀疑我？",
+     "我来这里是为了确认"
+    ],
+    "parent": "n8",
+    "parent_option": "行会长老就是这么狡猾的，难怪我们总怀疑他。"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "担忧",
+    "options": [
+     "你能帮我看看我的钥匙吗？",
+     "行会长老的手段真是让人捉摸不透"
+    ],
+    "parent": "n8",
+    "parent_option": "行会长老的手段真是让人捉摸不透。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "这事儿，可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "无奈",
+    "options": [
+     "我能帮你看看我的钥匙吗？",
+     "行会长老可能只是不小心。"
+    ],
+    "parent": "n9",
+    "parent_option": "行会长老肯定是故意的。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "这事儿，可能是我的钥匙出故障了，但这事儿不应该由我来负责。",
+    "emotion": "无奈",
+    "options": [
+     "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+     "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。"
+    ],
+    "parent": "n9",
+    "parent_option": "我怀疑是其他原因。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "这事儿，可能不是他做的，但行会长老总爱想歪主意。",
+    "emotion": "推测",
+    "options": [
+     "他可能在想些好听的理由来掩盖真相。",
+     "他平时不太注意这些细节，今天肯定有急事。"
+    ],
+    "parent": "n10",
+    "parent_option": "我怀疑行会长老，但他太独断了。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "你确定吗？",
+    "emotion": "疑惑",
+    "options": [
+     "是的，我不怕。",
+     "我还需要证据。"
+    ],
+    "parent": "n10",
+    "parent_option": "你有证据吗？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "也许是我记错了时间，我总是很粗心。",
+    "emotion": "尴尬",
+    "options": [
+     "可能是因为我的粗心，但这事儿不该由我来负责。",
+     "他总是喜欢在背后捣乱，但这次肯定有误会。"
+    ],
+    "parent": "n11",
+    "parent_option": "可能是我不小心碰坏了它"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "这事儿，可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "无奈",
+    "options": [
+     "你知道吗，我的钥匙经常出故障。",
+     "我怀疑是那个行会长老在背后捣鬼。"
+    ],
+    "parent": "n11",
+    "parent_option": "行会长老肯定有他的想法"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "试探",
+    "options": [
+     "你知道怎么回事吗？",
+     "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。"
+    ],
+    "parent": "n12",
+    "parent_option": "是的，请问有什么我能帮忙的？"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "猜测",
+    "options": [
+     "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。",
+     "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。"
+    ],
+    "parent": "n12",
+    "parent_option": "我是来协助你解决问题的。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "我能告诉你他是怎么钻空子的，但我不想泄露太多。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我他是怎么钻空子的吗？",
+     "我需要更多细节。"
+    ],
+    "parent": "n13",
+    "parent_option": "你能告诉我他是怎么钻空子的吗？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "怀疑",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n13",
+    "parent_option": "行会长老总喜欢玩这个把戏。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "可能我的钥匙出了问题，但我不会这么干。",
+    "emotion": "共情安抚",
+    "options": [
+     "我明白，谢谢你。",
+     "你放心，我会处理好。"
+    ],
+    "parent": "n14",
+    "parent_option": "可能是我的钥匙出了问题，但我不会这么干。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子。",
+    "emotion": "失望",
+    "options": [
+     "我明白你的担忧，但别忘了我们都在为这座城市努力。",
+     "也许我可以帮你解决这个问题。"
+    ],
+    "parent": "n14",
+    "parent_option": "我知道你缺人手，所以才会这么做。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我他是怎么钻空子的吗？",
+     "我怀疑那是因为他喜欢在背后捅刀子。"
+    ],
+    "parent": "n15",
+    "parent_option": "他可能是个聪明的家伙，只是想玩玩花样。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "担忧",
+    "options": [
+     "你认为行会长老有能力做这种事情？",
+     "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子"
+    ],
+    "parent": "n15",
+    "parent_option": "我需要更多证据来确定他的动机。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "猜测",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你怀疑我？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "推测",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我来这里是为了确认"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子。",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你能帮我看看我的钥匙吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "行会长老的手段真是让人捉摸不透"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我能帮你看看我的钥匙吗？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "这个钟表行会长老总是喜欢在背后捅刀子，但我不能就这么轻易相信。",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "行会长老可能只是不小心。"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "可能是我的钥匙出了问题，但这事儿不该由我来承担责任。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "这个钟表行会长老总是喜欢在背后捅刀子，但我不能就这么轻易相信。",
+    "emotion": "担忧",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "这事儿，我没做过。行会长老总是有点儿独断。",
+    "emotion": "厌恶",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "他可能在想些好听的理由来掩盖真相。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "他平时不太注意这些细节，今天肯定有急事。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "他平时不太注意这些细节，今天肯定有急事。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "这事儿，我没做过。行会长老总是有点儿独断。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "是的，我不怕。"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我还需要证据。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "这事儿，可能是因为我的粗心，但这事儿不该由我来负责。",
+    "emotion": "矛盾",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "可能是因为我的粗心，但这事儿不该由我来负责。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子。",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "他总是喜欢在背后捣乱，但这次肯定有误会。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我知道你的钥匙有问题，但我不能这么随便解决。",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你知道吗，我的钥匙经常出故障。"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "这事儿，可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "矛盾",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我怀疑是那个行会长老在背后捣鬼。"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "是的，请问有什么我能帮忙的？",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你知道怎么回事吗？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "我知道你缺人手，但请别这么鲁莽。",
+    "emotion": "警告",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "你知道我为什么一直对这个钟表行会长老保持警惕吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你能告诉我他是怎么钻空子的吗？"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "我是来确认一下你是否是前来捣乱的人。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我需要更多细节。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "是的，请问有什么我能帮忙的？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "可能是我的钥匙出了问题，但我不会这么干。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我明白，谢谢你。"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "可能我的钥匙出了问题，但我不会这么干。",
+    "emotion": "犹豫",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你放心，我会处理好。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "是的，请问有什么我能帮忙的？",
+    "emotion": "礼貌",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我明白你的担忧，但别忘了我们都在为这座城市努力。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老弄的，他总爱在背后捅刀子。",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "也许我可以帮你解决这个问题。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你能告诉我他是怎么钻空子的吗？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "惊讶",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我怀疑那是因为他喜欢在背后捅刀子。"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "厌恶",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你认为行会长老有能力做这种事情？"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我猜是那个钟表行会长老搞的鬼，他总爱钻空子。",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我猜是那个钟表行会长老搞的鬼，他总爱在背后捅刀子"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 101,
+   "parse_repaired": 2,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 103,
+   "dedupe_calls": 32,
+   "dedupe_fixed": 4,
+   "dedupe_gaveup": 41,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右手食指有一道被齿轮割出的旧疤；腰间挂着十七把不同规格的校时钥匙；说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右手食指有一道被齿轮割出的旧疤",
+     "unlock": "右手食指有一道被齿轮割出的旧疤",
+     "forbid": "腰间挂着十七把不同规格的校时钥匙；说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：腰间挂着十七把不同规格的校时钥匙",
+     "unlock": "腰间挂着十七把不同规格的校时钥匙",
+     "forbid": "说话时会不自觉用指节敲击金属三次；从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：说话时会不自觉用指节敲击金属三次",
+     "unlock": "说话时会不自觉用指节敲击金属三次",
+     "forbid": "从不摘下单片眼镜；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：从不摘下单片眼镜",
+     "unlock": "从不摘下单片眼镜",
+     "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 558.03,
+   "strategy_calls": 103
+  }
+ },
+ "judge": null
+}

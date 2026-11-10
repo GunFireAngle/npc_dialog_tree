@@ -1,0 +1,249 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 73.97,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.4667,
+  "gram_dup_rate": 0.5885,
+  "distinct2": 0.3667,
+  "option_dup_rate": 0.1429,
+  "option_semantic_distance": 0.9581,
+  "intent_distinct_rate": 0.5714,
+  "intent_coverage": 0.9286,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 16.07,
+  "std_line_len": 3.7,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 3.667,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 14,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 73.97,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "愤怒",
+    "options": [
+     "告诉我，你为什么来这里？",
+     "别废话，直接说你想干什么"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "别急，我这里有个小秘密可以帮你。",
+    "emotion": "狡黠",
+    "options": [
+     "告诉我，你为什么来这里？",
+     "你到底想怎么样？"
+    ],
+    "parent": "n1",
+    "parent_option": "告诉我，你为什么来这里？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "没时间，你别来烦我。",
+    "emotion": "生气",
+    "options": [
+     "我有事找你，",
+     "告诉我你在干什么"
+    ],
+    "parent": "n1",
+    "parent_option": "别废话，直接说你想干什么"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "生气",
+    "options": [
+     "告诉我，你来这里的目的是什么？",
+     "别急，我这里有个小秘密可以帮你。"
+    ],
+    "parent": "n2",
+    "parent_option": "告诉我，你为什么来这里？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "生气",
+    "options": [
+     "告诉我，你为什么来这里？",
+     "别急，我这里有好消息。"
+    ],
+    "parent": "n2",
+    "parent_option": "你到底想怎么样？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我这里有份情报，或许能帮到你。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我是什么情报！",
+     "你觉得这个情报有什么用？"
+    ],
+    "parent": "n3",
+    "parent_option": "我有事找你，"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "没时间，你别来烦我。",
+    "emotion": "厌烦",
+    "options": [
+     "别急，我这里有秘密能帮到你。",
+     "你知道我在做什么吗？"
+    ],
+    "parent": "n3",
+    "parent_option": "告诉我你在干什么"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我来找你，是因为我想知道那天晚上发生了什么。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "告诉我，你来这里的目的是什么？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "别急，我这里有份情报，或许能帮到你。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "别急，我这里有个小秘密可以帮你。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "告诉我，你为什么来这里？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我这里有好消息。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "别急，我这里有好消息。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "厌烦",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "告诉我是什么情报！"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "厌倦",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你觉得这个情报有什么用？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我这里有份情报，或许能帮你解开谜团。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "别急，我这里有秘密能帮到你。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "别急，我这里有个小秘密可以帮你。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你知道我在做什么吗？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 14,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 73.97,
+   "strategy_calls": 15
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合角色设定和说话风格，没有矛盾或重复。"
+ }
+}

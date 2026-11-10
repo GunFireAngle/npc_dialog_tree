@@ -1,0 +1,86 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "oneshot",
+ "elapsed_sec": 36.87,
+ "metrics": {
+  "n_nodes": 1,
+  "expected_nodes": 63,
+  "completeness": 0.0159,
+  "structure_valid": 0,
+  "bad_branch_nodes": 1,
+  "empty_line_nodes": 0,
+  "depth_achieved": 1,
+  "depth_ok": 0,
+  "n_leaf": 0,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 1.0,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.8667,
+  "intent_distinct_rate": 0.0,
+  "intent_coverage": 0.0,
+  "persona_hit_rate": 1.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 16.0,
+  "std_line_len": 0.0,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 2.333,
+  "composite": 4.111
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 1,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 1,
+  "elapsed": 36.87
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "oneshot",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "深井7号配给站，管道工程师锈钉。",
+    "emotion": "严肃",
+    "options": [
+     "我需要检查3号主水管。",
+     "我需要找到新的水源。",
+     "我必须确保配给站的供应稳定。"
+    ],
+    "parent": null,
+    "parent_option": null
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 1,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 1,
+   "elapsed": 36.87
+  }
+ },
+ "judge": null
+}

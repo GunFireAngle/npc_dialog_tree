@@ -1,0 +1,231 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "base",
+ "depth": 4,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 74.78,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.4,
+  "gram_dup_rate": 0.3914,
+  "distinct2": 0.5607,
+  "option_dup_rate": 0.0714,
+  "option_semantic_distance": 0.9905,
+  "intent_distinct_rate": 0.2857,
+  "intent_coverage": 0.1429,
+  "persona_hit_rate": 0.4667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 22.93,
+  "std_line_len": 6.08,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 1.0,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 14,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 74.78,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我叫沈无咎，守山三十年。你找我有啥事？",
+    "emotion": "询问",
+    "options": [
+     "我想知道当年的弟子是谁？",
+     "我是来找你商量事儿的。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？",
+    "emotion": "疑问",
+    "options": [
+     "我在山里找不到它，",
+     "它应该在剑冢的某个角落"
+    ],
+    "parent": "n1",
+    "parent_option": "我想知道当年的弟子是谁？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我听闻你曾经是内门首席，对剑意颇有研究。既然你来了，不妨分享一下心得。",
+    "emotion": "试探",
+    "options": [
+     "我确实研究过，但不认为它适合普通弟子。",
+     "你愿意教我吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "我是来找你商量事儿的。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我叫沈无咎，守山三十年。",
+    "emotion": "试探",
+    "options": [
+     "我叫沈无咎，守山三十年。你找我有啥事？",
+     "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？"
+    ],
+    "parent": "n2",
+    "parent_option": "我在山里找不到它，"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？",
+    "emotion": "好奇",
+    "options": [
+     "它应该在剑冢的某个角落",
+     "我在里面找到了一些奇怪的符文"
+    ],
+    "parent": "n2",
+    "parent_option": "它应该在剑冢的某个角落"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我对那柄断剑的记忆有些模糊，不过它似乎与那次反噬有关。",
+    "emotion": "疑惑",
+    "options": [
+     "你确定吗？",
+     "那是我的宝物，你想拿就拿吧。"
+    ],
+    "parent": "n3",
+    "parent_option": "我确实研究过，但不认为它适合普通弟子。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "我叫沈无咎，守山三十年。你找我有啥事？",
+    "emotion": "询问",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n3",
+    "parent_option": "你愿意教我吗？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我叫沈无咎，守山三十年。你找我有啥事？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "剑冢外的风似乎更冷了，你知道那柄断剑在哪儿吗？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我知道你想知道是谁。那个弟子，他总是带着一种不自然的神色，仿佛心事重重。",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "它应该在剑冢的某个角落"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我知道你在寻找答案，但这里并非寻求真理的最佳地方。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我在里面找到了一些奇怪的符文"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "那柄断剑似乎与剑冢的怨气相连，它能揭示许多秘密。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你确定吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "你究竟找我有何贵干？别跟我装可怜。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "那是我的宝物，你想拿就拿吧。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "我叫沈无咎，守山三十年。你找我有啥事？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我叫沈无咎，守山三十年。你找我有啥事？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我只想知道那天晚上的事。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 14,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 74.78,
+   "strategy_calls": 15
+  }
+ },
+ "judge": null
+}

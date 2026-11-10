@@ -1,0 +1,231 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "ft",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 98.57,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.4,
+  "gram_dup_rate": 0.3981,
+  "distinct2": 0.5425,
+  "option_dup_rate": 0.2857,
+  "option_semantic_distance": 0.9911,
+  "intent_distinct_rate": 0.8571,
+  "intent_coverage": 0.8571,
+  "persona_hit_rate": 0.2,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 16.53,
+  "std_line_len": 1.36,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 5,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 3.667,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 98.57,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在云顶蒸汽城，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "开个条件，我出得起。",
+     "算了，就当我没问。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我把话挑明：我要一个能立刻兑现的回报。",
+    "emotion": "交易",
+    "options": [
+     "我拿上行换你一句话。",
+     "你说的气压，到底指什么？"
+    ],
+    "parent": "n1",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "我拿云换你一句话。"
+    ],
+    "parent": "n1",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n2",
+    "parent_option": "我拿上行换你一句话。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "你为什么会知道这些？",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n2",
+    "parent_option": "你说的气压，到底指什么？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我把话说一半，剩下的你自己想。",
+    "emotion": "松动",
+    "options": [
+     "我不急着要答案，你慢慢说。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n3",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把上头办成，你告诉我实情。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "我拿云换你一句话。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "行，看在你没拿云压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我帮你把上头办成，你告诉我实情。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "行，看在你没拿气压压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "后来呢？那天发生了什么？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 98.57,
+   "strategy_calls": 15
+  }
+ },
+ "judge": null
+}

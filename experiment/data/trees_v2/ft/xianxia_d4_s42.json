@@ -1,0 +1,305 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "ft",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 117.13,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.4,
+  "gram_dup_rate": 0.3771,
+  "distinct2": 0.5781,
+  "option_dup_rate": 0.2857,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.7143,
+  "persona_hit_rate": 0.4667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 18.2,
+  "std_line_len": 6.73,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 28,
+  "parse_repaired": 0,
+  "parse_failed": 1,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 29,
+  "dedupe_calls": 6,
+  "dedupe_fixed": 3,
+  "dedupe_gaveup": 6,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右袖是空的，从不解释；腰上挂着一柄没有剑鞘的断剑；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右袖是空的，从不解释",
+    "unlock": "右袖是空的，从不解释",
+    "forbid": "腰上挂着一柄没有剑鞘的断剑；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：腰上挂着一柄没有剑鞘的断剑",
+    "unlock": "腰上挂着一柄没有剑鞘的断剑",
+    "forbid": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 117.13,
+  "strategy_calls": 29
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在青冥剑宗，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "别绕了，把话说明白。",
+     "你为什么会知道这些？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你手上那道印子，跟青冥有关吧。",
+    "emotion": "试探",
+    "options": [
+     "你在替谁遮掩？",
+     "你确定要跟我耗下去？"
+    ],
+    "parent": "n1",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "行，看在你没拿山门压我的份上。",
+    "emotion": "回避",
+    "options": [
+     "别逼我动手。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n1",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把山门修好，你告诉我实情。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把山门修好，你告诉我实情。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你手上那道印子，跟青冥有关吧。",
+    "emotion": "松动",
+    "options": [
+     "你说的冢，到底指什么？",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n3",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把山门修好，你告诉我实情。",
+     "你要是不说，我只能上报了。"
+    ],
+    "parent": "n3",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "他们让你看到的崖，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我帮你把山门修好，你告诉我实情。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "他们让你看到的崖，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我帮你把山门修好，你告诉我实情。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "他们让你看到的崖，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你说的冢，到底指什么？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "他们让你看到的崖，全是被挑过的。我给你一个选择，要么把你的心事告诉我，要么把崖处理好。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我帮你把山门修好，你告诉我实情。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "那天的师门，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你要是不说，我只能上报了。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 28,
+   "parse_repaired": 0,
+   "parse_failed": 1,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 29,
+   "dedupe_calls": 6,
+   "dedupe_fixed": 3,
+   "dedupe_gaveup": 6,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右袖是空的，从不解释；腰上挂着一柄没有剑鞘的断剑；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右袖是空的，从不解释",
+     "unlock": "右袖是空的，从不解释",
+     "forbid": "腰上挂着一柄没有剑鞘的断剑；他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：腰上挂着一柄没有剑鞘的断剑",
+     "unlock": "腰上挂着一柄没有剑鞘的断剑",
+     "forbid": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他当年入冢时被剑意反噬，废了一身修为，宗门对外称他“自愿守山”。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 117.13,
+   "strategy_calls": 29
+  }
+ },
+ "judge": null
+}

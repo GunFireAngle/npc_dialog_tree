@@ -1,0 +1,735 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 6,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 282.8,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.6667,
+  "gram_dup_rate": 0.7608,
+  "distinct2": 0.1991,
+  "option_dup_rate": 0.3548,
+  "option_semantic_distance": 0.9449,
+  "intent_distinct_rate": 0.4194,
+  "intent_coverage": 0.4194,
+  "persona_hit_rate": 0.5714,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.5,
+  "mean_line_len": 21.17,
+  "std_line_len": 5.29,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 1.0,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 1,
+  "bad_branch_nodes": 1,
+  "calls": 63,
+  "elapsed": 282.8,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我是什么事情。",
+     "你为什么问这么详细？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n1",
+    "parent_option": "告诉我是什么事情。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "冷漠",
+    "options": [
+     "告诉我，我会保密。",
+     "我不感兴趣，快点离开。"
+    ],
+    "parent": "n1",
+    "parent_option": "你为什么问这么详细？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "冷漠",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n2",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "你知道什么？",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n2",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "愤怒",
+    "options": [
+     "这是我的秘密，你无权问。",
+     "让我告诉你，否则我会让所有人都知道。"
+    ],
+    "parent": "n3",
+    "parent_option": "告诉我，我会保密。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这钟楼里有秘密，不是每个人都能揭开的。",
+    "emotion": "回避",
+    "options": [
+     "你知道这些秘密是什么吗？",
+     "行会长老怎么说？"
+    ],
+    "parent": "n3",
+    "parent_option": "我不感兴趣，快点离开。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [
+     "……",
+     "我明白了。"
+    ],
+    "parent": "n4",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n4",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n5",
+    "parent_option": "你知道什么？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n5",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "冷漠",
+    "options": [
+     "告诉我，我会保密。",
+     "这是我的秘密，你无权问。"
+    ],
+    "parent": "n6",
+    "parent_option": "这是我的秘密，你无权问。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "严肃",
+    "options": [
+     "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+     "告诉我，我会保密。"
+    ],
+    "parent": "n6",
+    "parent_option": "让我告诉你，否则我会让所有人都知道。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这钟楼里的秘密，与普通人的生活无关。",
+    "emotion": "回避",
+    "options": [
+     "告诉我，这是什么秘密？",
+     "我猜，可能跟我的工作有关。"
+    ],
+    "parent": "n7",
+    "parent_option": "你知道这些秘密是什么吗？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "你知道钟楼的秘密吗？",
+     "你来找我是为了帮助我吗？"
+    ],
+    "parent": "n7",
+    "parent_option": "行会长老怎么说？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "我知道你在找什么，跟我来吧。",
+     "你到底找我有什么事？"
+    ],
+    "parent": "n8",
+    "parent_option": "……"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "我明白了。",
+     "你到底想说什么？"
+    ],
+    "parent": "n8",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "或许是个小问题，但我觉得值得查探。",
+    "emotion": "好奇",
+    "options": [
+     "我来帮忙，看看有没有办法。",
+     "你确定这不是一场阴谋？"
+    ],
+    "parent": "n9",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "那是很久以前的事了，那时行会长老对我们这些钟楼人苛刻得很。",
+    "emotion": "回忆",
+    "options": [
+     "我怎么知道那些事？",
+     "你为什么这么关心？"
+    ],
+    "parent": "n9",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "我知道你缺人手。",
+    "emotion": "坦诚",
+    "options": [
+     "你确定吗？",
+     "这是真的吗？"
+    ],
+    "parent": "n10",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "你知道我在找什么吗？",
+     "那天晚上发生了什么事？"
+    ],
+    "parent": "n10",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我是什么事情",
+     "我只想知道那天晚上的事"
+    ],
+    "parent": "n11",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我来是为了找寻真相，而不是扰乱你的好日子。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我是什么真相吗？",
+     "那天晚上的事对你来说很重要吗？"
+    ],
+    "parent": "n11",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+     "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？"
+    ],
+    "parent": "n12",
+    "parent_option": "告诉我，我会保密。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "坚定",
+    "options": [
+     "这是我的秘密，你无权问。",
+     "我要告诉你，但要小心。"
+    ],
+    "parent": "n12",
+    "parent_option": "这是我的秘密，你无权问。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "这钟楼里的秘密，与普通人的生活无关。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我，我愿意听。",
+     "别说了，我不感兴趣。"
+    ],
+    "parent": "n13",
+    "parent_option": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "这座城市的秘密，只有少数人才能知晓，你想要知道些什么呢？",
+    "emotion": "好奇",
+    "options": [
+     "你知道那慢四秒的原因吗？",
+     "有没有可能是因为我的失误？"
+    ],
+    "parent": "n13",
+    "parent_option": "告诉我，我会保密。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "这钟楼里的秘密，与普通人的生活无关。",
+    "emotion": "解释",
+    "options": [
+     "这秘密跟我的目标有关。",
+     "我不太明白你在说什么。"
+    ],
+    "parent": "n14",
+    "parent_option": "告诉我，这是什么秘密？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "陈述",
+    "options": [
+     "你知道这些秘密是什么吗？",
+     "这钟楼里的秘密，与普通人的生活无关。"
+    ],
+    "parent": "n14",
+    "parent_option": "我猜，可能跟我的工作有关。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [
+     "你知道钟楼的秘密吗？",
+     "你来这里是为了什么？"
+    ],
+    "parent": "n15",
+    "parent_option": "你知道钟楼的秘密吗？"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n15",
+    "parent_option": "你来找我是为了帮助我吗？"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我知道你在找什么，跟我来吧。"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我不知道，可能是某个钟表出了问题。",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你到底找我有什么事？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "你到底想说什么？",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你到底想说什么？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "或许是个小问题，但我觉得值得查探。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我来帮忙，看看有没有办法。"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "或许是个小问题，但我觉得值得查探。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你确定这不是一场阴谋？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "我知道你缺人手，但行会长老总是那么苛刻。",
+    "emotion": "同情",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我怎么知道那些事？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你为什么这么关心？"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "我当然知道，不过有些小秘密还是希望你能保持缄默。",
+    "emotion": "困惑",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你确定吗？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "礼貌而精确",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "这是真的吗？"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你知道我在找什么吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "那天晚上发生了什么事？"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "告诉我是什么事情"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我只想知道那天晚上的事"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我来是为了找寻真相，而不是扰乱你的好日子。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你能告诉我是什么真相吗？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我来是为了找寻真相，而不是扰乱你的好日子。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "那天晚上的事对你来说很重要吗？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "这是我的秘密，你无权问。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我要告诉你，但要小心。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "告诉我，我愿意听。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "这钟楼里的秘密，只有少数人才能知晓。",
+    "emotion": "透露",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "别说了，我不感兴趣。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓，你想要知道些什么呢？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你知道那慢四秒的原因吗？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓，你想要知道些什么呢？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "有没有可能是因为我的失误？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "这钟楼里的秘密，与普通人的生活无关。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "这秘密跟我的目标有关。"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "我知道有些事，你未必想知道。",
+    "emotion": "轻描淡写",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我不太明白你在说什么。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "这钟楼里的秘密，只有少数人才能揭开。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你知道这些秘密是什么吗？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "这钟楼里的秘密，只有少数人才能知晓。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "这钟楼里的秘密，与普通人的生活无关。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "这钟楼里的秘密，只有少数人才能知晓。",
+    "emotion": "透露",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你知道钟楼的秘密吗？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓，我来这里是为了了解其中一些线索。",
+    "emotion": "好奇心",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你来这里是为了什么？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "这钟楼里的秘密，与普通人的生活无关，但这里也有不为人知的故事。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "这城市里的秘密，只有少数人才能知晓，但我来这里只是为了帮助。",
+    "emotion": "希望",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我只想知道那天晚上的事。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 1,
+   "bad_branch_nodes": 1,
+   "calls": 63,
+   "elapsed": 282.8,
+   "strategy_calls": 63
+  }
+ },
+ "judge": null
+}

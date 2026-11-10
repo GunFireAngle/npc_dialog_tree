@@ -1,0 +1,123 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 12.33,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 0.9615,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.9444,
+  "intent_distinct_rate": 0.0,
+  "intent_coverage": 1.0,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 19.67,
+  "std_line_len": 1.7,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.111
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 3,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 3,
+  "elapsed": 12.33,
+  "strategy_calls": 3
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没空闲时间谈这些。你到底想怎么样？",
+    "emotion": "愤怒",
+    "options": [
+     "告诉我，你为什么来这里？",
+     "别废话，直接说你想干什么"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在这里是为了赚钱养家糊口，你知道的。",
+    "emotion": "尴尬",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "告诉我，你为什么来这里？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我在旧城生活了一段时间，但没机会赚到多少钱。",
+    "emotion": "尴尬",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "别废话，直接说你想干什么"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 3,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 3,
+   "elapsed": 12.33,
+   "strategy_calls": 3
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合NPC设定，没有矛盾或冲突，对话内容自然且符合说话风格。"
+ }
+}

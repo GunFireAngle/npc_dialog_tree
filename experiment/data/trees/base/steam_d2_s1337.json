@@ -1,0 +1,105 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 2,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 10.51,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 0.9808,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.9286,
+  "intent_distinct_rate": 0.0,
+  "intent_coverage": 1.0,
+  "persona_hit_rate": 0.6667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.5,
+  "mean_line_len": 20.0,
+  "std_line_len": 2.94,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.556
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 3,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 3,
+  "elapsed": 10.51,
+  "strategy_calls": 3
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我叫薇拉，来自第七钟楼。你来找我，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我是什么事情。",
+     "你为什么问这么详细？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你知道那颗钟表里的齿轮是怎么运转的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "告诉我是什么事情。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "我知道你缺人手，但那不是我来问的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你为什么问这么详细？"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 3,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 3,
+   "elapsed": 10.51,
+   "strategy_calls": 3
+  }
+ },
+ "judge": null
+}

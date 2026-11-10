@@ -1,0 +1,231 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 57.11,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.6,
+  "gram_dup_rate": 0.6031,
+  "distinct2": 0.3566,
+  "option_dup_rate": 0.1429,
+  "option_semantic_distance": 0.9911,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.3571,
+  "persona_hit_rate": 0.0667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.125,
+  "mean_line_len": 19.0,
+  "std_line_len": 4.95,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 1,
+  "calls": 15,
+  "elapsed": 57.11,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来找钟表的。",
+     "我只是路过，没什么目的。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "好奇",
+    "options": [
+     "我确实需要帮忙。",
+     "你能告诉我你为何怀疑我吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "哦，我是来找钟表的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这里很安全，不需要担心。",
+    "emotion": "防御",
+    "options": [
+     "你可能误会了什么。",
+     "这里没有危险。"
+    ],
+    "parent": "n1",
+    "parent_option": "我只是路过，没什么目的。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "警惕",
+    "options": [
+     "我从云端飞下来，带着时间的线索。",
+     "我在行会长老那里学到了关于这里的故事。"
+    ],
+    "parent": "n2",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "询问",
+    "options": [
+     "你能告诉我你为何怀疑我吗？",
+     "我明白了。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [
+     "我就是来观光的。",
+     "我是来帮助解决这个问题的。"
+    ],
+    "parent": "n3",
+    "parent_option": "你可能误会了什么。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这里很安全，不需要担心。",
+    "emotion": "安抚",
+    "options": [
+     "我只是路过，没什么目的。",
+     "我需要更多线索来解决问题。"
+    ],
+    "parent": "n3",
+    "parent_option": "这里没有危险。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我从云端飞下来，带着时间的线索。",
+    "emotion": "自豪",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我从云端飞下来，带着时间的线索。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我对自己的计划有些小改变，希望能给你更多的信心。",
+    "emotion": "坦诚",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我在行会长老那里学到了关于这里的故事。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我就是来观光的。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "我是来帮助解决这个问题的。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "你知道这里为什么总是准时吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我只是路过，没什么目的。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这里很安全，不需要担心。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我需要更多线索来解决问题。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 1,
+   "calls": 15,
+   "elapsed": 57.11,
+   "strategy_calls": 15
+  }
+ },
+ "judge": null
+}

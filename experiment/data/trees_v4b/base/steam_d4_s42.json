@@ -1,0 +1,318 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "gen": {
+  "repetition_penalty": 1.2
+ },
+ "elapsed_sec": 144.44,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.1333,
+  "gram_dup_rate": 0.0612,
+  "distinct2": 0.8649,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 0.9949,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.1333,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 11.67,
+  "std_line_len": 7.07,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 2,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 3.667,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 8,
+  "parse_repaired": 11,
+  "parse_failed": 2,
+  "missing_nodes": 1,
+  "bad_branch_nodes": 2,
+  "calls": 21,
+  "dedupe_calls": 2,
+  "dedupe_fixed": 2,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 4,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "leaf_modes": {
+   "reveal": 4,
+   "refuse": 4
+  },
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "右手食指有一道被齿轮割出的旧疤；腰间挂着十七把不同规格的校时钥匙；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：右手食指有一道被齿轮割出的旧疤",
+    "unlock": "右手食指有一道被齿轮割出的旧疤",
+    "forbid": "腰间挂着十七把不同规格的校时钥匙；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：腰间挂着十七把不同规格的校时钥匙",
+    "unlock": "腰间挂着十七把不同规格的校时钥匙",
+    "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate",
+   "A5_dual_ending"
+  ],
+  "elapsed": 144.44,
+  "strategy_calls": 21
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "这里是云顶蒸汽城的第一层，请问您有何贵干?",
+    "emotion": "礼貌",
+    "options": [
+     "我要调查为什么我的工作比其他人的少两分钟",
+     "我只是路过,想看看这里的人们"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这是第一层吗？我听说这里很有趣。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我为什么我的工作这么紧张吗？",
+     "你知道那个疤痕是怎么来的吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "我要调查为什么我的工作比其他人的少两分钟"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这是我工作的一部分。",
+    "emotion": "neutral",
+    "options": [
+     "我能理解，不过这是为什么呢？",
+     "这件事跟你没关系，但我有兴趣了解一下"
+    ],
+    "parent": "n1",
+    "parent_option": "我只是路过,想看看这里的人们"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "，‘哦，我是来寻求帮助的。你们这里的钟表似乎有些问题。",
+    "emotion": "好奇",
+    "options": [
+     "我可以看看是什么原因造成的这个现象",
+     "我希望我们能共同解决这个问题"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我为什么我的工作这么紧张吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这是我工作的标志之一。",
+    "emotion": "自豪",
+    "options": [
+     "这些校时钥匙是我的骄傲。",
+     "我明白了。"
+    ],
+    "parent": "n2",
+    "parent_option": "你知道那个疤痕是怎么来的吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "这些都是我的工具。",
+    "emotion": "谦逊",
+    "options": [
+     "你能告诉我有什么可以帮忙的吗？",
+     "这些校时钥匙对维持城市的精准度很重要。"
+    ],
+    "parent": "n3",
+    "parent_option": "我能理解，不过这是为什么呢？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这是我的职责所在。",
+    "emotion": "正式",
+    "options": [
+     "我可以帮你看一看这些钥匙是否正常运行",
+     "我对这一切了如指掌"
+    ],
+    "parent": "n3",
+    "parent_option": "这件事跟你没关系，但我有兴趣了解一下"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "这不仅是我的责任，更是我的心愿。",
+    "emotion": "遗憾",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我可以看看是什么原因造成的这个现象"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我希望我们能共同解决这个问题"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我已经习惯了这种节奏。",
+    "emotion": "谦逊",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "这些校时钥匙是我的骄傲。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "……",
+    "emotion": "严厉",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "……",
+    "emotion": "犹豫",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你能告诉我有什么可以帮忙的吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我要五万银币。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "这些校时钥匙对维持城市的精准度很重要。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这并不是什么好笑的事情。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我可以帮你看一看这些钥匙是否正常运行"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这可不是闹着玩儿的！我要的是七千两白银。",
+    "emotion": "愤怒",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我对这一切了如指掌"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 8,
+   "parse_repaired": 11,
+   "parse_failed": 2,
+   "missing_nodes": 1,
+   "bad_branch_nodes": 2,
+   "calls": 21,
+   "dedupe_calls": 2,
+   "dedupe_fixed": 2,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 4,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "leaf_modes": {
+    "reveal": 4,
+    "refuse": 4
+   },
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "右手食指有一道被齿轮割出的旧疤；腰间挂着十七把不同规格的校时钥匙；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：右手食指有一道被齿轮割出的旧疤",
+     "unlock": "右手食指有一道被齿轮割出的旧疤",
+     "forbid": "腰间挂着十七把不同规格的校时钥匙；慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：腰间挂着十七把不同规格的校时钥匙",
+     "unlock": "腰间挂着十七把不同规格的校时钥匙",
+     "forbid": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "慢四秒是她故意调出来的，为了让下层工人多四秒逃生时间。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate",
+    "A5_dual_ending"
+   ],
+   "elapsed": 144.44,
+   "strategy_calls": 21
+  }
+ },
+ "judge": null
+}

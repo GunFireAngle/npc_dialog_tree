@@ -1,0 +1,155 @@
+{
+ "world": "academy",
+ "world_name": "星槎学院",
+ "npc": "雾先生",
+ "method": "base",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 10.63,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0943,
+  "distinct2": 0.8519,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 1.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 20.67,
+  "std_line_len": 2.49,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.556
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 3,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 3,
+  "dedupe_calls": 0,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 0,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 2,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+   },
+   {
+    "level": 2,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 10.63,
+  "strategy_calls": 3
+ },
+ "tree": {
+  "world_id": "academy",
+  "npc_name": "雾先生",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些不寻常，阿禾。图书馆里似乎没什么人。",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来帮忙的。",
+     "你找谁？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这间图书馆藏着许多秘密，我也不例外。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "哦，我是来帮忙的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "图书馆里藏有不少秘密，我也有自己的故事。",
+    "emotion": "揭露",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "你找谁？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 3,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 3,
+   "dedupe_calls": 0,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 0,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 2,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。"
+    },
+    {
+     "level": 2,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "他的名字已被那本书吃掉，所以他现在没有真名，也无法离开图书馆。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 10.63,
+   "strategy_calls": 3
+  }
+ },
+ "judge": null
+}

@@ -1,0 +1,17 @@
+# 模型权重：体积大且有各自许可，按 README 自行下载
+models/
+_downloads/
+
+# 训练中间检查点：只保留最终 LoRA adapter
+training/output/lora/step_*/
+training/output/checkpoint-*/
+training/output/*.log
+
+# 运行时日志与缓存
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 本地盲评数据（个人评分记录，不公开）
+app/data/ratings.csv

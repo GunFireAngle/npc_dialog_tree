@@ -1,0 +1,833 @@
+{
+ "world": "deepsea",
+ "world_name": "深潮站",
+ "npc": "林栖",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 373.27,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.7778,
+  "gram_dup_rate": 0.805,
+  "distinct2": 0.162,
+  "option_dup_rate": 0.1935,
+  "option_semantic_distance": 0.9531,
+  "intent_distinct_rate": 0.6129,
+  "intent_coverage": 0.4032,
+  "persona_hit_rate": 0.0476,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0938,
+  "mean_line_len": 18.17,
+  "std_line_len": 2.57,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 5,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 104,
+  "parse_repaired": 1,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 1,
+  "calls": 105,
+  "dedupe_calls": 34,
+  "dedupe_fixed": 1,
+  "dedupe_gaveup": 50,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 3,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+    "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+    "forbid": "手边永远有一杯没喝完的咸水；值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+    "unlock": "手边永远有一杯没喝完的咸水",
+    "forbid": "值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 4,
+    "goal": "让玩家确知：值班牌上写着第 214 个夜班",
+    "unlock": "值班牌上写着第 214 个夜班",
+    "forbid": "随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 5,
+    "goal": "让玩家确知：随身带一把水密舱门钥匙",
+    "unlock": "随身带一把水密舱门钥匙",
+    "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 6,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 373.27,
+  "strategy_calls": 105
+ },
+ "tree": {
+  "world_id": "deepsea",
+  "npc_name": "林栖",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "冷漠",
+    "options": [
+     "你怀疑什么？",
+     "别忘了我是谁。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "自豪",
+    "options": [
+     "你能告诉我你怀疑什么吗？",
+     "这耳机也能帮我找失踪的小猫呢。"
+    ],
+    "parent": "n1",
+    "parent_option": "你怀疑什么？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "尴尬",
+    "options": [
+     "别问，这是我的习惯。",
+     "你懂的，它让我安心。"
+    ],
+    "parent": "n1",
+    "parent_option": "别忘了我是谁。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这杯子还是上次的，你吃了吗？",
+    "emotion": "询问",
+    "options": [
+     "是的，谢谢。",
+     "我没尝过，你试试看。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我你怀疑什么吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "坚守",
+    "options": [
+     "耳机真的能帮我找到潜伏的生物吗？",
+     "你有没有什么特别的理由？"
+    ],
+    "parent": "n2",
+    "parent_option": "这耳机也能帮我找失踪的小猫呢。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "你真的认为它有用吗？",
+     "你是不是有什么问题？"
+    ],
+    "parent": "n3",
+    "parent_option": "别问，这是我的习惯。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [
+     "你放心，我会注意的。",
+     "你真的需要这杯咸水吗？"
+    ],
+    "parent": "n3",
+    "parent_option": "你懂的，它让我安心。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我你怀疑什么吗？",
+     "你真的认为它有用吗？"
+    ],
+    "parent": "n4",
+    "parent_option": "是的，谢谢。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "试探",
+    "options": [
+     "这耳机能帮我找到潜伏的生物。",
+     "这杯子还是上次的，你吃了吗？"
+    ],
+    "parent": "n4",
+    "parent_option": "我没尝过，你试试看。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [
+     "你怀疑潜伏的生物？",
+     "你有没有什么发现？"
+    ],
+    "parent": "n5",
+    "parent_option": "耳机真的能帮我找到潜伏的生物吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [
+     "你知道这是怎么做到的吗？",
+     "你有别的方法吗？"
+    ],
+    "parent": "n5",
+    "parent_option": "你有没有什么特别的理由？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "回避",
+    "options": [
+     "你知道我们每天都在监测，",
+     "你不知道我们每天都在监测。"
+    ],
+    "parent": "n6",
+    "parent_option": "你真的认为它有用吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "确认",
+    "options": [
+     "你能听懂我的话吗？",
+     "你知道我在担心什么吗？"
+    ],
+    "parent": "n6",
+    "parent_option": "你是不是有什么问题？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "值班牌上写着第214个夜班，我能理解。",
+    "emotion": "理解",
+    "options": [
+     "为什么总是在第214个夜班？",
+     "为什么不在其他地方值班？"
+    ],
+    "parent": "n7",
+    "parent_option": "你放心，我会注意的。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我真不需要这杯咸水，不过你听起来很不舒服。",
+    "emotion": "共情安抚",
+    "options": [
+     "你觉得我的话让你感觉好些了？",
+     "我走了，你要是觉得不舒服就告诉我。"
+    ],
+    "parent": "n7",
+    "parent_option": "你真的需要这杯咸水吗？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我你怀疑什么吗?",
+     "这杯子还是上次的，你吃了吗？"
+    ],
+    "parent": "n8",
+    "parent_option": "你能告诉我你怀疑什么吗？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "期待",
+    "options": [
+     "你能告诉我你怀疑什么吗?",
+     "这杯子还是上次的，你吃了吗？"
+    ],
+    "parent": "n8",
+    "parent_option": "你真的认为它有用吗？"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "这耳机能帮我找到潜伏的生物。",
+     "这杯子还是上次的，你吃了吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "这耳机能帮我找到潜伏的生物。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "好奇",
+    "options": [
+     "你知道这耳机能帮我们找到什么吗？",
+     "我需要一杯咸水，你能帮我找一杯吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "这杯子还是上次的，你吃了吗？"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "耳机能帮我找到潜伏的生物吗？",
+     "你知道这耳机能帮我们找到什么吗？"
+    ],
+    "parent": "n10",
+    "parent_option": "你怀疑潜伏的生物？"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "无奈",
+    "options": [
+     "你能帮我找出声音来源吗？",
+     "这耳机能帮我找到潜伏的生物。"
+    ],
+    "parent": "n10",
+    "parent_option": "你有没有什么发现？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我知道这是怎么做到的，但我不希望别人知道。",
+    "emotion": "防御",
+    "options": [
+     "你能告诉我具体怎么做吗？",
+     "我需要的是结果，不用告诉你方法。"
+    ],
+    "parent": "n11",
+    "parent_option": "你知道这是怎么做到的吗？"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我具体在哪么？",
+     "这耳机能帮我找到潜伏的生物。"
+    ],
+    "parent": "n11",
+    "parent_option": "你有别的方法吗？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "好奇",
+    "options": [
+     "你有没有想过要怎么处理这些线？",
+     "我需要知道你是怎么找到它的。"
+    ],
+    "parent": "n12",
+    "parent_option": "你知道我们每天都在监测，"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "我真不需要这杯咸水，不过你听起来很不舒服。",
+    "emotion": "无奈",
+    "options": [
+     "你确定吗？",
+     "我不喜欢咸水"
+    ],
+    "parent": "n12",
+    "parent_option": "你不知道我们每天都在监测。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "我能明白你的坚持。",
+     "你是不是有什么问题？"
+    ],
+    "parent": "n13",
+    "parent_option": "你能听懂我的话吗？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我确实需要这把钥匙，以防万一。",
+    "emotion": "紧张",
+    "options": [
+     "你能帮我看看那是什么吗？",
+     "我想知道这耳机是如何工作的。"
+    ],
+    "parent": "n13",
+    "parent_option": "你知道我在担心什么吗？"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "你能感受到它吗？",
+     "我需要这把钥匙，以防万一。"
+    ],
+    "parent": "n14",
+    "parent_option": "为什么总是在第214个夜班？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我真不需要这把钥匙，不过你看起来很危险。",
+    "emotion": "紧张",
+    "options": [
+     "请别担心，这是我的备份。",
+     "我需要确保安全。"
+    ],
+    "parent": "n14",
+    "parent_option": "为什么不在其他地方值班？"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "我确实不需要这把钥匙，不过你看起来很危险。",
+    "emotion": "困惑",
+    "options": [
+     "我明白你的担忧。",
+     "你为什么要这样？"
+    ],
+    "parent": "n15",
+    "parent_option": "你觉得我的话让你感觉好些了？"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [
+     "你知道这是为什么吗？",
+     "我需要它。"
+    ],
+    "parent": "n15",
+    "parent_option": "我走了，你要是觉得不舒服就告诉我。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我能告诉你我怀疑什么，不过这耳机能帮我找到潜伏的生物。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你能告诉我你怀疑什么吗?"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "这杯子还是上次的，你吃了吗？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你能告诉我你怀疑什么吗?"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "揭露",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "这杯子还是上次的，你吃了吗？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我真不需要这把钥匙，不过你看起来很危险。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "这耳机能帮我找到潜伏的生物。"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我确实在声呐记录里删掉了三段最清晰的录音。",
+    "emotion": "抱歉",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "这杯子还是上次的，你吃了吗？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你知道这耳机能帮我们找到什么吗？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我需要一杯咸水，你能帮我找一杯吗？"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "耳机能帮我找到潜伏的生物吗？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "这耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你知道这耳机能帮我们找到什么吗？"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "这耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你能帮我找出声音来源吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "这耳机能帮我找到潜伏的生物。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "你能告诉我具体怎么做吗？"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我需要的是结果，不用告诉你方法。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我确实在声呐记录里删掉了三段最清晰的录音。",
+    "emotion": "悲伤",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你能告诉我具体在哪么？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我确实在声呐记录里删掉了三段最清晰的录音。",
+    "emotion": "坦诚",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "这耳机能帮我找到潜伏的生物。"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "叙述",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你有没有想过要怎么处理这些线？"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我需要知道你是怎么找到它的。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你确定吗？"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我不喜欢咸水"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我能明白你的坚持。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你是不是有什么问题？"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "我能帮你找到潜伏的生物。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你能帮我看看那是什么吗？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我想知道这耳机是如何工作的。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你能感受到它吗？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我需要这把钥匙，以防万一。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "担忧",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "请别担心，这是我的备份。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "值班牌上写着第214个夜班，我能理解。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我需要确保安全。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "焦虑",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我明白你的担忧。"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你为什么要这样？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你知道这是为什么吗？"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我需要它。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 104,
+   "parse_repaired": 1,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 1,
+   "calls": 105,
+   "dedupe_calls": 34,
+   "dedupe_fixed": 1,
+   "dedupe_gaveup": 50,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 3,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+     "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+     "forbid": "手边永远有一杯没喝完的咸水；值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+     "unlock": "手边永远有一杯没喝完的咸水",
+     "forbid": "值班牌上写着第 214 个夜班；随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 4,
+     "goal": "让玩家确知：值班牌上写着第 214 个夜班",
+     "unlock": "值班牌上写着第 214 个夜班",
+     "forbid": "随身带一把水密舱门钥匙；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 5,
+     "goal": "让玩家确知：随身带一把水密舱门钥匙",
+     "unlock": "随身带一把水密舱门钥匙",
+     "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 6,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 373.27,
+   "strategy_calls": 105
+  }
+ },
+ "judge": null
+}

@@ -1,0 +1,735 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 240.83,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.746,
+  "gram_dup_rate": 0.7645,
+  "distinct2": 0.199,
+  "option_dup_rate": 0.2258,
+  "option_semantic_distance": 0.9567,
+  "intent_distinct_rate": 0.4194,
+  "intent_coverage": 0.3226,
+  "persona_hit_rate": 0.1111,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.25,
+  "mean_line_len": 18.0,
+  "std_line_len": 4.83,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 1.0,
+  "composite": 2.778
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 1,
+  "calls": 63,
+  "elapsed": 240.83,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来找钟表的。",
+     "我只是路过，没什么目的。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "好奇",
+    "options": [
+     "我确实需要帮忙。",
+     "你能告诉我你为何怀疑我吗？"
+    ],
+    "parent": "n1",
+    "parent_option": "哦，我是来找钟表的。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这里很安全，不需要担心。",
+    "emotion": "防御",
+    "options": [
+     "你可能误会了什么。",
+     "这里没有危险。"
+    ],
+    "parent": "n1",
+    "parent_option": "我只是路过，没什么目的。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "警惕",
+    "options": [
+     "哦，我是来找钟表的。",
+     "我确实需要帮忙。"
+    ],
+    "parent": "n2",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "询问",
+    "options": [
+     "你能告诉我你为何怀疑我吗？",
+     "我明白了。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [
+     "我是个旅行者，无意中来到这里。",
+     "我是这里的守卫，有事需要你帮忙。"
+    ],
+    "parent": "n3",
+    "parent_option": "你可能误会了什么。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "紧张",
+    "options": [
+     "你能帮我看看是什么问题吗？",
+     "你为什么总往这儿来？"
+    ],
+    "parent": "n3",
+    "parent_option": "这里没有危险。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "好奇",
+    "options": [
+     "这是我的秘密，保密。",
+     "你能帮我找到问题的答案吗？"
+    ],
+    "parent": "n4",
+    "parent_option": "哦，我是来找钟表的。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [
+     "哦，我是来找钟表的。",
+     "我确实需要帮忙。"
+    ],
+    "parent": "n4",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "强硬",
+    "options": [
+     "我能帮你，但我必须确保答案是正确的。",
+     "我需要更多证据才能相信你。"
+    ],
+    "parent": "n5",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "你似乎对这里不太了解，告诉我你是怎么来到这里的。",
+    "emotion": "好奇",
+    "options": [
+     "我是个自由职业者，听说这里很有名。",
+     "我在外面旅行时偶然看到你的标志，决定来这里。"
+    ],
+    "parent": "n5",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "试探",
+    "options": [
+     "我只是路过，没什么目的。",
+     "我是个旅行者，无意中来到这里。"
+    ],
+    "parent": "n6",
+    "parent_option": "我是个旅行者，无意中来到这里。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "警惕",
+    "options": [
+     "你似乎对这里的环境很熟悉。",
+     "我可以帮你看看是否有什么可以帮助你的工具。"
+    ],
+    "parent": "n6",
+    "parent_option": "我是这里的守卫，有事需要你帮忙。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "无奈",
+    "options": [
+     "我需要更多关于问题的信息。",
+     "让我们找个地方休息一下。"
+    ],
+    "parent": "n7",
+    "parent_option": "你能帮我看看是什么问题吗？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我，你到底想干什么？",
+     "这里没得玩，走吧。"
+    ],
+    "parent": "n7",
+    "parent_option": "你为什么总往这儿来？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "共情安抚",
+    "options": [
+     "你知道我在做什么吗？",
+     "你能告诉我是什么让你找到这里的吗？"
+    ],
+    "parent": "n8",
+    "parent_option": "这是我的秘密，保密。"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "神秘",
+    "options": [
+     "你能帮我找到问题的答案吗？",
+     "我对雷云有研究，也许能提供线索。"
+    ],
+    "parent": "n8",
+    "parent_option": "你能帮我找到问题的答案吗？"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "询问",
+    "options": [
+     "我在寻找钟表校正的关键线索。",
+     "我对这里的谜团充满好奇。"
+    ],
+    "parent": "n9",
+    "parent_option": "哦，我是来找钟表的。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "在雾气缭绕的街道尽头，我找到了这座蒸汽城的秘密入口。",
+    "emotion": "回忆",
+    "options": [
+     "你能帮我找出问题的答案吗？",
+     "你的勇气让我感到震惊。"
+    ],
+    "parent": "n9",
+    "parent_option": "我确实需要帮忙。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我你为何怀疑我吗？",
+     "你能帮我，但我必须确保答案是正确的。"
+    ],
+    "parent": "n10",
+    "parent_option": "我能帮你，但我必须确保答案是正确的。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "疑问",
+    "options": [
+     "你能告诉我你为何怀疑我吗？",
+     "我需要更多证据才能相信你。"
+    ],
+    "parent": "n10",
+    "parent_option": "我需要更多证据才能相信你。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "关心",
+    "options": [
+     "我明白了。",
+     "我有办法。"
+    ],
+    "parent": "n11",
+    "parent_option": "我是个自由职业者，听说这里很有名。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "试探",
+    "options": [
+     "我需要更多信息",
+     "你知道为什么怀疑我吗？"
+    ],
+    "parent": "n11",
+    "parent_option": "我在外面旅行时偶然看到你的标志，决定来这里。"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "共情安抚",
+    "options": [
+     "告诉我，我也许可以帮忙。",
+     "你能给我更多的信息吗？"
+    ],
+    "parent": "n12",
+    "parent_option": "我只是路过，没什么目的。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "试探",
+    "options": [
+     "我是个旅行者，无意中来到这里。",
+     "我是个旅行者，无意中来到这里。"
+    ],
+    "parent": "n12",
+    "parent_option": "我是个旅行者，无意中来到这里。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "我是个经验丰富的守卫，这里的一切都很熟悉。",
+    "emotion": "介绍",
+    "options": [
+     "你能告诉我有什么需要帮忙的吗？",
+     "我怀疑你不是来这里的。"
+    ],
+    "parent": "n13",
+    "parent_option": "你似乎对这里的环境很熟悉。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "询问",
+    "options": [
+     "我随口一说，你信吗？",
+     "你是不是有什么打算？"
+    ],
+    "parent": "n13",
+    "parent_option": "我可以帮你看看是否有什么可以帮助你的工具。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "紧张",
+    "options": [
+     "你确定这是问题的关键？",
+     "有没有其他可能的原因？"
+    ],
+    "parent": "n14",
+    "parent_option": "我需要更多关于问题的信息。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "警惕",
+    "options": [
+     "你需要帮助吗？",
+     "我知道你的处境。"
+    ],
+    "parent": "n14",
+    "parent_option": "让我们找个地方休息一下。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [
+     "我要找的是行会长老的计划书。",
+     "我听说他是个厉害的角色。"
+    ],
+    "parent": "n15",
+    "parent_option": "告诉我，你到底想干什么？"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "关心",
+    "options": [
+     "我想要找些关于天气的信息。",
+     "我是在寻找一些关于这座城市的秘密。"
+    ],
+    "parent": "n15",
+    "parent_option": "这里没得玩，走吧。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "疑问",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你知道我在做什么吗？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你能告诉我是什么让你找到这里的吗？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你能帮我找到问题的答案吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我对雷云有研究，也许能提供线索。"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我知道你缺人手，但是现在不行了，只能靠我自己。",
+    "emotion": "遗憾",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我在寻找钟表校正的关键线索。"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我确实需要帮忙。",
+    "emotion": "渴望",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我对这里的谜团充满好奇。"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "在雾气缭绕的街道尽头，我找到了这座蒸汽城的秘密入口。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你能帮我找出问题的答案吗？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "在雾气缭绕的街道尽头，我找到了这座蒸汽城的秘密入口。",
+    "emotion": "惊讶",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你的勇气让我感到震惊。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "我能帮你，但我必须确保答案是正确的。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你能帮我，但我必须确保答案是正确的。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你能告诉我你为何怀疑我吗？"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "期待",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我需要更多证据才能相信你。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "你在城庆日之前能找到问题的答案吗？",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我有办法。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我似乎对这里不太了解，告诉我你是怎么来到这里的。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我需要更多信息"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我有个小秘密，或许能帮到你。",
+    "emotion": "神秘",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你知道为什么怀疑我吗？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "你能告诉我你为何怀疑我吗？",
+    "emotion": "怀疑",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "告诉我，我也许可以帮忙。"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你能给我更多的信息吗？"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我是个旅行者，无意中来到这里。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "我是个旅行者，无意中来到这里。",
+    "emotion": "叙述",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我是个旅行者，无意中来到这里。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我是个经验丰富的守卫，这里的一切都很熟悉。",
+    "emotion": "陈述",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你能告诉我有什么需要帮忙的吗？"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "我只是路过，没什么目的。",
+    "emotion": "礼貌",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我怀疑你不是来这里的。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我随口一说，你信吗？"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "你看起来有些可疑，能告诉我你是怎么找到这里的吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你是不是有什么打算？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "疲惫",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你确定这是问题的关键？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "有没有其他可能的原因？"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "这里的雷云不够稳定，我得随时准备。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你需要帮助吗？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我知道你的处境。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我要找的是行会长老的计划书。"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我听说他是个厉害的角色。"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我想要找些关于天气的信息。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "这里没有危险，你找什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我是在寻找一些关于这座城市的秘密。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 1,
+   "calls": 63,
+   "elapsed": 240.83,
+   "strategy_calls": 63
+  }
+ },
+ "judge": null
+}

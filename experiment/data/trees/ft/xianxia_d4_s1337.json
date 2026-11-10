@@ -1,0 +1,231 @@
+{
+ "world": "xianxia",
+ "world_name": "青冥剑宗",
+ "npc": "沈无咎",
+ "method": "ft",
+ "depth": 4,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 83.12,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.3333,
+  "gram_dup_rate": 0.3416,
+  "distinct2": 0.6158,
+  "option_dup_rate": 0.2857,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.7857,
+  "persona_hit_rate": 0.2667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 16.0,
+  "std_line_len": 1.59,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 15,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 15,
+  "elapsed": 83.12,
+  "strategy_calls": 15
+ },
+ "tree": {
+  "world_id": "xianxia",
+  "npc_name": "沈无咎",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在青冥剑宗，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "你在替谁遮掩？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "强硬",
+    "options": [
+     "你说的冢，到底指什么？",
+     "先不说这个了。"
+    ],
+    "parent": "n1",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "山门的事，不是随便谁都能打听的。",
+    "emotion": "回避",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "别逼我动手。"
+    ],
+    "parent": "n1",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [
+     "我帮你把心修好，你告诉我实情。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n2",
+    "parent_option": "你说的冢，到底指什么？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n2",
+    "parent_option": "先不说这个了。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n3",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "别逼我动手。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n3",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我帮你把心修好，你告诉我实情。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "行，看在你没拿山门压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "行，看在你没拿剑压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我现在就要一个答案。"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 15,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 15,
+   "elapsed": 83.12,
+   "strategy_calls": 15
+  }
+ },
+ "judge": null
+}

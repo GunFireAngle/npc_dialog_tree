@@ -1,0 +1,13 @@
+﻿metric,depth,v1,v2,delta
+composite,2,4.389,4.5,0.111
+composite,4,3.5,3.722,0.222
+composite,6,3.222,3.5,0.278
+dup_line_rate,2,0.0,0.0,0.0
+dup_line_rate,4,0.442,0.308,-0.133
+dup_line_rate,6,0.653,0.627,-0.026
+option_dup_rate,2,0.0,0.0,0.0
+option_dup_rate,4,0.161,0.125,-0.036
+option_dup_rate,6,0.45,0.399,-0.05
+intent_distinct_rate,2,0.625,1.0,0.375
+intent_distinct_rate,4,0.696,0.732,0.036
+intent_distinct_rate,6,0.637,0.653,0.016

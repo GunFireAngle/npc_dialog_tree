@@ -1,0 +1,305 @@
+{
+ "world": "deepsea",
+ "world_name": "深潮站",
+ "npc": "林栖",
+ "method": "base",
+ "depth": 4,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 97.46,
+ "metrics": {
+  "n_nodes": 15,
+  "expected_nodes": 15,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 4,
+  "depth_ok": 1,
+  "n_leaf": 8,
+  "dup_line_rate": 0.5333,
+  "gram_dup_rate": 0.6483,
+  "distinct2": 0.3165,
+  "option_dup_rate": 0.0714,
+  "option_semantic_distance": 0.9947,
+  "intent_distinct_rate": 0.7143,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.0,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0,
+  "mean_line_len": 18.2,
+  "std_line_len": 3.1,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 0,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 29,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 29,
+  "dedupe_calls": 6,
+  "dedupe_fixed": 1,
+  "dedupe_gaveup": 8,
+  "reveal_retries": 8,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 2,
+    "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+    "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+    "forbid": "手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 3,
+    "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+    "unlock": "手边永远有一杯没喝完的咸水",
+    "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+   },
+   {
+    "level": 4,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 97.46,
+  "strategy_calls": 29
+ },
+ "tree": {
+  "world_id": "deepsea",
+  "npc_name": "林栖",
+  "depth": 4,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我没必要告诉你这是我们的工作日常。",
+    "emotion": "冷漠",
+    "options": [
+     "你怀疑什么？",
+     "别忘了我是谁。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "自豪",
+    "options": [
+     "你能告诉我你怀疑什么吗？",
+     "这耳机也能帮我找失踪的小猫呢。"
+    ],
+    "parent": "n1",
+    "parent_option": "你怀疑什么？"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "尴尬",
+    "options": [
+     "别问，这是我的习惯。",
+     "你懂的，它让我安心。"
+    ],
+    "parent": "n1",
+    "parent_option": "别忘了我是谁。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我你怀疑什么吗？",
+     "我听到了些奇怪的声音。"
+    ],
+    "parent": "n2",
+    "parent_option": "你能告诉我你怀疑什么吗？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "坚守",
+    "options": [
+     "耳机对我来说很重要。",
+     "你能不能告诉我，这耳机是怎么找到潜伏的生物的？"
+    ],
+    "parent": "n2",
+    "parent_option": "这耳机也能帮我找失踪的小猫呢。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "关心",
+    "options": [
+     "你真的认为它有用吗？",
+     "你是不是有什么问题？"
+    ],
+    "parent": "n3",
+    "parent_option": "别问，这是我的习惯。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "平静",
+    "options": [
+     "你听到了什么吗？",
+     "我明白了，谢谢你。"
+    ],
+    "parent": "n3",
+    "parent_option": "你懂的，它让我安心。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "那耳机能帮我找到潜伏的生物。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "你能告诉我你怀疑什么吗？"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "耳机是我最好的朋友，这条线缠在我脖子上，别动它。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n4",
+    "parent_option": "我听到了些奇怪的声音。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "耳机对我来说很重要。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这耳机能帮我找到潜伏的生物。",
+    "emotion": "坦诚",
+    "options": [],
+    "parent": "n5",
+    "parent_option": "你能不能告诉我，这耳机是怎么找到潜伏的生物的？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你真的认为它有用吗？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别动它。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n6",
+    "parent_option": "你是不是有什么问题？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "耳机是我的宝贝，线缠在脖子上，别拿开。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "你听到了什么吗？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我明白你的担心，但那是我们的工作，不能轻易透露。",
+    "emotion": "无奈",
+    "options": [],
+    "parent": "n7",
+    "parent_option": "我明白了，谢谢你。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 29,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 29,
+   "dedupe_calls": 6,
+   "dedupe_fixed": 1,
+   "dedupe_gaveup": 8,
+   "reveal_retries": 8,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "左耳戴着老式监听耳机，线缠在脖上；手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 2,
+     "goal": "让玩家确知：左耳戴着老式监听耳机，线缠在脖上",
+     "unlock": "左耳戴着老式监听耳机，线缠在脖上",
+     "forbid": "手边永远有一杯没喝完的咸水；她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 3,
+     "goal": "让玩家确知：手边永远有一杯没喝完的咸水",
+     "unlock": "手边永远有一杯没喝完的咸水",
+     "forbid": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。"
+    },
+    {
+     "level": 4,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "她已经在声呐记录里删掉了三段最清晰的录音，因为那里面有人声。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 97.46,
+   "strategy_calls": 29
+  }
+ },
+ "judge": null
+}

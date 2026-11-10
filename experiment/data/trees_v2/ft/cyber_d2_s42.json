@@ -1,0 +1,155 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "ft",
+ "depth": 2,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 17.18,
+ "metrics": {
+  "n_nodes": 3,
+  "expected_nodes": 3,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 2,
+  "depth_ok": 1,
+  "n_leaf": 2,
+  "dup_line_rate": 0.0,
+  "gram_dup_rate": 0.0,
+  "distinct2": 1.0,
+  "option_dup_rate": 0.0,
+  "option_semantic_distance": 1.0,
+  "intent_distinct_rate": 1.0,
+  "intent_coverage": 0.5,
+  "persona_hit_rate": 0.6667,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 17.67,
+  "std_line_len": 0.47,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 3.667,
+  "composite": 4.556
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 5,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 5,
+  "dedupe_calls": 0,
+  "dedupe_fixed": 0,
+  "dedupe_gaveup": 0,
+  "reveal_retries": 2,
+  "beat_leak_lines": 0,
+  "leaf_reveal": 0,
+  "beats": [
+   {
+    "level": 1,
+    "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+    "unlock": "",
+    "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+   },
+   {
+    "level": 2,
+    "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+    "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+    "forbid": ""
+   }
+  ],
+  "improvements": [
+   "A1_beat_sheet",
+   "A2_dedupe_retry",
+   "A4_secret_gate"
+  ],
+  "elapsed": 17.18,
+  "strategy_calls": 5
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 2,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在霓虹深渊，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "我现在就要一个答案。",
+     "别逼我动手。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "他们让你看到的皮肤，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n1",
+    "parent_option": "别逼我动手。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 5,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 5,
+   "dedupe_calls": 0,
+   "dedupe_fixed": 0,
+   "dedupe_gaveup": 0,
+   "reveal_retries": 2,
+   "beat_leak_lines": 0,
+   "leaf_reveal": 0,
+   "beats": [
+    {
+     "level": 1,
+     "goal": "确认来意，用一句本世界的日常细节把玩家挡在门外",
+     "unlock": "",
+     "forbid": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。"
+    },
+    {
+     "level": 2,
+     "goal": "被逼到无法回避，说出秘密的一部分，并留下代价或悬念",
+     "unlock": "妹妹的记忆早已被格式化，他一直在给自己修一段假的。",
+     "forbid": ""
+    }
+   ],
+   "improvements": [
+    "A1_beat_sheet",
+    "A2_dedupe_retry",
+    "A4_secret_gate"
+   ],
+   "elapsed": 17.18,
+   "strategy_calls": 5
+  }
+ },
+ "judge": null
+}

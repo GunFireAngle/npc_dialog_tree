@@ -1,0 +1,753 @@
+{
+ "world": "cyber",
+ "world_name": "霓虹深渊",
+ "npc": "白鸦",
+ "method": "base",
+ "depth": 6,
+ "seed": 1337,
+ "strategy": "levelwise",
+ "elapsed_sec": 282.69,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.7143,
+  "gram_dup_rate": 0.7535,
+  "distinct2": 0.196,
+  "option_dup_rate": 0.2581,
+  "option_semantic_distance": 0.9798,
+  "intent_distinct_rate": 0.5484,
+  "intent_coverage": 0.5323,
+  "persona_hit_rate": 0.0317,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0625,
+  "mean_line_len": 15.56,
+  "std_line_len": 2.86,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 1,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.222
+ },
+ "tree_meta": {
+  "seed": 1337,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 1,
+  "bad_branch_nodes": 1,
+  "calls": 63,
+  "elapsed": 282.68,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "cyber",
+  "npc_name": "白鸦",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "戒备",
+    "options": [
+     "我叫白鸦，是个医生。",
+     "我有证据证明你欠了人情。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "试探",
+    "options": [
+     "我是来帮忙的。",
+     "你是谁啊？"
+    ],
+    "parent": "n1",
+    "parent_option": "我叫白鸦，是个医生。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我有证据证明你欠了人情。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n1",
+    "parent_option": "我有证据证明你欠了人情。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "询问",
+    "options": [
+     "我只是想看看这里的病人。",
+     "我来帮白鸦医生凑钱。"
+    ],
+    "parent": "n2",
+    "parent_option": "我是来帮忙的。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "警惕",
+    "options": [
+     "告诉我你找我的事。",
+     "你看起来挺有趣。"
+    ],
+    "parent": "n2",
+    "parent_option": "你是谁啊？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我这些秘密吧！",
+     "你能帮我什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "我有证据证明你欠了人情。"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "回避",
+    "options": [
+     "你知道吗，这儿有个秘密。",
+     "这里生意好，你想买什么？"
+    ],
+    "parent": "n3",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [
+     "……",
+     "我明白了。"
+    ],
+    "parent": "n4",
+    "parent_option": "我只是想看看这里的病人。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "困惑",
+    "options": [
+     "你知道我在找谁吗？",
+     "告诉我你找的是谁吧"
+    ],
+    "parent": "n4",
+    "parent_option": "我来帮白鸦医生凑钱。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "我知道你缺人手，跟我好好说话。",
+    "emotion": "强硬",
+    "options": [
+     "我要知道你找我的事。",
+     "你到底是谁？"
+    ],
+    "parent": "n5",
+    "parent_option": "告诉我你找我的事。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "你知道什么秘密？",
+     "为什么这么感兴趣？"
+    ],
+    "parent": "n5",
+    "parent_option": "你看起来挺有趣。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我这些秘密吧！",
+     "我在这儿等了好久了，你到底是谁？"
+    ],
+    "parent": "n6",
+    "parent_option": "告诉我这些秘密吧！"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "我能帮你什么？",
+     "你的秘密是什么？"
+    ],
+    "parent": "n6",
+    "parent_option": "你能帮我什么？"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n7",
+    "parent_option": "你知道吗，这儿有个秘密。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "我没空，别打扰我",
+    "emotion": "无奈",
+    "options": [
+     "告诉我事情的经过吧。",
+     "你到底是谁？"
+    ],
+    "parent": "n7",
+    "parent_option": "这里生意好，你想买什么？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [
+     "你知道我在找谁吗？",
+     "你在说什么呢？"
+    ],
+    "parent": "n8",
+    "parent_option": "……"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [
+     "你知道我的事情吗？",
+     "我来这里是因为你的义体"
+    ],
+    "parent": "n8",
+    "parent_option": "我明白了。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "你知道我在找谁吗？",
+     "我在旧城区待久了，知道些秘密。"
+    ],
+    "parent": "n9",
+    "parent_option": "你知道我在找谁吗？"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "询问",
+    "options": [
+     "告诉我你找的是谁吧",
+     "我只知道这里是旧城区。"
+    ],
+    "parent": "n9",
+    "parent_option": "告诉我你找的是谁吧"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "我知道你缺人手，跟我好好说话。",
+    "emotion": "安慰",
+    "options": [
+     "告诉我你找我的事。",
+     "我没空，别打扰我"
+    ],
+    "parent": "n10",
+    "parent_option": "我要知道你找我的事。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "询问",
+    "options": [
+     "告诉我你找我的事。",
+     "你到底是谁？"
+    ],
+    "parent": "n10",
+    "parent_option": "你到底是谁？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "你能告诉我是什么秘密吗？",
+     "我对这些秘密很感兴趣。"
+    ],
+    "parent": "n11",
+    "parent_option": "你知道什么秘密？"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [
+     "为什么？",
+     "你能告诉我是什么秘密吗？"
+    ],
+    "parent": "n11",
+    "parent_option": "为什么这么感兴趣？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [
+     "我有证据证明你欠了人情。",
+     "你在旧城区待久了，知道些秘密。"
+    ],
+    "parent": "n12",
+    "parent_option": "告诉我这些秘密吧！"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "你在哪儿等？这里的人多得像是水一样。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我这个人的故事。",
+     "我在这里找一个人，你认识吗？"
+    ],
+    "parent": "n12",
+    "parent_option": "我在这儿等了好久了，你到底是谁？"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "我知道你缺人手，跟我好好说话。",
+    "emotion": "反问",
+    "options": [
+     "你能帮我什么？",
+     "我在旧城区待久了，知道些秘密。"
+    ],
+    "parent": "n13",
+    "parent_option": "我能帮你什么？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "我是白鸦，一个无证义体医生。",
+    "emotion": "介绍",
+    "options": [
+     "告诉我关于那个欠人情的秘密。",
+     "我们聊聊别的。"
+    ],
+    "parent": "n13",
+    "parent_option": "你的秘密是什么？"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我那天晚上的事吧！",
+     "有没有什么我可以帮忙的？"
+    ],
+    "parent": "n14",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "你知道吗，这儿有个秘密。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n14",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "这里生意好，你想买什么？",
+    "emotion": "试探",
+    "options": [
+     "我要看看有没有可以帮到我的东西。",
+     "你确定能帮我找到妹妹的记忆吗？"
+    ],
+    "parent": "n15",
+    "parent_option": "告诉我事情的经过吧。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我那天晚上的事。",
+     "你为什么要问我这些？"
+    ],
+    "parent": "n15",
+    "parent_option": "你到底是谁？"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你知道我在找谁吗？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你在说什么呢？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你知道我的事情吗？"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "你来这儿是为了帮助我解决什么问题？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我来这里是因为你的义体"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你知道我在找谁吗？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "疑惑",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "我在旧城区待久了，知道些秘密。"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "你来干什么？",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "告诉我你找的是谁吧"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我只知道这里是旧城区。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "告诉我你找我的事。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "你知道我缺人手，跟我好好说话。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我没空，别打扰我"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "我知道你缺人手，跟我好好说话。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "告诉我你找我的事。"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "你到底是谁？"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "你在哪儿等？这里的人多得像是水一样。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "你能告诉我是什么秘密吗？"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "坦诚",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我对这些秘密很感兴趣。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "为什么？"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "自嘲",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你能告诉我是什么秘密吗？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我有证据证明你欠了人情。"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "你敢相信我，这里的秘密就藏在那些挂钟里。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你在旧城区待久了，知道些秘密。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "告诉我这个人的故事。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "反问",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我在这里找一个人，你认识吗？"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我在旧城区待久了，知道些秘密。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你能帮我什么？"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "你知道我在旧城区的秘密。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "我在旧城区待久了，知道些秘密。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "你别以为自己聪明，就敢来坑我，知道吗？",
+    "emotion": "威胁",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "告诉我关于那个欠人情的秘密。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "你知道怎么在旧城区打到黑市义体吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我们聊聊别的。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "告诉我那天晚上的事吧！"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "我知道你缺人手，跟我好好说话。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "有没有什么我可以帮忙的？"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "这地方热闹极了，你来找我有什么事吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你知道吗，这儿有个秘密。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "你知道那个地方吗？那边有好多秘密。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "这里生意好，你想买什么？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "我要看看有没有可以帮到我的东西。"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "这里生意好，你想买什么？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你确定能帮我找到妹妹的记忆吗？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "我在这儿等了好久了，你到底是谁？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "告诉我那天晚上的事。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "你到底是谁？我在这儿等了好久了。",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你为什么要问我这些？"
+   }
+  ],
+  "meta": {
+   "seed": 1337,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 1,
+   "bad_branch_nodes": 1,
+   "calls": 63,
+   "elapsed": 282.68,
+   "strategy_calls": 63
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有台词均符合白鸦医生的身份和设定，没有矛盾之处。"
+ }
+}

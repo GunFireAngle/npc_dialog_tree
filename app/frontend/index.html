@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NPC 对话树生成器 · 深度 vs 质量实验台</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#151b23; --panel2:#1b2330; --line:#263241;
+    --text:#e6edf3; --muted:#8b98a9; --accent:#4cc2ff; --accent2:#7ee787;
+    --warn:#f2b53b; --danger:#ff7b72; --radius:12px;
+    --font:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;height:100vh;overflow:hidden}
+  header{height:56px;display:flex;align-items:center;gap:14px;padding:0 18px;border-bottom:1px solid var(--line);background:var(--panel)}
+  header h1{font-size:15px;margin:0;font-weight:600;letter-spacing:.3px}
+  header .sub{color:var(--muted);font-size:12px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 8px var(--accent2)}
+  .spacer{flex:1}
+  .badge{font-size:11px;padding:3px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+  main{display:grid;grid-template-columns:290px minmax(0,1fr) 350px;height:calc(100vh - 56px)}
+  section{padding:14px;overflow:auto}
+  #left{border-right:1px solid var(--line);background:var(--panel)}
+  #right{border-left:1px solid var(--line);background:var(--panel)}
+  #center{display:flex;flex-direction:column;gap:12px;padding:14px;overflow:hidden}
+  .block{margin-bottom:16px}
+  .label{font-size:11px;color:var(--muted);letter-spacing:.8px;margin-bottom:7px;text-transform:uppercase}
+  select,input,textarea,button{font-family:inherit;font-size:13px}
+  select,input[type=number],input[type=text],textarea{
+    width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);
+    border-radius:8px;padding:8px 10px;outline:none}
+  select:focus,input:focus,textarea:focus{border-color:var(--accent)}
+  .worlds{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .world{padding:8px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);cursor:pointer;font-size:12px;text-align:center;transition:.15s}
+  .world:hover{border-color:#3d5166}
+  .world.active{border-color:var(--accent);color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+  .npc-card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
+  .npc-card h3{margin:0 0 2px;font-size:14px}
+  .npc-card .role{color:var(--muted);font-size:12px;margin-bottom:8px}
+  .npc-card .kv{font-size:12px;color:#b9c6d4;line-height:1.6;margin-top:6px}
+  .npc-card .kv b{color:var(--accent);font-weight:500}
+  .setting{font-size:12px;color:var(--muted);line-height:1.65;max-height:96px;overflow:auto;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px}
+  .seg{display:flex;gap:6px}
+  .seg button{flex:1;padding:8px 0;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;cursor:pointer}
+  .seg button.active{background:rgba(76,194,255,.14);border-color:var(--accent);color:var(--accent)}
+  .primary{width:100%;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:600;
+    background:linear-gradient(135deg,#2a9fe0,#4cc2ff);color:#04121c;transition:.15s}
+  .primary:hover{filter:brightness(1.08)}
+  .primary:disabled{opacity:.55;cursor:not-allowed}
+  .ghost{background:transparent;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}
+  .ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .row{display:flex;gap:8px;align-items:center}
+  .muted{color:var(--muted);font-size:12px}
+  /* 试玩区 */
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .play{flex:1;display:flex;flex-direction:column;min-height:0}
+  .crumbs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .crumb{font-size:11px;color:var(--muted);background:var(--panel2);border:1px solid var(--line);padding:3px 8px;border-radius:999px}
+  .speaker{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:15px;
+    background:linear-gradient(135deg,#243449,#16202c);border:1px solid var(--line)}
+  .speaker .name{font-weight:600}
+  .emo{font-size:11px;padding:2px 8px;border-radius:999px;background:rgba(242,181,59,.14);color:var(--warn);border:1px solid rgba(242,181,59,.3)}
+  .bubble{background:var(--panel2);border:1px solid var(--line);border-radius:2px 12px 12px 12px;padding:14px 16px;
+    line-height:1.75;font-size:15px;min-height:64px}
+  .opts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .opt{text-align:left;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);
+    color:var(--text);cursor:pointer;transition:.15s;line-height:1.5}
+  .opt:hover{border-color:var(--accent);background:rgba(76,194,255,.08);transform:translateX(2px)}
+  .opt .tag{display:inline-block;font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-right:7px}
+  .ending{color:var(--muted);font-size:13px;margin-top:14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px}
+  /* 树 */
+  .tree-wrap{flex:0 0 auto;max-height:43vh;overflow:auto;background:#0b0f14;border:1px solid var(--line);border-radius:var(--radius)}
+  .tree-head{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#0b0f14;z-index:2}
+  svg text{font-family:var(--font)}
+  .node-rect{cursor:pointer;transition:.15s}
+  .node-rect:hover{filter:brightness(1.35)}
+  /* 评分 */
+  .scale{margin-bottom:14px}
+  .scale .s-title{font-size:13px;font-weight:600;margin-bottom:2px}
+  .scale .s-desc{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:6px}
+  .stars{display:flex;gap:6px}
+  .star{flex:1;padding:7px 0;text-align:center;border-radius:8px;border:1px solid var(--line);
+    background:var(--panel2);cursor:pointer;color:var(--muted);font-size:13px}
+  .star.active{background:rgba(126,231,135,.14);border-color:var(--accent2);color:var(--accent2);font-weight:700}
+  .hint{font-size:11px;color:var(--muted);line-height:1.6}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#22303f;border:1px solid var(--accent);
+    color:var(--text);padding:10px 18px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;z-index:99}
+  .toast.show{opacity:1}
+  .spinner{width:14px;height:14px;border:2px solid rgba(255,255,255,.25);border-top-color:#04121c;border-radius:50%;
+    display:inline-block;animation:spin .8s linear infinite;vertical-align:-2px;margin-right:6px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .metrics{display:flex;flex-wrap:wrap;gap:6px}
+  .mchip{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 7px;background:var(--panel2)}
+  .mchip b{color:var(--text);font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <div class="dot"></div>
+  <h1>NPC 对话树生成器</h1>
+  <span class="sub">世界观 → 分支对话 → 试玩 → 三维量表盲评</span>
+  <div class="spacer"></div>
+  <span class="badge" id="engineBadge">引擎：未连接</span>
+  <span class="badge" id="rateBadge">已评 0 条</span>
+</header>
+
+<main>
+  <!-- 左：配置 -->
+  <section id="left">
+    <div class="block">
+      <div class="label">世界观</div>
+      <div class="worlds" id="worldList"></div>
+    </div>
+
+    <div class="block">
+      <div class="label">NPC 档案</div>
+      <div class="npc-card" id="npcCard">
+        <h3>—</h3><div class="role">请选择世界观</div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="label">对话树深度（每层 NPC 一句，分支固定为 2）</div>
+      <div class="seg" id="depthSeg">
+        <button data-depth="2">深度 2</button>
+        <button data-depth="4" class="active">深度 4</button>
+        <button data-depth="6">深度 6</button>
+      </div>
+      <div class="hint" id="depthHint" style="margin-top:6px">节点数 = 3</div>
+    </div>
+
+    <div class="block">
+      <div class="label">生成模型</div>
+      <select id="modelSel">
+        <option value="base">Qwen2.5-1.5B-Instruct（基线）</option>
+        <option value="ft">基线 + LoRA 结构微调</option>
+      </select>
+      <div class="row" style="margin-top:8px">
+        <input type="number" id="seedInput" value="42" title="随机种子" />
+        <button class="ghost" id="regenSeed" title="换一个种子">换种子</button>
+      </div>
+    </div>
+
+    <button class="primary" id="genBtn">生成对话树</button>
+    <div class="hint" id="genStatus" style="margin-top:8px"></div>
+
+    <div class="block" style="margin-top:16px">
+      <div class="label">自动指标</div>
+      <div class="metrics" id="metricBox"><span class="muted">尚未生成</span></div>
+    </div>
+  </section>
+
+  <!-- 中：试玩 + 树 -->
+  <section id="center">
+    <div class="panel play">
+      <div class="row" style="justify-content:space-between;margin-bottom:8px">
+        <div class="label" style="margin:0">试玩</div>
+        <button class="ghost" id="resetBtn" style="padding:4px 10px">从头开始</button>
+      </div>
+      <div class="crumbs" id="crumbs"></div>
+      <div class="speaker">
+        <div class="avatar" id="avatar">?</div>
+        <div>
+          <div class="name" id="npcName">等待生成</div>
+          <div class="muted" id="nodeMeta"></div>
+        </div>
+        <div class="spacer"></div>
+        <span class="emo" id="emoTag" style="display:none"></span>
+      </div>
+      <div class="bubble" id="bubble">生成一棵对话树后，点击右侧树节点或下方选项开始试玩。</div>
+      <div class="opts" id="opts"></div>
+      <div id="endingBox"></div>
+    </div>
+
+    <div class="tree-wrap">
+      <div class="tree-head">
+        <span class="label" style="margin:0">对话树</span>
+        <span class="muted" id="treeInfo">—</span>
+        <div class="spacer"></div>
+        <span class="muted">点击节点跳转 · 高亮为当前路径</span>
+      </div>
+      <div id="treeBox" style="padding:10px"></div>
+    </div>
+  </section>
+
+  <!-- 右：盲评 -->
+  <section id="right">
+    <div class="row" style="justify-content:space-between;margin-bottom:6px">
+      <div class="label" style="margin:0">盲评量表</div>
+      <label class="muted row" style="gap:4px"><input type="checkbox" id="blindChk" checked style="width:auto"> 盲评模式</label>
+    </div>
+    <div class="hint" style="margin-bottom:12px">盲评模式下界面隐藏深度与模型信息，提交时仍记录到 CSV 供后续分析。</div>
+
+    <div class="scale">
+      <div class="s-title">1. 一致性 consistency</div>
+      <div class="s-desc">台词是否与世界观、NPC 设定（身份/物品/经历）矛盾；不同分支之间是否自相矛盾。</div>
+      <div class="stars" data-key="consistency">
+        <div class="star" data-v="1">1</div><div class="star" data-v="2">2</div><div class="star" data-v="3">3</div>
+        <div class="star" data-v="4">4</div><div class="star" data-v="5">5</div>
+      </div>
+    </div>
+
+    <div class="scale">
+      <div class="s-title">2. 角色性格稳定性 persona stability</div>
+      <div class="s-desc">是否始终是同一个人格与说话方式；深层节点是否退化为通用口吻或重复同一句。</div>
+      <div class="stars" data-key="persona_stability">
+        <div class="star" data-v="1">1</div><div class="star" data-v="2">2</div><div class="star" data-v="3">3</div>
+        <div class="star" data-v="4">4</div><div class="star" data-v="5">5</div>
+      </div>
+    </div>
+
+    <div class="scale">
+      <div class="s-title">3. 玩家选择有意义性 choice meaningfulness</div>
+      <div class="s-desc">同一节点的两个选项是否代表真正不同的立场或后果，而不是换词重述。</div>
+      <div class="stars" data-key="choice_meaningfulness">
+        <div class="star" data-v="1">1</div><div class="star" data-v="2">2</div><div class="star" data-v="3">3</div>
+        <div class="star" data-v="4">4</div><div class="star" data-v="5">5</div>
+      </div>
+    </div>
+
+    <div class="label">评语（可选）</div>
+    <textarea id="comment" rows="3" placeholder="例如：第 4 层之后开始复述同一设定……"></textarea>
+
+    <div class="row" style="margin-top:8px">
+      <input type="text" id="rater" placeholder="评分者代号" value="rater01" style="flex:1" />
+      <button class="primary" id="submitBtn" style="width:auto;padding:9px 16px">提交评分</button>
+    </div>
+    <button class="ghost" id="exportBtn" style="width:100%;margin-top:8px">下载评分 CSV</button>
+    <div class="hint" style="margin-top:12px">
+      建议流程：每棵树枝先完整点完至少两条分支再打分；同一世界观下 2/4/6 三种深度交错评，避免顺序效应。
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const state = {
+  worlds: [], worldId: "ash", depth: 4, model: "base", seed: 42,
+  tree: null, metrics: null, current: null, blind: true,
+  scores: { consistency: null, persona_stability: null, choice_meaningfulness: null },
+  ratedCount: 0
+};
+const $ = (id) => document.getElementById(id);
+
+function toast(msg){
+  const t = $("toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove("show"), 2200);
+}
+
+async function loadWorlds(){
+  const r = await fetch("/api/worlds"); state.worlds = await r.json();
+  const box = $("worldList"); box.innerHTML = "";
+  state.worlds.forEach(w=>{
+    const d = document.createElement("div");
+    d.className = "world" + (w.id === state.worldId ? " active" : "");
+    d.textContent = w.name; d.onclick = ()=>selectWorld(w.id);
+    box.appendChild(d);
+  });
+  selectWorld(state.worldId);
+}
+
+function selectWorld(id){
+  state.worldId = id;
+  document.querySelectorAll(".world").forEach(el=>{
+    el.classList.toggle("active", el.textContent === (state.worlds.find(w=>w.id===id)||{}).name);
+  });
+  const w = state.worlds.find(x=>x.id===id); if(!w) return;
+  $("npcCard").innerHTML = `
+    <h3>${w.npc.name}</h3>
+    <div class="role">${w.npc.role}</div>
+    <div class="kv"><b>目标</b>：${w.npc.goal}</div>
+    <div class="kv"><b>说话方式</b>：${w.npc.style}</div>
+    <div class="kv"><b>不可违背</b>：${w.npc.facts.join("；")}</div>
+    <div class="setting">${w.setting}</div>`;
+  $("npcName").textContent = w.npc.name;
+  $("avatar").textContent = w.npc.name.slice(0,1);
+}
+
+async function checkHealth(){
+  try{
+    const h = await (await fetch("/api/health")).json();
+    $("engineBadge").textContent = h.load_error ? "引擎：未加载模型（演示回退）" : "引擎：就绪";
+    $("engineBadge").style.color = h.load_error ? "var(--warn)" : "var(--muted)";
+  }catch(e){ $("engineBadge").textContent = "引擎：服务未连接"; }
+}
+
+async function countRatings(){
+  try{ const r = await (await fetch("/api/ratings")).json(); state.ratedCount = r.rows.length;
+       $("rateBadge").textContent = `已评 ${state.ratedCount} 条`; }catch(e){}
+}
+
+async function generate(){
+  const btn = $("genBtn"); btn.disabled = true;
+  const t0 = Date.now();
+  $("genStatus").innerHTML = `<span class="spinner"></span>正在生成深度 ${state.depth} 的对话树（深层可能需要 1-3 分钟）… 0s`;
+  const timer = setInterval(()=>{
+    $("genStatus").innerHTML = `<span class="spinner"></span>正在生成深度 ${state.depth} 的对话树… ${Math.round((Date.now()-t0)/1000)}s`;
+  }, 1000);
+  try{
+    const r = await fetch("/api/generate", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({world_id:state.worldId, depth:state.depth, model:state.model, seed:state.seed})
+    });
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    const data = await r.json();
+    state.tree = data.tree; state.metrics = data.metrics;
+    $("genStatus").textContent = `完成 · ${data.elapsed}s · 引擎 ${data.engine}` +
+      (data.fallback ? "（模型未就绪，已回退到 mock）" : "");
+    renderMetrics(data.metrics);
+    renderTree();
+    setNode(state.tree.root_id);
+    resetScores();
+  }catch(e){
+    $("genStatus").textContent = "生成失败：" + e.message;
+    toast("生成失败，请查看服务端日志");
+  }finally{
+    clearInterval(timer); btn.disabled = false;
+  }
+}
+
+function renderMetrics(m){
+  const items = [
+    ["节点", `${m.n_nodes}/${m.expected_nodes}`],
+    ["结构合法", m.structure_valid ? "是" : "否"],
+    ["完整度", (m.completeness*100).toFixed(0)+"%"],
+    ["重复句率", (m.dup_line_rate*100).toFixed(0)+"%"],
+    ["选项语义距", m.option_semantic_distance.toFixed(2)],
+    ["意图区分", (m.intent_distinct_rate*100).toFixed(0)+"%"],
+    ["语域命中", (m.persona_hit_rate*100).toFixed(0)+"%"],
+    ["设定冲突", m.fact_conflicts],
+    ["均长", m.mean_line_len.toFixed(0)+"字"]
+  ];
+  $("metricBox").innerHTML = items.map(([k,v])=>`<span class="mchip">${k} <b>${v}</b></span>`).join("");
+}
+
+function childMap(){
+  const m = {}; state.tree.nodes.forEach(n=>{ if(n.parent) (m[n.parent] ||= []).push(n.id); });
+  return m;
+}
+
+function renderTree(){
+  const box = $("treeBox"); if(!state.tree){ box.innerHTML = ""; return; }
+  const nodes = state.tree.nodes, byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
+  const kids = childMap();
+  const pos = {}; let leaf = 0;
+  const walk = (id, d) => {
+    const ch = kids[id] || [];
+    if(!ch.length){ pos[id] = { x: leaf++, d }; }
+    else { ch.forEach(c=>walk(c, d+1)); const xs = ch.map(c=>pos[c].x);
+           pos[id] = { x:(Math.min(...xs)+Math.max(...xs))/2, d }; }
+  };
+  walk(state.tree.root_id, 0);
+  const xStep = 74, yStep = 74, padX = 46, padY = 26;
+  const W = Math.max(320, leaf * xStep + padX*2), H = (state.tree.depth) * yStep + padY*2;
+  const path = new Set(state.current ? pathOf(state.current) : []);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${Math.min(H*0.82, 380)}" preserveAspectRatio="xMidYMid meet">`;
+  // 连线
+  nodes.forEach(n=>{
+    if(!n.parent) return;
+    const a = pos[n.parent], b = pos[n.id];
+    const x1 = padX + a.x*xStep, y1 = padY + a.d*yStep + 13;
+    const x2 = padX + b.x*xStep, y2 = padY + b.d*yStep - 13;
+    const on = path.has(n.id) && path.has(n.parent);
+    svg += `<path d="M${x1},${y1} L${x2},${y2}" stroke="${on?"#4cc2ff":"#263241"}" stroke-width="${on?1.8:1}" fill="none"/>`;
+  });
+  // 节点
+  nodes.forEach(n=>{
+    const p = pos[n.id], x = padX + p.x*xStep, y = padY + p.d*yStep;
+    const cur = state.current === n.id, on = path.has(n.id);
+    const fill = cur ? "#20465c" : on ? "#182530" : "#161f2a";
+    const stroke = cur ? "#4cc2ff" : on ? "#2f6b8c" : "#263241";
+    const txt = (n.line || "").slice(0, 7) + ((n.line||"").length > 7 ? "…" : "");
+    svg += `<g class="node-rect" data-id="${n.id}">
+      <rect x="${x-33}" y="${y-13}" width="66" height="26" rx="7" fill="${fill}" stroke="${stroke}" stroke-width="1"/>
+      <text x="${x}" y="${y+3.5}" text-anchor="middle" font-size="8.5" fill="${cur?"#bfe9ff":"#c9d6e2"}">${esc(txt)}</text>
+    </g>`;
+  });
+  svg += `</svg>`;
+  box.innerHTML = svg;
+  box.querySelectorAll("g.node-rect").forEach(g=>{
+    g.addEventListener("click", ()=>setNode(g.dataset.id));
+  });
+  $("treeInfo").textContent = `${nodes.length} 节点 · ${leaf} 条结局 · 当前 ${state.current||"-"}`;
+}
+
+function esc(s){ return (s||"").replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+function pathOf(id){
+  const byId = Object.fromEntries(state.tree.nodes.map(n=>[n.id,n]));
+  const out = []; let cur = byId[id];
+  while(cur){ out.push(cur.id); cur = cur.parent ? byId[cur.parent] : null; }
+  return out.reverse();
+}
+
+function setNode(id){
+  state.current = id;
+  const n = state.tree.nodes.find(x=>x.id===id);
+  const kids = childMap()[id] || [];
+  $("bubble").textContent = n.line || "……";
+  $("emoTag").style.display = n.emotion ? "inline-block" : "none";
+  $("emoTag").textContent = n.emotion || "";
+  $("nodeMeta").textContent = state.blind ? "对话进行中" : `层 ${n.depth} · 节点 ${n.id}`;
+
+  // 面包屑
+  const pathIds = pathOf(id);
+  $("crumbs").innerHTML = pathIds.length <= 1 ? `<span class="crumb">开场</span>` :
+    pathIds.slice(0,-1).map((pid)=>{
+      const pn = state.tree.nodes.find(x=>x.id===pid);
+      const kid = state.tree.nodes.find(x=>x.id===pathIds[pathIds.indexOf(pid)+1]);
+      return `<span class="crumb">${esc((kid.parent_option||"").slice(0,14))}</span>`;
+    }).join("");
+
+  // 选项
+  const opts = $("opts"); opts.innerHTML = "";
+  if(kids.length && n.options.length){
+    n.options.forEach((o, i)=>{
+      const b = document.createElement("button");
+      b.className = "opt";
+      b.innerHTML = `<span class="tag">选项 ${i+1}</span>${esc(o)}`;
+      b.onclick = ()=> { if(kids[i]) setNode(kids[i]); };
+      opts.appendChild(b);
+    });
+    $("endingBox").innerHTML = "";
+  } else {
+    opts.innerHTML = `<div class="ending">本分支到此结束。可点击其他节点继续体验，或为整棵树打分。</div>`;
+  }
+  renderTree();
+}
+
+function resetScores(){
+  state.scores = { consistency:null, persona_stability:null, choice_meaningfulness:null };
+  document.querySelectorAll(".stars").forEach(g=>g.querySelectorAll(".star").forEach(s=>s.classList.remove("active")));
+}
+
+document.querySelectorAll(".stars").forEach(group=>{
+  group.querySelectorAll(".star").forEach(star=>{
+    star.onclick = ()=>{
+      group.querySelectorAll(".star").forEach(s=>s.classList.remove("active"));
+      star.classList.add("active");
+      state.scores[group.dataset.key] = parseInt(star.dataset.v, 10);
+    };
+  });
+});
+
+async function submitRating(){
+  if(!state.tree) return toast("请先生成对话树");
+  const s = state.scores;
+  if(!s.consistency || !s.persona_stability || !s.choice_meaningfulness) return toast("三个量表都需要打分");
+  const payload = {
+    world_id: state.worldId, depth: state.depth, model: state.model, seed: state.seed,
+    rater: $("rater").value || "anon", comment: $("comment").value,
+    blind: $("blindChk").checked, ...s
+  };
+  const r = await fetch("/api/rating", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload)});
+  if(r.ok){ toast("评分已提交"); resetScores(); $("comment").value = ""; countRatings(); }
+  else toast("提交失败");
+}
+
+$("genBtn").onclick = generate;
+$("resetBtn").onclick = ()=>{ if(state.tree) setNode(state.tree.root_id); };
+$("submitBtn").onclick = submitRating;
+$("exportBtn").onclick = ()=> window.open("/api/ratings/export", "_blank");
+$("regenSeed").onclick = ()=>{ $("seedInput").value = Math.floor(Math.random()*9000+1000); };
+document.querySelectorAll("#depthSeg button").forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll("#depthSeg button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    state.depth = parseInt(b.dataset.depth, 10);
+    $("depthHint").textContent = `节点数 = ${Math.pow(2, state.depth) - 1}`;
+  };
+});
+$("depthHint").textContent = `节点数 = ${Math.pow(2, state.depth) - 1}`;
+$("modelSel").onchange = ()=> state.model = $("modelSel").value;
+$("seedInput").onchange = ()=> state.seed = parseInt($("seedInput").value || "42", 10);
+$("blindChk").onchange = ()=>{ state.blind = $("blindChk").checked; if(state.current) setNode(state.current); };
+
+loadWorlds(); checkHealth(); countRatings();
+setInterval(checkHealth, 15000);
+</script>
+</body>
+</html>

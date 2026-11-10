@@ -1,0 +1,735 @@
+{
+ "world": "steam",
+ "world_name": "云顶蒸汽城",
+ "npc": "薇拉·索恩",
+ "method": "ft",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 426.63,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.6667,
+  "gram_dup_rate": 0.65,
+  "distinct2": 0.2906,
+  "option_dup_rate": 0.6613,
+  "option_semantic_distance": 0.9964,
+  "intent_distinct_rate": 0.6452,
+  "intent_coverage": 0.5968,
+  "persona_hit_rate": 0.3016,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 16.41,
+  "std_line_len": 1.82,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 22,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 63,
+  "elapsed": 426.63,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "steam",
+  "npc_name": "薇拉·索恩",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在云顶蒸汽城，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "开个条件，我出得起。",
+     "算了，就当我没问。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我把话挑明：我要一个能立刻兑现的回报。",
+    "emotion": "交易",
+    "options": [
+     "我拿上行换你一句话。",
+     "你说的气压，到底指什么？"
+    ],
+    "parent": "n1",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "我拿云换你一句话。"
+    ],
+    "parent": "n1",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "试探",
+    "options": [
+     "我现在就要一个答案。",
+     "你说的发条，到底指什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "我拿上行换你一句话。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n2",
+    "parent_option": "你说的气压，到底指什么？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "换个话题。发条不是一天能好到的。",
+    "emotion": "回避",
+    "options": [
+     "你说的发条，到底指什么？",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n3",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "我把话说一半：剩下的你自己想。",
+    "emotion": "交易",
+    "options": [
+     "你在替谁遮掩？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n3",
+    "parent_option": "我拿云换你一句话。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "齿轮？我说不清楚，也不打算说清楚。",
+    "emotion": "回避",
+    "options": [
+     "你说的发条，到底指什么？",
+     "我帮你把发条修好，你告诉我实情。"
+    ],
+    "parent": "n4",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "我现在就要一个答案。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n4",
+    "parent_option": "你说的发条，到底指什么？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "拿齿轮换。我能看到你的心机。",
+    "emotion": "试探",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "我帮你把发条修好，你告诉我实情。"
+    ],
+    "parent": "n5",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [
+     "你说的发条，到底指什么？",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n5",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "这事换谁都扛不住。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n6",
+    "parent_option": "你说的发条，到底指什么？"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "回避",
+    "options": [
+     "你一个人守了这么多年？",
+     "别绕了，把话说明白。"
+    ],
+    "parent": "n6",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "回避",
+    "options": [
+     "你确定要跟我耗下去？",
+     "开个条件，我出得起。"
+    ],
+    "parent": "n7",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "这话我当没听见。",
+    "emotion": "回避",
+    "options": [
+     "别逼我动手。",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n7",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [
+     "我不急着要答案，你慢慢说。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n8",
+    "parent_option": "你说的发条，到底指什么？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "我拿发条换你一句话。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n8",
+    "parent_option": "我帮你把发条修好，你告诉我实情。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n9",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "他们让你看到的发条，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "别逼我动手。",
+     "算了，就当我没问。"
+    ],
+    "parent": "n9",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你确定要跟我耗下去？",
+     "别逼我动手。"
+    ],
+    "parent": "n10",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [
+     "我去别处打听。",
+     "我不急着要答案，你慢慢说。"
+    ],
+    "parent": "n10",
+    "parent_option": "我帮你把发条修好，你告诉我实情。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [
+     "别绕了，把话说明白。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n11",
+    "parent_option": "你说的发条，到底指什么？"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "算了，就当我没问。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n11",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "他们让你看到的发条，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "我帮你把发条修好，你告诉我实情。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n12",
+    "parent_option": "这事换谁都扛不住。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [
+     "别绕了，把话说明白。",
+     "你要是不说，我只能上报了。"
+    ],
+    "parent": "n12",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "这事换谁都扛不住。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n13",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "算了，就当我没看见。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n13",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "松动",
+    "options": [
+     "别逼我动手。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n14",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "那天的云，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [
+     "我不急着要答案，你慢慢说。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n14",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n15",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "他们让你看到的发条，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "别绕了，把话说明白。",
+     "别逼我动手。"
+    ],
+    "parent": "n15",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "那天的发条，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我拿发条换你一句话。"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "他们让你看到的上行，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "那天的发条，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "门在那边。下次来，带点能兑现的东西。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "那天的发条，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我帮你把发条修好，你告诉我实情。"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "这事换谁都扛不住。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "门在那边。下次来，带点能兑现的东西。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "算了，就当我没看见。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "行，看在我是个修心门的人的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "行，看在你没拿发条压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "那天的发条，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "我不急着要答案，你慢慢说。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "别逼我动手。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 63,
+   "elapsed": 426.63,
+   "strategy_calls": 63
+  }
+ },
+ "judge": null
+}

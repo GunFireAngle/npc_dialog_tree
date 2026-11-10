@@ -1,0 +1,753 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "base",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 296.43,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.5714,
+  "gram_dup_rate": 0.6586,
+  "distinct2": 0.2685,
+  "option_dup_rate": 0.4677,
+  "option_semantic_distance": 0.9714,
+  "intent_distinct_rate": 0.4839,
+  "intent_coverage": 0.3065,
+  "persona_hit_rate": 0.0476,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 0.0625,
+  "mean_line_len": 13.51,
+  "std_line_len": 5.16,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 3,
+  "consistency": 5.0,
+  "persona_stability": 2.333,
+  "choice_meaningfulness": 1.0,
+  "composite": 2.778
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 62,
+  "parse_repaired": 0,
+  "parse_failed": 1,
+  "missing_nodes": 2,
+  "bad_branch_nodes": 3,
+  "calls": 63,
+  "elapsed": 296.42,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "关心",
+    "options": [
+     "告诉我吧，我愿意帮忙。",
+     "我需要更多证据。"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "你在说什么？我听得懂。",
+    "emotion": "生气",
+    "options": [
+     "告诉我，这是我的责任。",
+     "别装糊涂了，你最好老实点。"
+    ],
+    "parent": "n1",
+    "parent_option": "告诉我吧，我愿意帮忙。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "你在担心什么，朋友？",
+    "emotion": "关心",
+    "options": [
+     "告诉我，你怕什么？",
+     "我只知道你没水喝。"
+    ],
+    "parent": "n1",
+    "parent_option": "我需要更多证据。"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n2",
+    "parent_option": "告诉我，这是我的责任。"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "你好像有点慌，什么事？",
+    "emotion": "紧张",
+    "options": [
+     "告诉我吧，我会帮你。",
+     "别怕，有我在。"
+    ],
+    "parent": "n2",
+    "parent_option": "别装糊涂了，你最好老实点。"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "担忧",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n3",
+    "parent_option": "告诉我，你怕什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "我需要更多证据。",
+    "emotion": "焦虑",
+    "options": [
+     "你放心，我有办法。",
+     "你能告诉我具体是什么问题吗？"
+    ],
+    "parent": "n3",
+    "parent_option": "我只知道你没水喝。"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "我知道你缺人手。",
+    "emotion": "坦率",
+    "options": [
+     "告诉我你最近遇到什么困难吗？",
+     "别担心，我可以帮你。"
+    ],
+    "parent": "n4",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "好奇",
+    "options": [
+     "告诉我吧，我愿意帮忙。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n4",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n5",
+    "parent_option": "告诉我吧，我会帮你。"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "你似乎有什么顾虑，能告诉我吗？",
+    "emotion": "关心",
+    "options": [
+     "我想知道那件事故的具体经过。",
+     "你有没有遇到过什么棘手的问题？"
+    ],
+    "parent": "n5",
+    "parent_option": "别怕，有我在。"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n6",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n6",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "关心",
+    "options": [
+     "我需要更多证据。",
+     "你放心，我有办法。"
+    ],
+    "parent": "n7",
+    "parent_option": "你放心，我有办法。"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n7",
+    "parent_option": "你能告诉我具体是什么问题吗？"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n8",
+    "parent_option": "告诉我你最近遇到什么困难吗？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "我听说你是个有经验的工程师。",
+    "emotion": "好奇",
+    "options": [
+     "能帮我修复水管，谢谢你！",
+     "我没时间，走吧。"
+    ],
+    "parent": "n8",
+    "parent_option": "别担心，我可以帮你。"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "你知道那条管线的位置吗？",
+    "emotion": "询问",
+    "options": [
+     "位置就在对面的楼梯间，",
+     "位置记不清了，"
+    ],
+    "parent": "n9",
+    "parent_option": "告诉我吧，我愿意帮忙。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "我那时在地表做了一次尝试，想帮助一个朋友，结果却偏离了轨道。",
+    "emotion": "回忆",
+    "options": [
+     "告诉我，你当时是怎么回事？",
+     "我听说你很了解管道，我可以问你一些问题吗？"
+    ],
+    "parent": "n9",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n10",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n10",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我需要更多证据。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n11",
+    "parent_option": "我想知道那件事故的具体经过。"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "你在说什么？我听得懂。",
+    "emotion": "好奇",
+    "options": [
+     "告诉我详情。",
+     "你似乎有什么顾虑，能告诉我吗？"
+    ],
+    "parent": "n11",
+    "parent_option": "你有没有遇到过什么棘手的问题？"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "你知道我为什么回来吗？",
+    "emotion": "好奇",
+    "options": [
+     "我需要证明自己的能力。",
+     "我怕。"
+    ],
+    "parent": "n12",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我需要更多证据。",
+     "你知道我在担心什么吗？"
+    ],
+    "parent": "n12",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "我怀疑那个事故会影响我的计划。",
+    "emotion": "关心",
+    "options": [
+     "你真的担心？",
+     "那我们快点解决这个问题吧。"
+    ],
+    "parent": "n13",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [
+     "我知道你缺人手。",
+     "我只想知道那天晚上的事。"
+    ],
+    "parent": "n13",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "我需要更多证据。",
+    "emotion": "困惑",
+    "options": [
+     "你知道哪里可以找到这些证据吗？",
+     "你是在怀疑我的人品？"
+    ],
+    "parent": "n14",
+    "parent_option": "我需要更多证据。"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "我需要更多证据。",
+    "emotion": "询问",
+    "options": [
+     "你放心，我有办法。",
+     "你似乎有什么顾虑，能告诉我吗？"
+    ],
+    "parent": "n14",
+    "parent_option": "你放心，我有办法。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "你知道我们层的水是什么情况吗？",
+    "emotion": "好奇",
+    "options": [
+     "你有监控吗？",
+     "你能给我提供点信息吗？"
+    ],
+    "parent": "n15",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "你在担心什么，朋友？",
+    "emotion": "关心",
+    "options": [
+     "我只知道你没水喝。",
+     "我需要更多证据。"
+    ],
+    "parent": "n15",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "我知道你缺人手，你愿意帮忙吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "能帮我修复水管，谢谢你！"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "我没时间，走吧。"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "我知道那条管线的位置吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "位置就在对面的楼梯间，"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "你知道那条管线的位置吗？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "位置记不清了，"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "我那时在地表做了一次尝试，想帮助一个朋友，结果却偏离了轨道。",
+    "emotion": "犹豫",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "告诉我，你当时是怎么回事？"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "我那时在地表做了一次尝试，想帮助一个朋友，结果却偏离了轨道。",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我听说你很了解管道，我可以问你一些问题吗？"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "你好像有点慌，什么事？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "你在担心什么，朋友？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "你是不是觉得有什么不对劲？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "我知道你在担心什么，朋友。",
+    "emotion": "关心",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我需要更多证据。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "我需要更多细节来判断事故的影响。",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "你似乎有些不安，发生什么事了吗？",
+    "emotion": "担忧",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "告诉我详情。"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "你好像有什么事情瞒着我。",
+    "emotion": "警惕",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "你似乎有什么顾虑，能告诉我吗？"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "我知道你缺人手。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我需要证明自己的能力。"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "我知道你缺人手。",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我怕。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "我需要更多证据。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "我需要更多证据。",
+    "emotion": "焦虑",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "你知道我在担心什么吗？"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "我需要更多证据。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你真的担心？"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "那我们快点解决这个问题吧。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "我知道你缺人手。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我知道你缺人手。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "你怀疑那个事故会影响我的计划。",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "我只想知道那天晚上的事。"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "你真的担心？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你知道哪里可以找到这些证据吗？"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "你是在怀疑我的人品？",
+    "emotion": "好奇",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "你是在怀疑我的人品？"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "你放心，我有办法。",
+    "emotion": "坚定",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你放心，我有办法。"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "……",
+    "emotion": "沉默",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你似乎有什么顾虑，能告诉我吗？"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "你看起来有些紧张，是有什么事吗？",
+    "emotion": "试探",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你有监控吗？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "你知道我们层的水是什么情况吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你能给我提供点信息吗？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "我知道你没水喝，但那又如何？",
+    "emotion": "冷漠",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我只知道你没水喝。"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我知道我们层的水是什么情况吗？",
+    "emotion": "询问",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "我需要更多证据。"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 62,
+   "parse_repaired": 0,
+   "parse_failed": 1,
+   "missing_nodes": 2,
+   "bad_branch_nodes": 3,
+   "calls": 63,
+   "elapsed": 296.42,
+   "strategy_calls": 63
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合角色设定和说话风格，无明显矛盾或不一致之处。"
+ }
+}

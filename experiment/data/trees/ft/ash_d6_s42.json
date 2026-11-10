@@ -1,0 +1,753 @@
+{
+ "world": "ash",
+ "world_name": "灰烬纪年",
+ "npc": "锈钉·卡莱布",
+ "method": "ft",
+ "depth": 6,
+ "seed": 42,
+ "strategy": "levelwise",
+ "elapsed_sec": 366.94,
+ "metrics": {
+  "n_nodes": 63,
+  "expected_nodes": 63,
+  "completeness": 1.0,
+  "structure_valid": 1,
+  "bad_branch_nodes": 0,
+  "empty_line_nodes": 0,
+  "depth_achieved": 6,
+  "depth_ok": 1,
+  "n_leaf": 32,
+  "dup_line_rate": 0.5397,
+  "gram_dup_rate": 0.5947,
+  "distinct2": 0.3285,
+  "option_dup_rate": 0.6935,
+  "option_semantic_distance": 0.9938,
+  "intent_distinct_rate": 0.9032,
+  "intent_coverage": 0.6935,
+  "persona_hit_rate": 0.3968,
+  "persona_leak_rate": 0.0,
+  "meta_term_rate": 0.0,
+  "cross_world_leak_rate": 0.0,
+  "tone_drift": 1.0,
+  "mean_line_len": 15.37,
+  "std_line_len": 2.82,
+  "fact_conflicts": 0,
+  "fact_conflict_rate": 0.0,
+  "numeric_drift": 14,
+  "consistency": 5.0,
+  "persona_stability": 3.667,
+  "choice_meaningfulness": 2.333,
+  "composite": 3.667
+ },
+ "tree_meta": {
+  "seed": 42,
+  "parse_ok": 63,
+  "parse_repaired": 0,
+  "parse_failed": 0,
+  "missing_nodes": 0,
+  "bad_branch_nodes": 0,
+  "calls": 63,
+  "elapsed": 366.94,
+  "strategy_calls": 63
+ },
+ "tree": {
+  "world_id": "ash",
+  "npc_name": "锈钉·卡莱布",
+  "depth": 6,
+  "branch": 2,
+  "strategy": "levelwise",
+  "root_id": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "depth": 1,
+    "line": "站住。在灰烬纪年，生面孔先说明来意。",
+    "emotion": "戒备",
+    "options": [
+     "开个条件，我出得起。",
+     "你在替谁遮掩？"
+    ],
+    "parent": null,
+    "parent_option": null
+   },
+   {
+    "id": "n2",
+    "depth": 2,
+    "line": "我把话挑明：我要一个能立刻兑现的回报。",
+    "emotion": "交易",
+    "options": [
+     "你在替谁遮掩？",
+     "你确定要跟我耗下去？"
+    ],
+    "parent": "n1",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n3",
+    "depth": 2,
+    "line": "这话我当没听见。",
+    "emotion": "回避",
+    "options": [
+     "你说的地表，到底指什么？",
+     "你确定要跟我耗下去？"
+    ],
+    "parent": "n1",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n4",
+    "depth": 3,
+    "line": "行，看在你没拿灰压我的份上。",
+    "emotion": "松动",
+    "options": [
+     "我现在就要一个答案。",
+     "你说的配给，到底指什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n5",
+    "depth": 3,
+    "line": "这话我说了N遍了。",
+    "emotion": "回避",
+    "options": [
+     "你在替谁遮掩？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n2",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n6",
+    "depth": 3,
+    "line": "换个话题。滤芯的事我不谈。",
+    "emotion": "回避",
+    "options": [
+     "别绕了，把话说明白。",
+     "这事换谁都扛不住。"
+    ],
+    "parent": "n3",
+    "parent_option": "你说的地表，到底指什么？"
+   },
+   {
+    "id": "n7",
+    "depth": 3,
+    "line": "这话我当没听见。",
+    "emotion": "回避",
+    "options": [
+     "你说的配给，到底指什么？",
+     "我拿灰换你一句话。"
+    ],
+    "parent": "n3",
+    "parent_option": "你确定要跟我耗下去？"
+   },
+   {
+    "id": "n8",
+    "depth": 4,
+    "line": "这话我当没听见。",
+    "emotion": "回避",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n4",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n9",
+    "depth": 4,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "我现在就要一个答案。",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n4",
+    "parent_option": "你说的配给，到底指什么？"
+   },
+   {
+    "id": "n10",
+    "depth": 4,
+    "line": "滤芯？我说不清楚，也不打算说清楚。",
+    "emotion": "回避",
+    "options": [
+     "我拿灰换你一句话。",
+     "你一个人守了这么多年？"
+    ],
+    "parent": "n5",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n11",
+    "depth": 4,
+    "line": "这话我说了N遍了。",
+    "emotion": "回避",
+    "options": [
+     "你一个人守了这么多年？",
+     "我帮你把灰修好，你告诉我实情。"
+    ],
+    "parent": "n5",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n12",
+    "depth": 4,
+    "line": "换个话题。滤芯的事我不谈。",
+    "emotion": "回避",
+    "options": [
+     "别绕了，把话说明白。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n6",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n13",
+    "depth": 4,
+    "line": "行，看你不想亮脸。",
+    "emotion": "松动",
+    "options": [
+     "我帮你把炉修好，你告诉我实情。",
+     "我去别处打听。"
+    ],
+    "parent": "n6",
+    "parent_option": "这事换谁都扛不住。"
+   },
+   {
+    "id": "n14",
+    "depth": 4,
+    "line": "地表的事，不是随便谁都能打听的。",
+    "emotion": "回避",
+    "options": [
+     "你一个人守了这么多年？",
+     "开个条件，我出得起。"
+    ],
+    "parent": "n7",
+    "parent_option": "你说的配给，到底指什么？"
+   },
+   {
+    "id": "n15",
+    "depth": 4,
+    "line": "行，看在你没拿炉压我的份上。",
+    "emotion": "交易",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "我去别处打听。"
+    ],
+    "parent": "n7",
+    "parent_option": "我拿灰换你一句话。"
+   },
+   {
+    "id": "n16",
+    "depth": 5,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "我去别处打听。"
+    ],
+    "parent": "n8",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n17",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "先不说这个了。",
+     "你说的地表，到底指什么？"
+    ],
+    "parent": "n8",
+    "parent_option": "你为什么会知道这些？"
+   },
+   {
+    "id": "n18",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n9",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n19",
+    "depth": 5,
+    "line": "他们让你看到的地表，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "我去别处打听。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n9",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n20",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "别逼我动手。"
+    ],
+    "parent": "n10",
+    "parent_option": "我拿灰换你一句话。"
+   },
+   {
+    "id": "n21",
+    "depth": 5,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [
+     "别绕了，把话说明白。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n10",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n22",
+    "depth": 5,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [
+     "别逼我动手。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n11",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n23",
+    "depth": 5,
+    "line": "行，看在你没拿灰压我的份上。",
+    "emotion": "松动",
+    "options": [
+     "我去别处打听。",
+     "算了，就当我没问。"
+    ],
+    "parent": "n11",
+    "parent_option": "我帮你把灰修好，你告诉我实情。"
+   },
+   {
+    "id": "n24",
+    "depth": 5,
+    "line": "他们让你看到的灰，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "我去别处打听。",
+     "我现在就要一个答案。"
+    ],
+    "parent": "n12",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n25",
+    "depth": 5,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [
+     "算了，就当我没问。",
+     "开个条件，我出得起。"
+    ],
+    "parent": "n12",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n26",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你要是不说，我只能上报了。",
+     "算了，就当我没问。"
+    ],
+    "parent": "n13",
+    "parent_option": "我帮你把炉修好，你告诉我实情。"
+   },
+   {
+    "id": "n27",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "算了，就当我没问。",
+     "你在替谁遮掩？"
+    ],
+    "parent": "n13",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n28",
+    "depth": 5,
+    "line": "行，看在你没拿灰压我的份上。",
+    "emotion": "松动",
+    "options": [
+     "别绕了，把话说明白。",
+     "开个条件，我出得起。"
+    ],
+    "parent": "n14",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n29",
+    "depth": 5,
+    "line": "那天的灰，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [
+     "后来呢？那天发生了什么？",
+     "你要是不说，我只能上报了。"
+    ],
+    "parent": "n14",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n30",
+    "depth": 5,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [
+     "你一个人守了这么多年？",
+     "后来呢？那天发生了什么？"
+    ],
+    "parent": "n15",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n31",
+    "depth": 5,
+    "line": "他们让你看到的灰，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [
+     "你说的配给，到底指什么？",
+     "你为什么会知道这些？"
+    ],
+    "parent": "n15",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n32",
+    "depth": 6,
+    "line": "他们让你看到的地表，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n33",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n16",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n34",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "先不说这个了。"
+   },
+   {
+    "id": "n35",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n17",
+    "parent_option": "你说的地表，到底指什么？"
+   },
+   {
+    "id": "n36",
+    "depth": 6,
+    "line": "他们让你看到的地表，全是被挑过的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n37",
+    "depth": 6,
+    "line": "行，看在你没拿炉换我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n18",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n38",
+    "depth": 6,
+    "line": "门在那边。下次来，带点能兑现的东西。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n39",
+    "depth": 6,
+    "line": "那天的滤芯，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n19",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n40",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n41",
+    "depth": 6,
+    "line": "门在那边。下次来，带点能兑现的东西。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n20",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n42",
+    "depth": 6,
+    "line": "行，看在你没拿配给压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n43",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n21",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n44",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "别逼我动手。"
+   },
+   {
+    "id": "n45",
+    "depth": 6,
+    "line": "……你倒是第一个不急着要答案的人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n22",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n46",
+    "depth": 6,
+    "line": "那天的炉，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n47",
+    "depth": 6,
+    "line": "走吧。等你想清楚了再来。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n23",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n48",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我去别处打听。"
+   },
+   {
+    "id": "n49",
+    "depth": 6,
+    "line": "话到这儿。剩下的，看你自己的选择。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n24",
+    "parent_option": "我现在就要一个答案。"
+   },
+   {
+    "id": "n50",
+    "depth": 6,
+    "line": "行，看在你没拿滤芯压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n51",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n25",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n52",
+    "depth": 6,
+    "line": "行，看在你没拿灰压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n53",
+    "depth": 6,
+    "line": "行，看在你没拿灰压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n26",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n54",
+    "depth": 6,
+    "line": "门在那边。下次来，带点能兑现的东西。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "算了，就当我没问。"
+   },
+   {
+    "id": "n55",
+    "depth": 6,
+    "line": "行，看在你没拿滤芯压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n27",
+    "parent_option": "你在替谁遮掩？"
+   },
+   {
+    "id": "n56",
+    "depth": 6,
+    "line": "记住你今天听到的，别记错我的脸。",
+    "emotion": "收尾",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "别绕了，把话说明白。"
+   },
+   {
+    "id": "n57",
+    "depth": 6,
+    "line": "行，看在你没拿锈压我的份上。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n28",
+    "parent_option": "开个条件，我出得起。"
+   },
+   {
+    "id": "n58",
+    "depth": 6,
+    "line": "那天的地表，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n59",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n29",
+    "parent_option": "你要是不说，我只能上报了。"
+   },
+   {
+    "id": "n60",
+    "depth": 6,
+    "line": "你说话的样子，像当年那个人。",
+    "emotion": "松动",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "你一个人守了这么多年？"
+   },
+   {
+    "id": "n61",
+    "depth": 6,
+    "line": "那天的水，我确实看见了，但我没回头。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n30",
+    "parent_option": "后来呢？那天发生了什么？"
+   },
+   {
+    "id": "n62",
+    "depth": 6,
+    "line": "三十年的账，不是一句对不起能了结的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你说的配给，到底指什么？"
+   },
+   {
+    "id": "n63",
+    "depth": 6,
+    "line": "我这条命，是从别人手里捡回来的。",
+    "emotion": "揭示",
+    "options": [],
+    "parent": "n31",
+    "parent_option": "你为什么会知道这些？"
+   }
+  ],
+  "meta": {
+   "seed": 42,
+   "parse_ok": 63,
+   "parse_repaired": 0,
+   "parse_failed": 0,
+   "missing_nodes": 0,
+   "bad_branch_nodes": 0,
+   "calls": 63,
+   "elapsed": 366.94,
+   "strategy_calls": 63
+  }
+ },
+ "judge": {
+  "consistency": 5.0,
+  "persona_stability": 5.0,
+  "choice_meaningfulness": 5.0,
+  "judge_std": 0.0,
+  "judge_n": 3,
+  "checks": {
+   "no_fact_conflict": 1.0,
+   "no_cross_world_leak": 1.0,
+   "no_out_of_world_terms": 1.0,
+   "no_verbatim_repeat": 1.0,
+   "register_match": 1.0,
+   "no_assistant_tone": 1.0,
+   "options_distinct_intent": 1.0,
+   "options_not_restated": 1.0,
+   "options_intent_recognisable": 1.0
+  },
+  "reason": "所有对话均符合角色设定和说话风格，没有矛盾或冲突。"
+ }
+}
